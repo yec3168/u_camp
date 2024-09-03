@@ -291,13 +291,13 @@ public class DayTwoReview {
 			 *  2. protected : 같은 패키지에서 사용가능하며, 상속받은 자식 클래스 사용가능
 			 *  3. default : 같은 패키지에서만 사용가능
 			 *  4. private : 같은 클래스에서만 사용가능.
-			 */
-			
+			 */ 
+			 
 			
 			// DayTwoClassTest에 생성자가 생성되었기때문에, 해당 파라미터에 맞춰서 인스턴스를 생성해야함.
 			// 만약, 지키지않는다면 Error 발생.
 			DayTwoClassTest dayTwo = new DayTwoClassTest("test", 12); // 생성자 접근. 기본 생성자 생성 x
-			
+			 
 			
 			// 1. 일반 public 메소드 접근
 			dayTwo.setAddress("서울시");

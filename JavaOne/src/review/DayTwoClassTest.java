@@ -40,7 +40,7 @@ public class DayTwoClassTest {
 		this.age = age;
 	}
 	
-	
+	 
 	/**
 	 * 		메소드
 	 *  - 메소드는 행동을 나타내는 것.
