@@ -37,7 +37,7 @@ public class DayOneReivew {
 		 * 		규칙(필수)
 		 * 1. 영대소문자를 사용하거나 한글을 사용한다.
 		 * 2. 특수문자는 '_' or '$'만 사용한다.
-		 * 3. 변수의 첫 문자는 숫자가 와선 안돈디ㅏ.
+		 * 3. 변수의 첫 문자는 숫자가 와선 안된다. 대신 특수문자나 대문자는 가능.
 		 * 4. Java에서 사용되는 예약어(public, int, double ...)를 사용해선 안된다.
 		 * 
 		 * 		규약
@@ -49,10 +49,10 @@ public class DayOneReivew {
 		 * 5. 상수에서 여러개의 단어를 사용하는 경우 '_'를 사용해서 구분한다.
 		 * 		
 		 * 
-		 * ** 기본 자료형은 소문자로 시작
+		 * ** 기본 자료형은 소문자로 시작									★★★★★★★★★★★★★★★★★★★★★
 		 *  ex) int, double, float
 		 * 
-		 * ** 참고 자료형은 대문자로 시작.
+		 * ** 참고 자료형은 대문자로 시작.									★★★★★★★★★★★★★★★★★★★★★
 		 *  ex) String, Car, Book, Thread
 		 */
 		
@@ -60,8 +60,8 @@ public class DayOneReivew {
 		 int Abc = 1; // o 되긴 하나 첫 시작은 소문자로 하는걸 추천.
 		 int _abc = 2; // o
 		 int _$abc = 2; // o
-		 //int 1_123 = 3; // x 변수명에 첫 시작은 숫자가 와선 안된다.
-		 //int int = 4;  // x 예약어는 작성할 수 없음.
+		 //int 1_123 = 3; // x 변수명에 첫 시작은 숫자가 와선 안된다.			★★★★★★★★★★★★★★★★★★★★★
+		 //int int = 4;  // x 예약어는 작성할 수 없음.					★★★★★★★★★★★★★★★★★★★★★
 		 //int public = 4; // x public은 예약어
 		 final int PRE_PASS = 5;
 		 String str1 = "abc";
@@ -92,10 +92,12 @@ public class DayOneReivew {
 		  *  1. 참조자료형 String은 heap영역에 String pool에 관리가 된다.
 		  *  ** Reference 타입 : 해당영역의 값이 아닌 주소를 참조하는 것.
 		  *	 2. stack에는 값이 저장된 pool 영역의 메모리 주소의 값이 들어있다.
+		  *  3. 그렇기 때문에 String으로 생성된 두 개의 변수에 같은 값을 넣으면 같은 메모리를 참조한다.
 		  *
 		  *  	String 객체
 		  *  1. heap영역에 생성한다.
 		  *  2. 서로서로 다른 객체이기때문에 서로 다른 주소(해시코드)를 가지고 있다.
+		  *  3. 그렇기 때문에 두개의 String new 객체를 생성하면 heap에 완전히 다른 영역을 생성하기 때문에 주소가 다르다.
 		  */
 		
 		 int comp_a = 10;
@@ -200,8 +202,11 @@ public class DayOneReivew {
 		 
 		 System.out.println();
 		 
-		 System.out.println((comp_aa++ > 0 ) & (--comp_aa == 0)); // false   comp_aa++가 후위 연산자이기 때문.
-		 System.out.println((++comp_aa > 0 ) & (--comp_aa == 0)); //true
+		 comp_aa =  1;
+		 System.out.println((comp_aa-- > 0 ) && (comp_aa++ == 0)); // true // 후위 연산자 즉, a++은 비교 연산자보다 우선순위가 낮음.
+		 
+		 comp_aa = 1;
+		 System.out.println((--comp_aa > 0 ) & (++comp_aa == 0)); // false
 		 
 		 
 		 
