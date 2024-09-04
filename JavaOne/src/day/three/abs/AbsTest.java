@@ -19,8 +19,10 @@ public class AbsTest {
 		 */
 		//SupAbsTest s = new SupAbsTest();
 		
-		
+		//자식 ㅁㄴㅇ = new 자식
 		SubAbsTest sub = new SubAbsTest(); 
+		
+		//부모 asd = new 자식;
 		SupAbsTest sup = new SubAbsTest(); // 이렇게 하면 가능.
 		
 		sub.one(); // sup에 있는 one 메소드를 오버라이딩
