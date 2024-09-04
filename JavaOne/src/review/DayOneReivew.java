@@ -79,7 +79,8 @@ public class DayOneReivew {
 		  *  
 		  *  
 		  *  	eqauls
-		  *  - 'equals'는 서로간의 값을 비교해서 같은지 아닌지 판별한다.
+		  *  - 'equals'는 서로간의 값을 비교해서 같은지 아닌지 판별한다. (String)
+		  *  - Object(객체)는 주소를 비교함.
 		  *  
 		  *  
 		  *  String 과 String객체, 기본자료형
