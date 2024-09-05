@@ -1,4 +1,4 @@
-package review.three.inter;
+package review.three.interfaces;
 
 /**
  *  인터페이스끼리 상속 받을 때는 extends

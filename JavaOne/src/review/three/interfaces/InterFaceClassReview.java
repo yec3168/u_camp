@@ -1,4 +1,4 @@
-package review.three.inter;
+package review.three.interfaces;
 
 public class InterFaceClassReview implements InterOne, InterTwo{
 
@@ -58,7 +58,7 @@ public class InterFaceClassReview implements InterOne, InterTwo{
 		
 		// 꼭 앞에 인터페이스 정보를 적어줘야함.
 		// 앞에 이름을 명확하게 안적어주면 Object를 의미함.
-		// reason) 인터페이스를 여러 개 할당받기 때문.
+		// reason) 인터페이스를 여러 개 할당받기 때문. and super라고하면 class의 부모 object를 의미.
 		InterOne.super.sleep();
 	}
 

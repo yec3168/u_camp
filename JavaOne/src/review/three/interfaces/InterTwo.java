@@ -1,4 +1,4 @@
-package review.three.inter;
+package review.three.interfaces;
 
 public interface InterTwo extends DuplicatedMethod{
 	

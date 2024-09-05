@@ -94,7 +94,7 @@ public class ChildOne extends Parent{
 		 //System.out.println(c2.name);
 		 
 		 //p1.childOneUniqueMethod(); // 안됨.
-		 //System.out.println(p1.name); // p1의 name은 ChildOne의 name을 가르킴. 근데 private라 접근이 안됨.
+		 //System.out.println(p1.name); // p1은 Parent의 name을 가르킴. 근데 작업공간에 ChildOne이라서 못가져오는 것.
 		 
 		 p1.print("변수명 p1 :::: ChildOne c1을 업 캐스케이팅하여 print 메소드를 호출함");
 		 
@@ -108,6 +108,9 @@ public class ChildOne extends Parent{
 		 							  	// 원래 c3는 ChildOne타입이면서 parent의 자식클래스이기 때문에.
 		 								// parent로 강제 형변환으로 업 캐스팅이 진행해도 문제가 없음.
 		 								// 근데 Parent라고 해도 현재 작업하는 공간이 ChildOne이기 때문에 p2.name이 오류가 발생함.
+	
+	
+		 
 	}
 	
 	

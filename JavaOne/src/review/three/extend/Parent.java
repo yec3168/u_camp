@@ -129,9 +129,9 @@ public class Parent {
 		 
 		 ChildOne c1 = (ChildOne)p3;
 		 //c1.은 자료형이 ChildOne이기 때문에 Parent에 private로 선언된 name을 가져올 수 없음.
-		 //c1.print(c1.name);  //c1.name은 ChildOne의 name임.
+		 //c1.print(c1.name);  //c1.name은 ChildOne의 name임. private라 접근 불가.
 		 
-		 c1.setName("변수명 c1 :::: 강제 케스팅"); 	// 부모로부터 상속받은 메소드이기 때문에 사용가능하나 name은 parent에 있는 private String name이 호출.
+		 c1.setName("변수명 c1 :::: 강제 케스팅"); 	// 부모로부터 상속받은 메소드이기 때문에 사용가능하나 name은 parent에 있는 private String name을 말함.
 		 										// 마찬가지로 setName이 Parent에 정의되어 있기때문에 ChildOne의 name에 저장되지 않는다.
 		 
 		 c1.print(c1.getName());		// 값이 저장안되서 null임.	값을 넣고 싶으면 ChildOne에서 재정의해야함.	

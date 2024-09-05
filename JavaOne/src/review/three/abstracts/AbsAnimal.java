@@ -1,4 +1,4 @@
-package review.three.abs;
+package review.three.abstracts;
 
 /**
  *  	abstract
