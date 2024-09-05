@@ -13,7 +13,6 @@ public class AbsCat extends AbsAnimal{
 	 */
 	@Override
 	void cry() {
-		// TODO Auto-generated method stub
 		System.out.println("야옹~");
 	}
 
