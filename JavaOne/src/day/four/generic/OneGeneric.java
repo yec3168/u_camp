@@ -67,7 +67,6 @@ public class OneGeneric <T> {
 	 *  	static 제네릭 메소드
 	 *  - <T>라고 칭하여 해당 메소드가 제네릭이라고 함.
 	 *  - static은 필드에 접근하고 싶어도 필드도 static이 아닌 이상 접근이 안된다.
-	 * @param <T>
 	 */
 	public static <T> T print(T t) {
 		return t;
