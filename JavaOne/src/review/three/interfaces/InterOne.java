@@ -38,11 +38,13 @@ public interface InterOne extends DuplicatedMethod{
 	 * 		default method
 	 *  - 인터페이스 내부에서 구현할 수 있는 메소드
 	 *  - 앞에 `default`를 붙여야한다.
-	 * @return 
 	 */
 	default void sleep() {
 		System.out.println("zzz");
 	}
+	
+	
+	
 	
 	
 	

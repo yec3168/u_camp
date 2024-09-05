@@ -143,7 +143,7 @@ public class DayTwoReview {
 			bp:
 				for(int k = 1; k < 10; k++) {
 					for(int j = 1; j < 10; j++) {
-						if(( k * j) % 2 == 0){
+						if(( k * j) % 2 == 0){ // 완전히 중단.
 							break bp;
 						}
 						System.out.print(k*j+" ");
@@ -159,7 +159,7 @@ public class DayTwoReview {
 				for(int k = 1; k < 10; k++) {
 					for(int j = 1; j < 10; j++) {
 						if(( k * j) % 2 == 0){
-							// k * 2를 만나는 순간 반복문 중단.
+							// k * 2를 만나는 순간 반복문 중단. 처음으로 돌아감 ( 바로 위 반복문)
 							continue bp;
 						}
 						System.out.print(k*j+" ");

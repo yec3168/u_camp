@@ -12,6 +12,7 @@ package review.three.abstracts;
  *  - default가 public이며, private는 안된다.
  *  - class이기 때문에 하나의 클래스만 상속이 가능하다. 
  *  	참고) 인터페이스는 implements로 여러 개 가능.
+ *  - abstract는 인스터스를 생성할 수 없다.
  *  
  */
 public abstract class AbsAnimal {

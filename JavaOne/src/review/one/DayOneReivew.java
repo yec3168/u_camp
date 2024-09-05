@@ -80,7 +80,7 @@ public class DayOneReivew {
 		  *  
 		  *  	eqauls
 		  *  - 'equals'는 서로간의 값을 비교해서 같은지 아닌지 판별한다. (String)
-		  *  - Object(객체)는 주소를 비교함.
+		  *  - Object(객체)만 주소를 비교함.
 		  *  
 		  *  
 		  *  String 과 String객체, 기본자료형
@@ -197,13 +197,14 @@ public class DayOneReivew {
 		  */
 		 
 		 int comp_aa = 0;
-		 
-		 System.out.println((comp_aa > 0 ) && (comp_aa == 0)); //false
-		 System.out.println((comp_aa > 0 ) & (comp_aa == 0)); //false
+	
+		 System.out.println((++comp_aa > 0 ) && (--comp_aa == 0)); //true
+		 System.out.println((comp_aa++ > 0 ) & (comp_aa-- == 0)); //false
 		 
 		 System.out.println();
 		 
 		 comp_aa =  1;
+		 // 후위 연산자는 비교하고 증가하거나 감소해
 		 System.out.println((comp_aa-- > 0 ) && (comp_aa++ == 0)); // true // 후위 연산자 즉, a++은 비교 연산자보다 우선순위가 낮음.
 		 
 		 comp_aa = 1;
