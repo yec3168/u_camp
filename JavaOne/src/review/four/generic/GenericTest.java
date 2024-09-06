@@ -90,7 +90,7 @@ public class GenericTest {
 		 *			 
 		 *			   *D d = new D() == D<B> d = new D<>();
 		 *			   *C c = new C() == C<A> c = new C<>();
-		 * 				*C c = new C() == C<B> c = new C<>();
+		 * 			   *C c = new C() == C<B> c = new C<>();
 		 */
 	}
 

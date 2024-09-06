@@ -66,6 +66,7 @@ public class InterFaceClassReview implements InterOne, InterTwo{
 		
 		InterFaceClassReview r1 = new InterFaceClassReview();
 		r1.cry("멍멍~");
+		System.out.println(r1.barks); // public필드이기 때문.
 		
 		
 		

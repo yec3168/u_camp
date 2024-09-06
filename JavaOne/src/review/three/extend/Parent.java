@@ -35,8 +35,10 @@ public class Parent {
 	/**
 	 * 		생성자
 	 *  - 생성자는 상속하지 않는다.
+	 *  - super()는 맨 앞줄에 적어줘야하고, Parent는 부모 클래스이기때문에 Parent의 부모 Object의 생성자를 호출.
 	 */
 	Parent(){
+		super();
 		System.out.println("Parent 생성자.");
 	}
 	

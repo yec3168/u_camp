@@ -13,7 +13,6 @@ public class ChildTwo extends ChildOne{
 	 */
 	@Override
 	public void print(String name) {
-		// TODO Auto-generated method stub
 		super.print(name);
 	}
 	

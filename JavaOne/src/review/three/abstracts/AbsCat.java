@@ -36,6 +36,8 @@ public class AbsCat extends AbsAnimal{
 		// 부모클래스를 할당받으면 오류.
 		//AbsCat cat2 = new AbsAnimal(); 
 		
+		// 추상클래스는 인스턴스를 만들 수 없다.
+		// 자식의 인스턴스를 할당받아서 사용.
 		System.out.println("AbsAnimal 자료형의 AbsCat의 자식 인스턴스를 할당 받은 메소드입니다.");
 		AbsAnimal animal = new AbsCat();
 		animal.cry(); 	// AbsAnimal에는 구현이 안되어있음. 
