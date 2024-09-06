@@ -12,6 +12,9 @@ import java.io.PrintWriter;
 
 import javax.xml.crypto.Data;
 
+/**
+ * 읽고 쓰는 장소를 'Node'라고 함.
+ */
 public class IOStreamTest {
 
 	public static void main(String[] args) {

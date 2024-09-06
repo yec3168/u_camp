@@ -83,6 +83,9 @@ public class Parent {
 			 *  - p2는 Parent부터 시작하기 때문에 Parent의 메소드는 전부 사용 가능 하나, 
 			 *     ChildOne에 오버라이딩 된 메소드가 존재한다면 해당 메소드를 대신 실행한다.
 			 *  - ChildOne의 생성된 고유 메소드(오버라이딩한 메소드 x)는 실행이 안된다.
+			 *  
+			 *  Polymorphism : 다형성. 
+			 *   - 자식을 만들어 부모에게 할당하는 것.
 			 */
 		
 		
