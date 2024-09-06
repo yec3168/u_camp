@@ -39,4 +39,21 @@
 <hr>
     
 ### 4. 09월 05일
+  - static
+  - final
+  - Stiring, new String
+  - Collection
+    - list ( ArrayList, LinkedList, stack etc..)
+    - set  ( HashSet, TreeSet etc...)
+    - map  ( HashMap, HashTable etc...)
+  - Generic
+<hr>
+
 ### 5. 09월 06일
+  - Exception
+  - Throws
+  - Thread
+  - IO
+<hr>
+
+## 2024-09-09 ~ 2024-09-13 SQL
