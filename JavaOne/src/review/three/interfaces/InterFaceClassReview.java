@@ -55,7 +55,7 @@ public class InterFaceClassReview implements InterOne, InterTwo{
 	 */
 	@Override
 	public void sleep() {
-		
+		// default method를 오버라이딩 한 것.
 		// 꼭 앞에 인터페이스 정보를 적어줘야함.
 		// 앞에 이름을 명확하게 안적어주면 Object를 의미함.
 		// reason) 인터페이스를 여러 개 할당받기 때문. and super라고하면 class의 부모 object를 의미.
@@ -77,7 +77,7 @@ public class InterFaceClassReview implements InterOne, InterTwo{
 		 
 
 		 InterOne one = new InterFaceClassReview();
-		 one.cry(one.barks); // interOne에 정의된 필드.
+		 one.cry(one.barks); // interOne에 정의된 필드. public이라서 접근이 가능.
 		 
 		 
 		 

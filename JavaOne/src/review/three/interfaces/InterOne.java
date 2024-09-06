@@ -10,6 +10,7 @@ public interface InterOne extends DuplicatedMethod{
 	 *  - 추상클래스와 똑같이 불안전한 메소드를 구현.
 	 *  - 내부적으로 메소드도 구현 가능함 ( default method )
 	 *  - default method는 `public`
+	 *  - 다른 메소드도 public임.
 	 *  
 	 *  - private는 안되며, extends를 통해 하나의 인터페이스만 상속 받는다. 
 	 *  - 클래스에게 상속해줄 때는 implements를 사용하여 다중상속 가능
@@ -25,11 +26,11 @@ public interface InterOne extends DuplicatedMethod{
 	
 	// 필드도 구현 가능. 
 	// 컴파일시 `public static final` 붙음
-	String barks = "야옹~";
+	String barks = "야옹~";   // public static final String barks = "야옹~";
 	
 	
 	// 컴파일시 자동으로 `abstract`가 붙음.
-	public void cry(String barks);
+	public void cry(String barks);	//
 	public void wakeUp();
 	
 	

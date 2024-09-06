@@ -167,7 +167,7 @@ public class DayOneReivew {
 		 int aa = 0;
 		 System.out.println("aa ::: " + aa);
 		 System.out.println("aa++ ::: " + aa++); // 후치 : 출력하고 증가 == 0
-		 System.out.println("--aa ::: " + --aa); // 전치 : 감소하고 출력 == 0
+		 System.out.println("--aa ::: " + ++aa); // 전치 : 증가하고 출력 == 2
 		 
 		 
 		 //-----------------------------------------------------------------------------------------------------------------------------//	

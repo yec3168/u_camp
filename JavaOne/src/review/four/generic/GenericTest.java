@@ -84,12 +84,13 @@ public class GenericTest {
 		 *  
 		 *  	ex)  class A{}
 		 *			 class B extends A{}
-		 *			 class C extends B{}
+		 *			 class C <T extends A>{}
 		 *			 
 		 *			 class D <T extends B>{}
 		 *			 
 		 *			   *D d = new D() == D<B> d = new D<>();
-		 *			   *C c = new C() == C<B> c = new C<>();
+		 *			   *C c = new C() == C<A> c = new C<>();
+		 * 				*C c = new C() == C<B> c = new C<>();
 		 */
 	}
 

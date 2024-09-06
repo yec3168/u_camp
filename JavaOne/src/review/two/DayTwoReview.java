@@ -24,13 +24,14 @@ public class DayTwoReview {
 		switch(switch_int){
 		case 10:
 			System.out.println(10);
-			break;
+			 
 		case 20:
 			System.out.println(20);
 			break;
 		default:
 			System.out.println("그 외");
 		}
+		
 		
 		
 		
@@ -246,14 +247,16 @@ public class DayTwoReview {
 			
 			
 			
-			int array2[][] = new int[4][];
+			int array2[][] = new int[5][];
 			array2[0] = new int[1];
 			array2[1] = new int[3];
 			array2[2] = new int[5];
 			array2[3] = new int[4];
+			//array[4] == null로 나옴,	길이는 exception
 			System.out.print("2차원 배열 크기 지정 출력 :::: " );
 			for(int aa [] : array2) {
 				System.out.print(Arrays.toString(aa) + " ");
+				
 			}
 			
 			System.out.println();
