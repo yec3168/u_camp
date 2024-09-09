@@ -6,10 +6,10 @@
  select student_name
  from  tb_student
  where student_no in ('A513079', 'A513090', 'A513091',  'A513110', 'A513119');
- 
+  
  -- 문제 2( tb_professor )
 -- 총장을 제외하고 모든 교수들이 소속 학과를 가지고있다.
--- 총장의 이름을 알아낼수 있는 sql문을 작성
+-- 총장의 이름을 알아낼수 있는 sql문을 작성 
  
  select professor_name
  from tb_professor
