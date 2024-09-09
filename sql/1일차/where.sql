@@ -53,3 +53,56 @@ where first_name like ('_a%');
 select first_name
 from employees
 where manager_id is null;
+
+
+
+
+
+-- UNION
+-- 윗 줄에 ;는 없애야함.
+-- a union b를 합친다.
+-- a랑 b의 컬럼은 서로 타입이 같고 갯수도 같아야함. ( 더미값을 줄 수 있음.)
+-- 중복이 제거됨.
+select employee_id
+        , first_name
+        , manager_id
+from employees
+union
+select department_id
+        , department_name
+        , manager_id
+    from departments;
+
+-- union all
+-- 중복된 것도 출력.
+
+select employee_id
+        , first_name
+        , manager_id
+from employees
+union all
+select department_id
+       ,null  -- 더미 값
+        , manager_id
+    from departments;
+    
+-- minus
+-- a를 기준 교집합 제외
+select department_id
+        , manager_id
+from employees
+minus 
+select department_id
+        , manager_id
+    from departments;
+    
+
+-- INTERSECT
+select department_id
+        , manager_id
+from employees
+INTERSECT 
+select department_id
+        , manager_id
+    from departments;
+    
