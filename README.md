@@ -57,3 +57,58 @@
 <hr>
 
 ## 2024-09-09 ~ 2024-09-13 SQL
+
+### 1. 09월 09일
+  - Select 절
+    - as (시즈닝, 알리아스)
+    - distinct
+  - order by
+  - where
+    - in : 정확한 값을 넣어 줘야함 ( "김%" ) x
+    - like : 단 한개만 넣을 수 있음.
+    - between a and b
+    - not
+    - is null
+    - is not null
+  - 연산자
+     - <=, <=, ==
+     - <>, !=, ^=
+  - 집합 연산자
+    - union : 중복 x
+    - union all : 중복 o
+    - minus
+    - intersect
+  - function
+    - 문자열
+        - upper : 소문자를 대문자
+        - lower : 대문자를 소문자
+        - initcap : 첫 문자를 대문
+        - length : 문자열 길이
+        - lengthb : 문자열 바이트 ( 한글은 3byte, 영어 1byte)
+        - substr : 문자열 자르기
+        - instr : 문자열 내 특정문자 위치 찾기
+        - replace : 문자열 내 문자 특정문자로 바꾸기
+        - lpad, rpad : 왼쪽, 오른쪽 입력한 문자로 채우기
+        - concat : 문자열과 문자열 붙이기.
+        - trim, ltrim, rtrim : 문자열내 공백 지우
+    - 숫자
+        - round : 원하는 위치 반올림
+        - trunc : 원하는 위치 버림
+        - ceil : 지정된 숫자와 가장 가까운 큰 정수
+        - floor : 지정된 숫자와 가장 가까운 작은 정수
+        - mod : 숫자 나눈 나머지
+    - 날짜
+        -  to_date : 문자데이터를 date 타입으로
+        -  to_number: 문자데이터를 숫자타입으로
+        -  to_char : date타입을 문자데이터로
+        -  add_months : 날짜의 원하는 숫자만큼 월을 더함
+        -  months_between : 두 날짜 사이의 차이
+        -  next_day : 1은 일요일, 2는 월요일 ... 7은 토요일로 다음으로 오는 날짜
+        -  last_day : 해당 월 마지막 날짜
+    - NULL
+        - nvl : 값이 null이면 처리해야하는 값 지정
+        - nvl2: 값이 null이거나 null이 아닐 때 값을 지정.
+    - case
+        - decode : 자바의 스위치 정해진 값만 해서 조건을 걺 (switch)
+        - case :  조건식으로 범위를 지정 (if)
+      
