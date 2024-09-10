@@ -111,4 +111,35 @@
     - case
         - decode : 자바의 스위치 정해진 값만 해서 조건을 걺 (switch)
         - case :  조건식으로 범위를 지정 (if)
-      
+  <hr>
+
+
+###  09월 10일
+  -  다중행 함수
+      - count
+      - min, max
+      - sum
+      - avg
+  - Group by
+  - having
+  - 조인
+      - 등가조인
+          - cross join
+          - inner join
+          - left outer join
+          - right outer join
+          - full outer join
+          - self join
+      - 비등가조인
+   - 서브쿼리
+       - where 서브쿼리
+           - 단일 행
+               - like
+           - 다중 행
+               - in
+               - any, some
+               - all
+               - exists
+  
+
+
