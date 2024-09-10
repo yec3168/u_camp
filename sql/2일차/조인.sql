@@ -80,4 +80,4 @@ from employees e right join departments d using(department_id);
 --        ex)
 --            select employee_id, first_name, salary, point
 --            from employees, tb_grade
---            where salary between min(salary) and maX(salary);
+--            where salary between 1000 and 10000;;
