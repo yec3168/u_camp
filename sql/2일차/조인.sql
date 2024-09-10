@@ -72,3 +72,12 @@ select first_name, last_name, department_name
 from employees e right join departments d using(department_id);
 
 --------------------------------------------------------------------------------
+
+
+
+--        2. 비등가조인
+--           '='를 사용하지 않는 조인.
+--        ex)
+--            select employee_id, first_name, salary, point
+--            from employees, tb_grade
+--            where salary between min(salary) and maX(salary);

@@ -61,7 +61,7 @@ group by d.category, d.department_name
 order by  3 desc;
 
 
--- null값 포함
+-- null값 포함 Ansi
 select  d.category as "계열명"
         , d.department_name as "학과명"
         , sum( decode( s.student_no, NULL, 0, 1)) as "학생 수"
@@ -71,6 +71,7 @@ group by d.category, d.department_name
 order by 3 desc;
 
 
+-- null값 포함 oracle
 select  d.category as "계열명"
         , d.department_name as "학과명"
         , sum( decode( s.student_no, NULL, 0, 1)) as "학생 수"
@@ -79,3 +80,15 @@ where d.department_no = s.department_no (+)
     and d.category in ('예체능', '공학')
 group by d.category, d.department_name
 order by 3 desc;
+
+
+SELECT category "계열 명", department_name "학과 명", COUNT(student_no) AS "학생 수"
+FROM tb_department 
+left JOIN tb_student USING (department_no)
+WHERE category = '예체능' 
+   OR category = '공학' 
+GROUP BY department_name, category;
+
+
+
+
