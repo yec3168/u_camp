@@ -140,7 +140,8 @@ where ranking < 10;
                     createdt    date
                  );
                  
-             - create시 자동으로 commit이 들어간다.    
+             - create시 자동으로 commit이 들어간다.  
+             - 서브쿼리 가능함.
  */
  
  drop table test_table;
