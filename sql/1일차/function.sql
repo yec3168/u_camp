@@ -68,7 +68,8 @@ from dual;
 -- trim, ltrim, rtrim (문자열)
 -- 특정 문자를 지우기
 -- 보통 공백을 없앰.
-select trim('       aaaaeeeeeaaaaa      ') 
+-- 문자만지우다 다른문자가를 만나면 멈춤.
+select trim('       aaaaeeee eaaaaa      ') 
         ,ltrim('       aaaaeeeeeaaaaa      ')
         ,rtrim('       aaaaeeeeeaaaaa      ')
 from dual;

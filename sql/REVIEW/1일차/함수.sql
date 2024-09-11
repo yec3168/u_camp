@@ -28,7 +28,8 @@ from dual;
 --                                     but. 기존문자의 길이와 '문자'를 합쳐서 값
 --                                       값 : length(문자열) + length(문자)
 --        concat(문자열, 문자열) : 두 개의 문자열으 이어 붙임
---        trim, ltrim, rtrim : 왼쪽, 오른쪽, 둘 다 공백을 없앰.
+--        trim, ltrim, rtrim : 왼쪽, 오른쪽, 둘 다 입력한 문자를 지움, 없으면 공백.
+
 
 select substr('abce123', 1, 5) as substr
         , instr(first_name, 'a') as instr -- 없으면 0
@@ -39,6 +40,7 @@ select substr('abce123', 1, 5) as substr
         ,trim('         trim          ') as trim
         ,ltrim('        ltrim') as ltrim
         ,rtrim('rtrim         ') as rtrim
+        ,trim('     tr      im        ') as trim_2
 from employees;
 
 
