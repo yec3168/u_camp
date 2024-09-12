@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.ArrayList;
+
+import notice.entity.Notice;
 
 public class NoticeDAO {
 	
@@ -56,6 +58,39 @@ public class NoticeDAO {
 		return rs;
 	}
 	
+	public ArrayList<Notice>  select2() {
+		ResultSet rs = null;
+		
+		String sql = 
+				"select * from notice " +
+		        "order by num";
+		
+		Connection con = getConnection();
+		ArrayList<Notice> noticeList = new ArrayList<>();
+		if (con != null) {
+			try {
+				PreparedStatement stmt = con.prepareStatement(sql);
+				rs = stmt.executeQuery(sql);
+				
+				while(rs.next()) {
+					Notice n = new Notice();
+					n.setNum(rs.getInt("num"));
+					n.setTitle(rs.getString("title"));
+					n.setContent(rs.getString("cotnent"));
+					n.setHit(rs.getInt("hit"));
+					n.setCreatedt(rs.getString("createdt"));
+					
+					noticeList.add(n);
+				}
+				con.close();
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		return noticeList;
+	}
 	
 	public int insert(String title, String content) {
 		int result = 0;
