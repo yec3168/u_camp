@@ -81,8 +81,8 @@ with 절;
   
 DDL
  -  자동으로 commit 되며,  Auto Commit;이 있으며, 옵션은 수정이 가능함.
- -  
- - 
+ -  트랜잭션에 속하지 않는다.
+ -  즉시 영구적으로 반영하기 때문에, auto commit 을 제거한다고 하여도 독립적으로 작동하기 때문에 트랜잭션에 속한다고 볼 수 없다.
    ex) create, alter, drop, truncate;
    
 1. create
@@ -141,6 +141,7 @@ create table review_table(
 
 2. Alter
  - 테이블 이름을 바꾸거나 열을 추가, 수정, 삭제, 이름변경을 함.
+ - '테이블 삭제'는 불가능!!
  
  2-1. Add(컬럼을 추가)
  - alter table [테이블 명] add [컬럼] [자료형]
@@ -170,7 +171,7 @@ create table review_table(
  4. drop 
  alter table review_table drop column rename_col;
  
- 
+ SELECT MOD(15, 4) FROM dual;
  
 --------------------------------------------------
 
@@ -234,6 +235,9 @@ drop table review_table;
 5. check
  - 열을 정의할 때, 값의 범위를 지정해 줌
   ex) age  check (age>10)
+ - 여러 열에 대해 동시에 사용할 수 있다.
+ - 테이블 생성 시 또는 이후에 추가할 수 있다.
+ - 기본 키와 중복해서 사용할 수 없다.
 
 6. default
  - 사용자가 명시적 null 을 입력하지 않았을 때 발생하는 자동적 null 대신 default로 설정해준

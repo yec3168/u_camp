@@ -47,6 +47,14 @@ select salary / 12 as "월급"
 from employees;
 
 
+
+-- but. 아래 쿼리는 왜 되냐???
+ -- 오라클이 자동으로 문자열을 숫자데이터로 변환하기 때문
+ select '100' + '200'
+ from dual;
+
+
+
 --        5. order by
 --    - 정렬을 해주는 것
 --    - 맨 마지막에 붙임
@@ -55,7 +63,8 @@ from employees;
 --        ex) order by 1;
 --            order by "이름" asc
 --            order by salary/12 desc
---
+--  
+--    - 따로 order by가 없으면 임의의 순서로 반환.
 
 select salary /12 as "월급"
 from employees
