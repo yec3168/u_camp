@@ -23,6 +23,7 @@
                        
                     
                     - 자료형으로  varchar2, number, date 등 사용이 가능하다.
+                    - 길이는 varchar2만 적어줘야하고 나머지는 안적어도 됨.
                     - key 로서 작동하게 옵션을 넣거나 NULL 의 관한 옵션도 넣을 수 있다.
                             1. 열에서 조건 추가.
                         ex) create table sample(
@@ -44,13 +45,14 @@
 create table sample(
   -- 한글은 3바이트 이기 때문에 여유롭게 잡아주는것이 좋음
   -- 영어는 1바이트
-    id          number(6),   --primary key로서 사용.
+    id          number,   --primary key로서 사용.
     email       varchar2(30),
     password    varchar2(60),
     name        varchar2(30),
     createdt    date
 );
 
+drop table sample;
 
 -- 서브쿼리로 create 하는 방법
 create table empCopy as(
@@ -60,6 +62,7 @@ create table empCopy as(
 
 select *
 from empCopy;
+
 
 
 

@@ -33,6 +33,7 @@ create sequence seq_emp
 
 -- 현재 시퀀스 번호.
 -- 최초로 한 번은 수행되어야 아래 쿼리가 수행됨.
+-- curraval은 마지막 시퀀스 출력 아무것도 없으면 에러.
 select seq_emp.currval 
 from dual;
 
