@@ -64,7 +64,7 @@ from employees;
 --            order by "이름" asc
 --            order by salary/12 desc
 --  
---    - 따로 order by가 없으면 임의의 순서로 반환.
+    - 따로 'order by가 없으면 임의의 순서로 반환'.
 
 select salary /12 as "월급"
 from employees

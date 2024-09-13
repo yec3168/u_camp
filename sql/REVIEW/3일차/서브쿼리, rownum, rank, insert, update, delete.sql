@@ -33,7 +33,8 @@ where student_no like ('A_%');
                 
 /*                      
                             with 절
-                        -쿼리 맨 윗 줄에 가상의 테이블을 만드는 것.
+                        -쿼리 맨 윗 줄에 가상의 테이블을 만드는 것., 실제x, 임시 x , 뷰 x
+                        -때에따라 성능을 올려줌
                         -자주사용하는 쿼리를 만들 때 사용.
                          ex) with min_salary as(
                                  select min(salary)
@@ -58,7 +59,7 @@ where salary like ( select min
                             rownum
             사용법
              select rownum;
-                            
+                        - top and 방식    
                         - 각 행의 '인덱스'(번호)를 넣는 것.
                         - 중복된 값이 없음.
                         - 실제 컬럼으로 인식하지 않은 이상, 1이 아닌 다른 값만 뽑아 내는것은 어려움
@@ -105,7 +106,7 @@ where salary like ( select min
                             Rank
             사용법
             select rank() over( order by [컬럼 목록] )
-            
+                    partition by를 사용해서 그룹화 할수 있다.
                    - order by를 한 후 순위를 매기는 것.
                    - group by를 통해 각 그룹별로 등수를 매길수 있음.
                    - 중복된 값이 있을 수 있다.

@@ -77,7 +77,7 @@ having  count(*) > 5;
 --                1-1. cross join
 --               ex) from employees, departments
 --
---              1-2. inner join
+--              1-2. inner join == join
 --               - 서로 같은 것만 나옴.
 --                 ex) from employees e, departments d
 --                     where e.department_id = d.department_id;
@@ -182,7 +182,7 @@ where e.department_id(+) = d.department_id;
 --11000
 --10500
  
- -- salary > any() >> 최소값보다 크니?
+ -- salary > any() >> 최소값보다 크니?, 어느 한값보다 크니 라는 질문.
  select employee_id, first_name || last_name, salary
 from employees
 where salary > any( select salary
@@ -225,7 +225,7 @@ where salary = any( select salary
 --11000
 --10500       
 
--- salary > all() >> 최댓값보다 크니?
+-- salary > all() >> 최댓값보다 크니? 모든 값보다 크니라는 질문.
  select employee_id, first_name || last_name, salary
 from employees
 where salary > all( select salary
@@ -250,7 +250,7 @@ where salary = all( select salary
 --                2-4. exists
 --              - 상관관계 서브쿼리라고 함.
 --              - where exists (10, 20, 30)
-
+--              - 서브쿼리에서 행이 존재하는 경우 참입니다
 select *
 from employees e
 where exists ( select  *
