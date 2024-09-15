@@ -101,6 +101,7 @@ from test_view;
     
     grant 
 grant [dml, dcl, ... etc] [table, index ... etc]  to [계정];
+admin option으로 다른 사용자에게 권한을 부여할 수 있는 권한이 생김. 
  - 권한을 부여하는 것
  
     revoke
