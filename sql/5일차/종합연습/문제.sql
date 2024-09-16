@@ -28,6 +28,21 @@
 각 카테고리 별로 주문상태가 "배송완료"인 상품들 중 결재금액이 가장 높은 상품을 조회하시오.
  2009년 1월 1일 부터 2010년 12월 31일
 
+select *
+from(  select c.category_name "카테고리명"
+                     , g.goods_name "상품명"
+                     , order_sum_money "결재금액"
+        from goods_order_detail d inner join goods g on d.order_goods_num = g.goods_num
+                                  inner join goods_order o on d.order_num = o.order_num
+                                  inner join category c on c.category_num = g.goods_category
+        where o.order_date between '2009-01-01' and '2010-12-31' and o.order_status = 4
+        order by d.order_sum_money desc
+    )
+where rownum = 1;
+
+
+------------------------ 서브쿼리------------------------------------------
+
  select *
  from 
     (  
@@ -49,7 +64,33 @@ where rownum =1;
 
 
 
+
+
+
+
+
+
  문제2
+ 
+ select '가디안'
+        , "분기"
+        , sum(order_sum_money) as "분기별 주문량"
+ from (
+             select (case when to_char(order_date,'mm') between 01 and 03 then '1분기'
+                                  when to_char(order_date,'mm') between 04 and 06 then '2분기' 
+                                  when to_char(order_date,'mm') between 07 and 09 then '3분기'
+                                  else '4분기' end) as "분기"
+                            , order_sum_money 
+             from goods_order o inner join goods_order_detail d on o.order_num = d.order_num
+                                inner join member m on o.order_member_id = m.member_id
+             where  m.member_name like '가디안'
+                 and o.order_date between '2009-01-01' and '2009-12-31'
+     )
+group by "분기";
+ 
+ 
+ 
+ -------------------------------서브쿼리----------------------------------
  select '가디안'
             , "분기"
             , sum(order_sum_money) as "분기별 주문량"
@@ -76,6 +117,16 @@ where rownum =1;
 
 문제 3
 
+
+select  d.order_goods_num, sum(order_goods_amount)
+from goods_order o inner join goods_order_detail d on o.order_num = d.order_num
+                    inner join goods g on g.goods_num  = d.order_goods_num
+where o.order_date between '2009-01-01' and '2010-01-31' 
+group by d.order_goods_num;
+
+
+
+----------------------------서브쿼리, with 절 -------------------------------
 with result_set as (
 select g.goods_num as "상품번호"
         , g.goods_name "상품명"
