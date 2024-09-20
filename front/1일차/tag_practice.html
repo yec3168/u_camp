@@ -1,0 +1,497 @@
+<!DOCTYPE html>     <!-- DTD : 문서형 정의-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 블럭 요소-->
+    <h1> 블럭 요소  h1</h1>
+    <p> 블럭 요소  p</p>
+    
+    <!-- 인라인 요소-->
+    <span> span1 </span> <span>span2</span>
+
+
+
+    <!-- 1. header test-->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    
+
+    
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    
+    <!-- 엔터, 스페이스바(여러 개), 탭은  공백 한 개로 인식.-->
+    하나           둘
+
+    셋
+
+    넷
+    다섯  <br>
+
+    <!-- br : 엔터, &nbsp; : 공백 하나 -->
+    하나        둘 <br>
+    
+
+    셋 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;넷
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    
+    <hr>
+    <!--
+        2. p test
+      - <br>는 태그를 선언한 대로 줄 바꿈이 이루어 지는 반면, <p>태그는 여러 개를 선언해도 한 번만 인식.
+      - <br>, <p>는 다른 태그 내부 안에 선언이 가능.
+      - <br>은 <br/> 와 같이 선언이 가능하지만, <p>는 안됨.
+    -->
+    
+    <p>첫번째</p>
+    <p>두번째</p>
+    <p>세번째</p>
+    <p>네번째</p>
+    
+    다섯<p></p><p></p>
+    여섯
+    
+    <hr>
+    <!--
+            strong, b
+        - 텍스트를 강조
+
+            em, i
+        - 텍스트 기울기.
+    -->
+    <p> 텍스트 <strong>strong</strong>테스트 <br>
+        텍스트 <b>bold</b> 테스트</p>
+    
+    
+    <p>오늘은 <em>금요일</em></p>
+    <p>오늘은 <i>금요일</i></p>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    
+
+    <!-- 
+            인용문
+    - 눈으로 보면 큰 차이는 없어보임. 저작권 관련해서 사용하는 듯.
+        <blockquote> : 긴 인용문
+        <q> : 짧은 인용문. ""가 생김.
+    -->
+    
+    <blockquote cite="https://www.naver.com">
+            <p>인용 태그 테스트</p>
+    </blockquote>
+
+    <p >
+        q 태그 : <q cite="https://www.naver.com">짧은 인용문</q>
+    </p>
+
+    <hr>
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+
+    <!--
+        ins : 텍스트 추가, 언더라인
+        del : 텍스트 삭제, 중앙삭제선 
+    -->
+    <ins>ins 테스트</ins>
+    <del>del 테스트</del>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+        sub : 아래 첨자를 표시
+        sup : 위 첨자를 표시
+    -->
+        <p> H<sub>2</sub>O </p>
+        <p> 2<sup>10</sup> </p>
+
+    
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            <div>
+        - 블록 요소와 인라인 요소를 묶을 때 사용.
+        - 따로 사이즈를 지정하지 않으면, 한 라인(줄)의 영역을 가짐.
+
+            <span>
+        - 인라인 요소들을 그룹으로 묶을 때 사용.
+    -->
+    <div style="background-color: aqua;">
+        <p>asd</p>
+    </div>
+
+    하나 둘 <span style="background-color: aquamarine;">셋</span> 넷
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            ul
+        - 순서가 없는 목록.
+        - 내용을 구성 할 때는 <li> 태그를 사용한다.
+
+            ol
+        - 순서가 있는 목록.
+        - 내용을 구성 할 때는 <li> 태그를 사용한다.
+    -->
+
+        <ul type="square">
+            <li>사과</li>
+            <li>바나나</li>
+            <li>포도</li>
+        </ul>
+
+        <ol type="I">
+            <li>첫번째</li>
+            <li>두번째</li>
+        </ol>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    
+    <!--
+            dl
+        - 설명 목록
+        - dt : 타이틀
+        - dd : 정의
+    -->
+
+    <dl>
+        <dt>html</dt>
+        <dd>Hyper text markup language</dd>
+
+        <dt>css</dt>
+        <dd>Cascading style Sheets</dd>
+    </dl>
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            a
+        - 하이퍼링크
+        - 내부의 특정위치 혹은 외부 다른 문서를 연결하는 것.
+        - href 속성을 사용
+        - target 문서로 이동하는 방식을 설정.
+            _blank : 새로운 탭 생성
+            _self : default
+            _parent : 부모
+            _top 
+        - rel="noreferrer"를 추가해 window.opener API의 악의적인 사용을 방지하는걸 고려
+    -->
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.daum.net" target="_blank">다음</a>
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            img
+        - 이미지파일
+        - inline display속성으로 정해진 영역만 자치하게 만듦.
+            but. 웹 브라우저에서는 inline으로 처리.
+        - src 속성을 사용.
+        - alt : 이미지의 설명.
+    -->
+
+    <img src="/front/1일차/img/수달.jfif" alt="수달" >
+
+    <br><br>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+
+    <!--
+            form
+        - method : get, post,   default : get
+        - action : 서버 url
+        
+            input
+        - type 
+            text
+            button 
+            checkbox : 여러 개 선택 가능. name으로 묶음.
+            radio : 한 개만 선택. name으로 묶음.
+            color
+            date
+            datetime: 시분초까지
+            email : 이메일 형식
+            file
+            password : *로 표시.
+            image
+            submit : 데이터를 서버에 전송       value를 설정하면 버튼의 이름을 변경이 가능.
+            reset : 초기화.                                 //
+            range : 범위를 조절하는 형태
+        
+        - disabel : 입력 불가능
+        - readonly : 오직 읽기만. post or get을 통해 전송을 하면 default로 선언된 value값이 전달 됨.
+
+            label
+        - 폼 요소(input)에 이름을 붙일 때 사용.
+        - input의 id값을 label의 for속성에 넣어주면 됨.
+
+
+    -->
+
+    <input type="text" maxlength="3"><br>
+    <input type="email"><br>
+    <input type="password"><br>
+    <input type="date"><br>
+    <input type="datetime"><br>
+    <input type="checkbox"><br>
+    <input type="radio"><br>
+    <input type="submit"><br>
+    <input type="reset"><br>
+
+    <hr>
+    
+    <h3>radio Test</h3>
+    <input type="radio" name="gender" value="male" >
+    <label>남자</label>
+    <input type="radio" name="gender" value="female">
+    <label>여자</label>
+
+    <h3>checkbox test</h3>
+    <input type="checkbox" name="fruit" value="사과" checked>
+    <label>사과</label>
+    <input type="checkbox" name="fruit" value="바나나">
+    <label>바나나</label>
+    <input type="checkbox" name="fruit" value="포도">
+    <label>포도</label>
+
+    <hr>
+    <h3>form test</h3>
+    <form action="/text" method="post">
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">비밀번호</label>
+        <input type="password"  name="password" id="password">
+        <input type="reset">
+        <input type="submit" >
+        <input type="color">
+        <input type="range">
+    </form>
+
+
+
+    <!--
+            legend
+        - 그룹화한 요소들(fieldset)에 대한 간단한 설명을 명시해둔 것.
+
+            fieldset
+        - input과 label을 묶은 것.
+    -->
+
+    <form>
+        <fieldset>
+            <legend> 주소와 전화번호를 입력하세요.</legend>
+            <div>
+                <label for="address">주소 : </label>
+                <input type="text" id="address"> 
+            </div>
+            <div>
+                <label for="phones">전화번호 : </label>
+                <input type="tel" id="phone"> 
+            </div>
+            
+            <br>
+
+            <fieldset>
+                <div>
+                    <label for="name">이름</label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <input type="color">
+                </div>
+            </fieldset>
+        </fieldset>
+    </form>
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            textarea
+        - 여러 줄의 텍스트
+        - cols : 가로 사이즈
+        - rows : 세로 사이즈
+            style 쓰는게 더 좋음.
+    -->
+    <textarea cols="5"></textarea>
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!-- 
+            select
+        - option, optgroup
+        - name을 붙여줘야 함. 
+            reason) js에서 컨트롤하거나, form을 통해 데이터를 보낼 때 값을 찾기 위해.
+        - optgroup의 라벨의 값은 안넘어감.
+        - multiple로 여러 옵션 선택 가능.
+        
+    -->
+    <select names="options" >
+        <optgroup label="pets">
+            <option value="dog">개</option>
+            <option value="cat">고양이</option>
+            <option value="bird">새</option>
+        </optgroup>
+        
+        <optgroup label="vehicle">
+            <option value="car">차</option>
+            <option value="train">지하철</option>
+            <option value="bike">오토바이</option>
+        </optgroup>
+    </select>
+
+    
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+
+    <!--
+            table
+        - <caption> : 표의 제목을 설정.
+        - <th> : 열의 제목.
+               : 가운데 정렬.
+        - <tr> : 행 하나.
+        - <td> : 데이터 값.
+        
+        colspan : 해당 열을 기준으로 숫자만큼 열을 병합.
+        rowspan : 해당 열을 기준으로 숫자만큼 행을 병합.
+    
+        - thead, tbody, tfoot으로 그룹화 가능.
+
+
+
+            col, colgroup
+        - 컬럼을 그룹화.
+            -->
+        
+    <table border="1" >
+        <caption>테이블 테스트</caption>
+        <tr>
+            <th>열1</th>
+            <th>열2</th>
+            <th>열3</th>
+            <th>열4</th>
+        </tr>
+        <tr>
+            <td>1-1</td>
+            <td>1-2</td>
+            <td>1-3</td>
+            <td>1-4</td>
+        </tr>
+        <tr>
+            <td>2-1</td>
+            <td>2-2</td>
+            <td>2-3</td>
+            
+        </tr>
+        <tr>
+            <td>3-1</td>
+            <td>3-2</td>
+            <td>3-3</td>
+            <td>3-4</td>
+            <td>3-5</td>
+        </tr>
+        <tr>
+            <td colspan="2">4-1</td>
+            <td>4-2</td>
+            <td>4-3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">5-1</td>
+            <td>5-2</td>
+            <td>5-3</td>
+        </tr>
+        <tr>
+            <td>6-2</td>
+            <td>6-3</td>
+        </tr>
+    </table>
+    
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>수량</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>12</td>
+            </tr>
+            <tr></tr>
+                <td>3</td>
+                <td>환타</td>
+                <td>11</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td colspan="2" style="text-align: right;"> 33</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <colgroup>
+            <col width="30"  title="one">
+            <col width="100" title="two">
+            <col width="300" title="three">
+        </colgroup>
+
+        <tr>
+            <td>1</td>
+            <td>홍길동</td>
+            <td>2024-09-20</td>
+        </tr>
+
+
+        <tr></tr>
+            <td>2</td>
+            <td>김수로</td>
+            <td>2024-09-19</td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!--
+            Audio, video
+        - src 속성 사용.
+        - controls를 사용하면 조절이 가능함.
+    -->
+    
+    <audio src="/front/1일차/file/Bourree.mp3" controls>
+        <source src="/front/1일차/file/Bourree.mp3" type="audio/mp3">
+        <source src="/front/1일차/file/sample.mp4" type="audio/mp4">
+    </audio>
+
+    <video src="/front/1일차/file/sample.mp4" controls></video>
+</body>
+
+</html>
