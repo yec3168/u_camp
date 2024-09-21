@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+            header test
+        - header는 h1 ~ h6까지 있음.
+        - 블럭요소로 줄바꿈이 이루어짐.
+    -->
+    <h1>h1 test</h1>
+    <h2>h2 test</h2>
+    <h3>h3 test</h3>
+    <h4>h4 test</h4>
+    <h5>h5 test</h5>
+    <h6>h6 test</h6>
+
+    <br><hr><br>
+
+    <!--
+            p test
+        - <p>태그는 블럭요소로 줄 바꿈이 이루어진다.
+        - 같은 줄에 <p>태그를 여러 개 입력하여도 한개로 인식됨.
+            ex) <p><p><p><p>
+        - <br>을 사용하면 줄 바꿈이 됨.
+
+        
+            strong, b
+        - 텍스트를 강조하는 태그
+
+            em, i
+        - 텍스트를 기울려서 출력.
+    
+    -->
+        <p>동해물과 백두산이 마르고 닳도록 <br>
+            하느님이 보우하사 우리나라 만세 <br>
+            <strong>무궁화</strong> 삼천리 <b>화려강산</b> <br>
+            <em>대한사람</em> 대한으로 <i>길이 보전하세</i></p>
+        
+    
+    <br><hr><br>
+
+
+    <!--
+            blockquote, q
+        blockquote :  긴 인용문
+        q : 짧은 인용문, ""가 붙음
+    -->
+    
+    <blockquote cite="www"><h3>인용문 테스트</h3></blockquote>
+    <q cite="www">짧은 인용문</q>
+
+
+    <br><hr><br>
+
+
+    <!--
+            ins, del
+        - ins: 텍스트를 추가한다는 의미. 언더라인
+        - del : 텍스트를 삭제한다는 의미. 중앙삭제선.
+
+            sup, sub
+        - sup : 위 첨자 표시
+        - sub : 아래 첨자 표시
+    -->
+        <ins>텍스트 추가</ins>
+        <del>텍스트 삭제</del>
+        <p>H<sub>2</sub>O</p>
+        <p>2<sup>10</sup></p>
+
+    
+    <br><hr><br>
+
+
+    <!--
+            ul
+        - 순서가 없는 목록
+
+            ol
+        - 순서가 있는 목록
+
+            dl
+        - 타이틀 : 정의 형식.
+        - 순서가 없음.
+        - dt : 타이틀
+        - dd : 정의
+    -->
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+    </ul>
+
+    <ol>
+        <li>one</li>
+        <li>two</li>
+    </ol>
+
+    <dl>
+        <dt>html</dt>
+        <dd>hyper text markup language</dd>
+
+        <dt>css</dt>
+        <dd>cascading style sheets</dd>
+    </dl>
+
+
+    <br><hr><br>
+
+
+
+    <!--
+            a
+        - 내부의 특정문서 혹은 외부 다른 문서를 연결
+        - href의 속성을 사용
+        - target 문서로 이동하는 방식
+            _blank : 새로운 탭
+            _parent
+            _self
+            _top
+        - rel="noreferrer"를 추가해 window.opener API의 악의적인 사용을 방지하는걸 고려
+
+
+            img
+        - 이미지파일
+        - inline_block으로 정해진 영역만 차지하게 함
+        - src 속성과 alt 속성을 사용한다.
+    
+    -->
+
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.daum.net" target="_blank">다음</a>
+
+    <img src="/front/1일차/img/수달.jfif" alt="수달" >
+
+
+<br><br><hr><br>
+
+
+    <!--
+            form
+        - method : get, post,   default : get
+        - action : 서버 url
+        
+            input
+        - type 
+            text
+            button 
+            checkbox : 여러 개 선택 가능. name으로 묶음.
+            radio : 한 개만 선택. name으로 묶음.
+            color
+            date
+            datetime: 시분초까지
+            email : 이메일 형식
+            file
+            password : *로 표시.
+            image
+            submit : 데이터를 서버에 전송       value를 설정하면 버튼의 이름을 변경이 가능.
+            reset : 초기화.                                 //
+            range : 범위를 조절하는 형태
+        
+        - disabel : 입력 불가능
+        - readonly : 오직 읽기만. post or get을 통해 전송을 하면 default로 선언된 value값이 전달 됨.
+
+            label
+        - 폼 요소(input)에 이름을 붙일 때 사용.
+        - input의 id값을 label의 for속성에 넣어주면 됨.
+
+
+    -->
+    <input type="text" maxlength="3"><br>
+    <input type="email"><br>
+    <input type="password"><br>
+    <input type="date"><br>
+    <input type="datetime"><br>
+    <input type="checkbox"><br>
+    <input type="radio"><br>
+    <input type="submit"><br>
+    <input type="reset"><br>
+
+    <br>
+
+    <input type="radio" name="gender" value="male" >
+    <label>남자</label>
+    <input type="radio" name="gender" value="female">
+    <label>여자</label>
+
+    <br>
+
+    <input type="checkbox" name="fruit" value="사과" checked>
+    <label>사과</label>
+    <input type="checkbox" name="fruit" value="바나나">
+    <label>바나나</label>
+    <input type="checkbox" name="fruit" value="포도">
+    <label>포도</label>
+
+
+    <br><br><hr><br>
+
+    <!--
+            legend
+        - 그룹화한 요소들에 대한 간단한 설명을 명시해둔 것.
+        - fieldset에 그룹화된 목록의 제목을 넣는 것.
+
+            fieldset
+        - label, input을 묶는 것.
+
+            
+
+            textarea
+        - 여러 줄의 텍스트
+    -->
+
+    <fieldset>
+        <legend>아이디와 비밀번호를 입력해주세요.</legend>
+
+        <div>
+            <label for="email">Email : </label>
+            <input type="email" id="email">
+        </div>
+
+        <div>
+            <label for="pwd">pwd : </label>
+            <input type="password" id="pwd">
+        </div>
+        
+        <div>
+            <textarea cols="30" rows="3"></textarea>
+        </div>
+    </fieldset>
+
+
+    <br><hr><br>
+
+     <!-- 
+            select
+        - option, optgroup
+        - name을 붙여줘야 함. 
+            reason) js에서 컨트롤하거나, form을 통해 데이터를 보낼 때 값을 찾기 위해.
+        - optgroup의 라벨의 값은 안넘어감.
+        - multiple로 여러 옵션 선택 가능.
+        
+    -->
+
+    <select names="options" >
+        <optgroup label="pets">
+            <option value="dog">개</option>
+            <option value="cat">고양이</option>
+            <option value="bird">새</option>
+        </optgroup>
+        
+        <optgroup label="vehicle">
+            <option value="car">차</option>
+            <option value="train">지하철</option>
+            <option value="bike">오토바이</option>
+        </optgroup>
+    </select>
+
+
+    <br><hr><br>
+
+    <!--
+            table
+        - <caption> : 표의 제목을 설정.
+        - <th> : 열의 제목.
+               : 가운데 정렬.
+        - <tr> : 행 하나.
+        - <td> : 데이터 값.
+        
+        colspan : 해당 열을 기준으로 숫자만큼 열을 병합.
+        rowspan : 해당 열을 기준으로 숫자만큼 행을 병합.
+    
+        - thead, tbody, tfoot으로 그룹화 가능.
+
+
+
+            col, colgroup
+        - 컬럼을 그룹화.
+        - col을 통해 각각의 열의 공통된 옵션을 줄 수 있음.
+    -->
+
+    <table border="1">
+            <colgroup>
+                <col width="50">
+                <col width="150">
+                <col width="100">
+                <col width="200">
+            </colgroup>
+
+            <tr>
+                <th>1</th>
+                <td>콜라</td>
+                <td>10</td>
+                <td>2500원</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>사이다</td>
+                <td>5</td>
+                <td>1900원</td>
+                <td>추가 주문 필요.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3</th>
+                <td>??</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>환타</td>
+                <td colspan="2">20</td>
+            </tr>
+            
+    </table>
+</body>
+</html>
