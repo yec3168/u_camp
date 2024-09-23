@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="/front/2일차/css/selector.css" rel="stylesheet"> 
+    
+    <style>
+        .inner_p{
+            color: yellow;
+        }
+
+        
+    </style>
+</head>
+<body>
+        <!--
+                인라인스타일
+            - 태그의 style 속성을 넣어서 스타일을 적용.
+        -->
+        <p style="color: red;">인라인스타일</p>
+
+    
+        <!--
+                내부스타일
+            - head영역에 style 적용.
+        -->
+            <p class="inner_p">내부스타일</p>
+
+        
+        <!--
+                외부스타일
+            - 외부파일을 link태그를 통해 가져와서 적용.  
+            - rel 속성의 stylesheet를 적어줘야 함.
+        -->
+            <p class="outer_p">외부스타일</p>
+
+        <br><hr><br>
+        
+        <!--
+                전체선택자
+            - *{}
+
+                태그선택자
+            - p{}, h1{}
+
+                아이디선택자
+            -#gender, #animal
+
+                클래스선택자
+            - .flower, .vehicle
+
+                기본속성선택자
+            input[type=password], a[href]
+            
+        -->
+            <form action="" method="get">
+                <table border="1">
+                    <tr>
+                        <th>ID</th>
+                        <td><input type="email" class="input_test"></td>
+                    </tr>
+                    <tr>
+                        <th>pw</th>
+                        <td><input type="password"  class="input_test"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> <input type="submit" id="submit_btn"></td>
+                    </tr>
+                </table>
+            </form>
+        
+            <br><hr><br>
+
+            <a href="https://www.naver.com">naver</a> <br>
+            
+            <a href="https://daum.net">daum</a> <br>
+            
+            <a href="google.com">google</a> <br>
+            
+            <a href="https://www.github.com">github</a> <br>
+
+            <br><hr><br>
+
+    <!--
+                그룹 선택자
+            - h1, h2, h3 {}
+
+                자식 선택자
+            - ul > li{}
+
+                하위 선택자
+            - div .story{}
+            - 공백으로 구분.
+            - 자식 선택자의 비해 좀 더 넓은 범위를 포함함.
+
+                인접 형제 선택자
+            - 특정 태그와 가장 인접하는 형제 관계 태그
+            - ol + ul {}
+            - ol 말고 ul이 선택됨.
+            - 두 요소가 붙어있어야함.
+
+                일반 형제 선택자
+            - p ~ span{}
+            - 두 요소는 붙어있을 필요는 없음.
+            - 두 선택자의 "부모"가 같고 뒷 쪽 선택자가 뒤에 있을 경우 선택됨.
+            - p를 기준으로 아래에 있는 span을 찾는 것.
+    -->
+            <h3>h3 태그</h3>
+            <h4>h4 태그</h4>
+            <h5>h5 태그</h5>
+
+            <ul>
+                <li>사과</li>
+                <li>바나나</li>
+            </ul>
+
+            <div>
+                <p>동해물과 <span>
+                                <em class="story">
+                                    백두산이
+                                </em>
+                            </span> 
+                    마르고 닳도록 <br> 
+                    <span class="story">하느님이 보우하사</span> 우리나라 만세 <br>
+                    <span class ="story">무궁화</span>
+                        <strong>삼
+                            <em class="story">천리</em>
+                        </strong>
+                        화려강산 <br>
+                </p>
+            </div>
+
+
+            <div>
+                <ul id="vehicle">
+                    <li>벤츠</li>
+                    <li>BMW</li>
+                </ul>
+
+                <ol>
+                    <li>현대</li>
+                    <li>기아</li>
+                </ol>
+            </div>
+            <br><hr><br>
+
+        <!--
+                ::before
+            - 해당 요소 앞에 있는 요소를 선택
+
+                ::after
+            - 해당 요소 뒤에 있는 요소 선택
+
+                :link
+            - 한 번도 방문한적 없는 상태
+
+                :visited
+            - 한 번 이상 방문한적 있는 상태
+        -->
+
+        <div id="before_test">
+            문장
+        </div>
+
+        <div id="after_test">
+            문장
+        </div>
+
+        <a href="https://www.github.com/yec3168">깃허브</a>
+
+        
+
+</body>
+</html>

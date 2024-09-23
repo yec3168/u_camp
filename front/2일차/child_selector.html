@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+            예시
+                .foo:nth-last-child(n)      마지막 요소부터 시작, n은 1부터 시작합니다!! 
+                .foo:first-child {}         class="foo"인 엘리먼트 중 첫번째 자식인 엘리먼트를 선택 
+                .foo:last-child {}          class="foo"인 엘리먼트 중 가장 마지막 엘리먼트 선택 
+                .foo:nth-child(n) {}        n번째 엘리먼트 선택, n은 1부터 시작합니다!! 
+                .foo:nth-child(odd) {}      홀수 선택 
+                .foo:nth-child(2n+1) {}     홀수 선택, 여기선 n이 0부터 시작합니다!! 
+                .foo:nth-child(even) {}     짝수 선택 
+                .foo:nth-child(2n) {}       짝수 선택, 여기선 n이 0부터 시작합니다!!
+        */
+        div > p:first-child{
+            background-color: yellow;
+        }
+
+        p:last-child{
+            background-color: green;
+        }
+
+        /*
+            nth-child(n)
+         - 모든 자식 요소들을 기준으로 순서가 정해짐.
+         - body를 기준으로 n번째
+         - div를 기준으로 n번째 
+         - ...
+         
+         - 특정 타입을 지정하는 것이 아닌 모든 타입을 대상으로 하는 것
+         - 만약, p:nth-child(3); 했을 때, 3번째가 자식클래스면 작동안함.
+        */
+        p:nth-child(3){
+            color: red;;
+        }
+
+        p:nth-last-child(3){
+            color: aqua;
+        }
+
+        /* 특정 타입*/
+        p:last-of-type{
+            background-color: purple;
+        }
+
+        /*부모가 body이기 때문에 one 지정.*/
+        p:nth-last-of-type(2){
+            background-color: beige;
+        }
+
+        
+    </style>
+</head>
+<body>
+        <p>one</p> <!--1-->
+        <div>
+            <p>two</p> <!--2-->
+            <span>three</span>
+            <p>four</p>  <!-- 3-->
+        </div>  
+
+        <div>
+            <p>five</p>
+            <span>six-1</span>
+            <span>six-2</span>
+            <p>seven</p>
+        </div>
+        <p>eight</p>
+        
+
+
+
+</body>
+</html>

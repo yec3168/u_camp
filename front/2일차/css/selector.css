@@ -1,0 +1,79 @@
+
+.outer_p{
+    color:blue;
+}
+
+
+th{
+    color: gray;
+}
+.input_test{
+    width: 200px;
+    
+}
+#submit_btn{
+    background-color: lightblue;
+    width: 100px;
+    margin-left: 50px;
+}
+input[type=password]{
+    background-color: lightgray;
+}
+
+/* 포함하는지 */
+a[href *= "www"]{
+    color: aqua;
+}
+
+/* 끝나는지 */
+a[href $= "net"]{
+    color: wheat;
+}
+/* 시작하는지 */
+a[href ^= "google"]{
+    color: rgb(46, 194, 32);
+}
+
+h3, h4, h5{
+    text-shadow: 5px 2px 5px;
+}
+ul > li{
+    font-size: 13px;
+}
+
+p .story{
+    font-size: 25px;
+}
+
+#vehicle + ol {
+    font-size: 20px;
+    color: gray;
+}
+
+#before_test::before{
+    content: "before테스트입니다.";
+}
+#after_test::after{
+    content: "afrer테스트입니다.";
+}
+
+a[href *="yec3168"]:link{
+    font-size: 20px;
+    color: rgb(58, 145, 94);
+}
+
+a[href *="yec3168"]:visited{
+    font-size: 10px;
+    color: rgb(153, 133, 44);
+    text-decoration: none;
+}
+
+a[href *="yec3168"]:hover{
+    font-family: serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+a[href *="yec3168"]:active{
+    color: red;
+}

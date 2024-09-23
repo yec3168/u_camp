@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #test{
+            letter-spacing: 5px;
+            background-color: lightblue;
+            line-height: 50px;
+        }
+
+        #header{
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid black;
+            box-sizing: border-box ;
+        }
+
+        #content{
+            border: 1px solid black;
+        }
+
+        #display_test1{
+            border: 1px solid black;
+            width: 300px;
+            height: 30px;
+            display: inline-block;
+            box-shadow: 5px 5px 2px;
+        }
+        #display_test2{
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+        }
+        #display_test3{
+            
+            border: 1px solid black;
+            width: 250px;
+            height: 200px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100px 100px;
+            background-position: center;
+            background-image: url("/front/1일차/img/수달.jfif");
+        }
+
+        #top_parent{
+            height: 1000px;
+        }
+        #top{
+            width: 320px;
+            height: 240px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+        #sub{
+            height: 2000px;
+            background-image: url("/front/1일차/img/수달.jfif");
+            background-attachment: scroll;
+            border: 1px solid blue;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <a href="#" style="text-decoration: none;">링크테스트</a> <br>
+    <p style="text-align: left; text-decoration: overline;">왼쪽</p>
+    <p style="text-align: right; text-decoration: underline;">오른쪽</p>
+    <p style="text-align: center; text-decoration: line-through;">가운데</p>
+
+    <p id="test">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세. 남산위해 저 소나무 철갑을 두른 듯 </p>
+
+
+    <br><hr><br>
+
+    <!--
+            박스 영역
+        - margin : 경계선 밖
+        - border : 경계선
+        - padding : 경계선과 content 사이
+        - contetn : 내용.
+    --> 
+    <p id="header">header 입니다.</p>
+    <div id="content">
+        박스
+    </div>
+    <p>footer입니다.</p>
+
+
+
+    <br><hr><br>
+
+    <div id="display_test1">
+        test
+    </div>
+
+
+    <div id="display_test2">
+        test
+    </div>
+
+    <div id="display_test3">
+       
+    </div>
+
+
+    <br><br><hr><br>
+
+
+    <div id="top_parent">
+        <div id="top">
+            <div id="sub"></div>
+        </div>
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

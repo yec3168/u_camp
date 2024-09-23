@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;;
+            border: 2px solid blue;
+            
+        }
+        .container > div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        
+        .container::after{
+            display: block;
+            clear: left; ;
+        }
+        #red{
+            background-color: red;
+            float: left;
+        }
+        #green{
+            background-color: green;
+            float: left;
+        }
+        #blue{
+            background-color: blue;
+            float: left;
+            /* clear: left; */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+    </div>
+    
+</body>
+</html>
