@@ -1,0 +1,70 @@
+<script>
+    /*
+                객체
+            - 객체는 {}로 값을 초기화가 가능함.
+            - key : value 로 저장함.
+            - 객체의 'key's값으로 value값을 가져올 수 있음.
+                ex) student.name
+            - value 값으로 배열, 객체, 함수등 여러 자료형이 올 수 있음.
+                ex) let obj  = {
+                        name : 'asd',
+                        scoreList : [90, 80, 90],
+                        toString : function(){
+                            console(this.name)
+                        }
+                    }
+            - value 값으로 익명함수를 만들 때, 객체의 값에 접근하고 싶다면 'this'를 사용한다.
+            - 객체의 value값을 동적으로 추가, 삭제, 변경이 가능하다.
+    */
+    let student = {
+        name : '홍길동',
+        age : 20,
+        addr : 'seoul',
+        gender : 'male',
+        scoreList : [10, 20, 30],
+
+        printInfo : () =>{
+            document.write(this.name);
+        }
+    };
+    student.printInfo();
+    console.log(student.age)
+    
+
+    // 추가
+    student.add1 = '추가된 값'
+    console.log(student)
+
+    // 변경
+    student.name = '길동이'
+    console.log(student)
+
+
+
+
+        /*
+            객체 (참조 타입) ( array, list, 객체, )
+        - 배열과 같이 주소를 공유하기 때문에 하나의 값이 바뀌면 다 바뀐 값이 출력.
+
+            기본자료형( number, String, boolean)
+        - 값을 가지는 것.
+        - 주소가 서로 다르기 때문에 copy를 하고 값을 바꾸면 서로 다른 값을 출력.
+    */
+
+    const exam ={
+        msg : "변경할 문자열"
+    }
+
+    const examCopy = exam;
+    exam.msg = "문자열"
+
+    console.log(examCopy)
+    console.log(exam)
+
+
+
+
+
+
+
+</script>

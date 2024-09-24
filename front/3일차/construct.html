@@ -1,0 +1,19 @@
+<script>
+    const test = {
+        one : "test....."
+    }
+    
+
+
+    function exam(first, second){
+        this.first = first;
+        this.second = second;
+
+        this.printData = function(){
+            console.log(first + second)
+        }
+    }
+
+    const exam_1 = new exam(10, 20);
+    exam_1.printData()
+</script>

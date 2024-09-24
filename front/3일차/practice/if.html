@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="grade"></div>
+    </body>
+
+    <script>
+        let score = prompt("점수를 입력하세요.");
+        let grade = document.getElementById("grade");
+        console.log(grade);
+
+        if( score >= 90)
+            grade.innerHTML = "A";
+        else if( score >= 80)
+            grade.innerHTML+= "B";
+        else if( score >= 70)
+            grade.innerHTML = "C";
+        else if( score >= 60)
+            grade.innerHTML = "D";
+        else   
+            grade.innerHTML = "F";
+        
+        grade.style.color= 'red';
+        grade.style.fontSize= '100px';
+    </script>
+</html>

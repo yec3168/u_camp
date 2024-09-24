@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        Math.random()*6 +1
+        
+        let sum1 = 0
+        for(let i = 0; i < 3; i++){
+            sum1  += Math.pow(parseInt(Math.random()*6 +1), 3)
+            // console.log(Math.pow(parseInt(Math.random()*6 +1), 3))
+           
+        }
+        console.log("sum1  = " + sum1)
+
+
+        let sum2 = '';
+        for(let i = 0; i < 3; i++){
+            sum2 += String(parseInt(Math.random()*6 +1))
+        }
+        sum2 = Number(sum2)
+        console.log("sum2  = " + sum2)
+        console.log("sum1 + sum2  = " +(sum1 + sum2))
+        
+
+
+        /*==============================================================================================*/
+
+
+        for(let i = 0; i < 10; i ++){
+            for(let j = 0; j < 10; j ++){
+                for(let z = 0; z < 10; z++ ){
+                    sum1 = Math.pow(i, 3) + Math.pow(j, 3) + Math.pow(z, 3)
+                    sum2 = i*100 + j *10 + z ;
+
+                    if(sum1 === sum2 ){
+                        console.log(sum1)
+                    }
+                }
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

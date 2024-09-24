@@ -1,0 +1,167 @@
+<script>
+    /*
+            변수명 규칙
+        - 자바와 비슷
+            1. 첫 글자는 영문자, '_', '$' 만 가능
+                규약) 영어로는 소문자를 적는다. ( 필수는 x )
+            2. 한글 가능
+            3. 특수문자로 '$', '_'만 올 수 있다.
+            4. 대소문자를 구별한다.
+            5. 키워드가 오면 안된다
+                ex) function, let, var ...
+        
+
+            표기법
+        - camelCase  : 단어의 첫 문자는 '대문자' (처음 오는 문자는 제외)
+            ex) helloWorld, documentPage
+        - pascalCase : 모든 단어의 첫 문자를 '대문자'
+            ex) HelloWorld, DocumentPage
+        - snake_case : 단어 사이를 '_'로 구분
+            ex) hello_world, document_page
+    */
+    /*
+            var
+        - 유연하게 사용이 가능
+        - 변수명 중복 가능
+        - 실무에서는 사용을 권장하지 않음.
+    */
+    var one = 10;
+    var one = 20;
+    console.log(one)
+    document.write(10)
+
+    /*
+            let
+        - 변수명 중복 x
+        - 값의 재할당이 가능
+            ex) let name = "asd"
+                name = "qwe"
+                console.log(name) // qwe
+        - 값의 할당을 하지 않으면 default로 'undefined'
+    */
+    let o;
+    console.log(o)
+    let two = "asd";
+    two += "xxxx"
+    document.write("<br> two")
+
+
+    /*
+            const
+        - java에서 final
+        - '상수'로 값의 재할당이 안됨
+        - 변수명 중복 x
+        - 선언과 할당이 같이 이루어져야함.
+            ex) const age = 10; ( o )
+                const name; ( x )
+    */
+    const three = 30;
+
+    /*
+            호이스팅
+        - 자바처럼 위에서 아래로 실행됨
+        - var로 선언된 선언문과 function은 아래에 있더라도 맨 위로 옮겨서 실행되는 것처럼 보여줌.
+        - 변수의 값 초기화는 그 자리에 그대로 있음.
+    */
+
+
+
+    /*
+            자료형
+
+        1. 문자열
+        - '', "" 둘 다 가능하다.
+        - 자바와 달리 문자열끼리 + 를 사용해서 붙일 수 있다.
+            ex) let s1 = '안녕하세요'
+                s1 += '반갑습니다'
+                console.log(s1) // 안녕하세요반갑습니다
+        - 숫자와 문자열끼리 연산시 결과는 문자열
+            ex) let s2 = 10 + '10'
+                console.log(s2) // 1010
+
+        2. 논리
+        - true/false
+        - true는 숫자로 1
+        - false는 숫자로 0
+        - 연산작업이 가능함
+            ex) 1 + true = 2
+
+        3. 배열
+        - 자바에서 array
+        - []로 생성.
+        - [,,,] 처럼 쉼표의 갯수 만큼 빈 배열을 생성 가능
+            ex) let arr = ['고양이', '강아지']ㅇ
+
+        4 객체
+        - {} 로 생성
+        - key: value로 지정
+            ex) let obj = { 콜라 : 2500, 사이다 : 2300};
+    */
+
+
+    /*
+            연산자
+        1. ',' 연산자
+        - 별개의 두 문장을 이어주는 역할
+            ex) let num1 = 0, num2= 1;
+        
+        2. typeof
+        - 변수의 자료형을 반환해주는 연산자
+            ex) let str = "abc";
+                console.log(str) // string
+        
+        3. delete 
+        - 변수, 배열의 요소 등 지워주는 역할
+        - 성공시 true, 실패시 false
+            ex) let arr = ['가', '나', '다']
+            console.log(delete arr[1]) // true
+            console.log(arr) // ["가", empty, "다"]
+
+        4. instanceof
+        - 해당 객체가 지정된 클래스가 맞는지
+        - 자바의 instanceof랑 같음
+
+
+            ****우선순위****
+        1.  ()
+        2.  ++, --, !
+        3. *, /, %
+        4. +, -
+        5. <, >, <=, >=
+        6. ==, ===(타입도 비교), !=, !== 
+        7. &&
+        8. ||
+    */
+
+
+
+    /*
+            ${}
+        - 출력시 동적으로 데이터를 넣고 싶을 때 사용한다.
+        - ``를 사용한다.
+            ex) let a1 = prompt("숫자 입력")
+                console.log(`${a1} 입니다.` )
+
+            
+            ===, !==
+        - 타입까지 같으면 true
+            ex) console.log(10 == '10') true
+                console.log(10 === '10') false
+
+            
+            강제형변환
+        - Number(), String() 등을 사용하여 변수의 타입을 바꿈.
+    */
+    let a1 = prompt("숫자 입력")
+    console.log(`${a1} 입니다.` )
+
+    console.log(10 == '10')
+    console.log(10 === '10')
+    
+
+    
+
+
+
+        
+</script>

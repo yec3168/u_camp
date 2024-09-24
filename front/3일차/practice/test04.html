@@ -1,0 +1,55 @@
+<script>
+    const productList = [];
+
+    // 생성자 함수는 대문자로 시작함.
+    function Product(num, name, price){
+        this.num = num;
+        this.name = name;
+        this.price = price;
+        
+    }
+
+    productList[0] = new Product(1, "Computer", 5000);
+    productList[1] = new Product(2, "Ipad", 3000);
+    productList[2] = new Product(3, "Galaxy flip 6", 3500);
+
+
+    // 1. prompt로 데이터를 입력받아서, productList 배열에 추가한다.
+    // 데이터의 형태
+    //    예 ) 4,TV,8000
+    // ,로 나눠지고 공백은 없다.
+    
+
+    let index = 3; // productList의 다음 인덱스.
+
+    while(true){
+        let data = prompt("데이터를 입력하세요(ex 4,TV,8000)\n 프로그램 종료는 'exit' 입니다.")
+        if(data === 'exit') // exit 입력시 프로그램 종료.
+            break;
+
+        let split_data = data.split(',') // ',' 를 기준으로 문자열을 나눔.
+
+        // 예외처리
+        if(split_data.length != 3){
+            alert("ex)4,tv,8000 \n 같이 형식을 맞춰주세요.")
+            continue;
+        }
+
+        console.log(split_data)
+        // 배열의 마지막 인덱스에 Product 객체 생성 후 넣기.
+        productList[index++] = new Product(Number(split_data[0]), split_data[1], Number(split_data[2]));
+    }
+   
+
+    // 2. productList에 있는 정보를 모두 출력한다.
+    console.log(productList)
+
+    // 3. 가격의 평균을 구하여 출력한다. 
+    let sum = 0;
+    for(let i = 0; i < productList.length; i ++){
+        sum += productList[i].price
+    }
+    console.log("평균 : " + (sum/productList.length));
+
+
+</script>
