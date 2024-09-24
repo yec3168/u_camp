@@ -153,3 +153,79 @@
       - update [테이블] set [열1] = [값], [열2] = [값], ... , [열n] = [값n] [where 조건]
       - delete [from] [테이블] [where 조건]
       - select
+
+<hr>
+
+## 2024-09-20 ~ 2024-10-04 Front
+
+### 09월 20일
+  - html 태그
+    - h1 ~ h6
+    - p, span
+    - strong, b, em, i
+    - blockquote, q
+    - ins, del, sup, sub
+    - ul, ol, li, dl, dt, dd
+    - a, img, video, audio
+    - form
+    - input
+      - text, button, checkbox, radio, color, date, datetime, email, file, password, image, submit, reset, range
+      - disable, readonly
+      - maxlength
+    - label
+    - fieldset, legend
+    - textarea
+    - select
+    - table, tr, th, td, col, colgroup
+
+<hr>
+   
+### 09월 23일
+  - css 선언위치
+    - inline 스타일
+    - 내부 스타일
+    - 외부 스타일
+  - 선택자
+    - *{} : 전체선택자
+    - p{}, h1{} : 태그선택자
+    - #pwd, #email : 아이디선택자
+    - .flower, .animal : 클래스선택자
+    - input[type] : 기본속성 선택자
+    - h1, h2, h3{} : 그룹선택자
+    - ul > li {} : 자식선택자
+    - div span: 하위선택자
+    - ol + ul : 인접형제선택자
+    - p ~ span{} :일반형제선택자
+  - ::before, ::after, ::action ::link, ::visited
+  - margin, padding, border, content
+  - position : absolute, relative, static, fixed, float
+  - 자식
+      - nth-child
+      - first-child
+      - last-child
+      - nth-last-child
+      - last-of-type
+      - nth-last-of-type
+  - clear
+
+<hr>
+
+### 09월 24일
+ - 변수명 규칙( 자바와 비슷)
+ - 표기법
+     - camelCase
+     - pascalCase
+     - snakeCase
+ - var, let, const, 호이스팅
+ - 자료형
+ - 연산자
+ - 함수
+   - 익명함수
+   - 람다식
+   - 즉시실행함수
+   - 생성자
+ - String 메소드
+ - Date, Math 객체
+ - 객체, 배열
+
+<hr>
