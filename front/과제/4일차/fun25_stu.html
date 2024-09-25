@@ -11,17 +11,21 @@
       */
      let cnt = 0;
      let sum = 0;
+     let str = "";
      function r(){
             let result = document.querySelector("#result");
-            let str1 = document.querySelector("#str1");
-            let str2 = document.querySelector("#str2");
             
             //클릭변수
             cnt+=1;
             sum += (3 * cnt);
             
-            str1.innerHTML += (3*cnt)+',';
-            str2.innerHTML = `클릭한 수: ${cnt}<br>합계:${sum}`
+            if(cnt == 1){
+                  str += (3*cnt);
+            }
+            else{
+                  str += (',' + (3*cnt));
+            }
+            result.innerHTML = `${str}<br>클릭한 수: ${cnt}<br>합계:${sum}`
      }
 
 </script>
@@ -30,8 +34,6 @@
 <h3>배수 출력</h3>
 <button onclick="r()">3의 배수</button>
 <div id="result">
-      <p id ='str1'></span>
-      <p id ='str2'></p>
 </div>
 </body>
 </html>
