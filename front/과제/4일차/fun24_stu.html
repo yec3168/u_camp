@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    //배열
+    var num = [10, 4, 20, 41, 32, 9, 1, 2];
+    
+    /*
+            함수 구현    
+    */
+
+    
+    function asc(){
+        let result = document.querySelector("#result");
+        result.innerHTML ="";
+        temp = num.sort((a, b) => a-b);
+
+        for(let i = 0 ; i < temp.length-1; i++){
+            result.innerHTML +=(temp[i] +',')
+        }
+        result.innerHTML +=temp[temp.length-1]
+    }
+
+    function desc(){
+        let result = document.querySelector("#result");
+        result.innerHTML ="";
+        temp = num.sort((a, b) => b-a);
+
+        for(let i = 0 ; i < temp.length-1; i++){
+            result.innerHTML +=(temp[i] +',')
+        }
+        result.innerHTML +=temp[temp.length-1]
+    }
+  
+</script>
+</head>
+<body>
+<h3>배열 정렬</h3>
+var num = [10, 4, 20, 4, 32, 9, 1, 2];<br>
+<button onclick="asc()">오름차순</button>
+<button onclick="desc()">내림차순</button>
+<div id="result">
+
+</div>
+</body>
+</html>

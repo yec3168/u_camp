@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    /*
+        even 함수 구현
+    */
+   function even(one, two, three, four, five){
+        let numbers = [one, two, three, four, five];
+       // console.log(numbers)
+        let sum = 0;
+       for(let i = 0; i < numbers.length; i++){
+            if(numbers[i] % 2 == 0)
+                sum += numbers[i];
+       }
+       return sum;
+   }
+
+   var mesg = even(1,2,3,4,5);
+   console.log(mesg);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

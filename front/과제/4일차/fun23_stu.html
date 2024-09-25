@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    /*
+      함수 구현
+    */
+
+    function info(){
+      let v1 = document.querySelector("#v1").value;
+      let result = document.querySelector("#result");
+      let arr = v1.split(" ");
+      let sum = 0;
+      for(let i = 0; i < arr.length; i++){
+        sum += arr[i].length;
+      }
+
+      result.innerHTML = `단어수:${arr.length} <br>글자수: ${sum}`
+
+
+    }
+</script>
+</head>
+<body>
+<h3>문자열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="How are you? fine thank you">
+<button onclick="info()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

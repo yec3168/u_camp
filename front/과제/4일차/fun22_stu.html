@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    /*
+    
+       함수 구현
+    
+    */
+    function info(){
+        let v1 = document.querySelector("#v1").value;
+        let result = document.querySelector("#result");
+        
+        //정렬
+        let nums = v1.split(",").sort((a, b) => a-b);
+        console.log(nums)
+
+        let sum= 0, avg=0, middle = 0;
+        for(let i = 0; i < nums.length; i++){
+            sum += Number(nums[i]);
+        }
+        avg = sum / nums.length;
+
+        let m = 0;
+        if (nums.length % 2 == 0 ){
+            m = Math.floor(nums.length / 2);
+            middle  = (Number(nums[m-1])+ Number(nums[m])) / 2
+        }
+        else{
+            middle = nums[nums.length/2];
+        }
+
+
+        console.log(sum)
+        result.innerHTML = `합계 : ${sum} <br>평균 : ${avg} <br>중앙값 : ${middle}`
+    }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="1,5,10,9,3,7,23,4,6,8">
+<button onclick="info()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

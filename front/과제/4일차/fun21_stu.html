@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      /*
+         함수 구현
+       
+      */
+      let arr;
+      function newArray(){
+            arr = [];
+      }
+      function removeAll(){
+            arr = [];
+            let result = document.querySelector("#result")
+            result.innerHTML = "";
+      }
+      function addData(){
+            let v1 = document.querySelector("#v1");
+            arr[arr.length] = v1.value;
+      }
+      function printArray(){
+            let result = document.querySelector("#result")
+            result.innerHTML = "";
+            for(let i = 0; i < arr.length; i++){
+                  result.innerHTML += (arr[i]+"<br>");
+            }
+      }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+<button onclick="newArray()">배열생성</button>
+<button onclick="removeAll()">배열삭제</button><br>
+값:<input type="text" name="v1" id="v1" >
+<button onclick="addData()">배열에 값 저장</button><br>
+<button onclick="printArray()">배열에 값 출력</button><br>
+<div id="result"></div>
+</body>
+</html>

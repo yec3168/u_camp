@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+    //구현
+
+    function info(){
+        let bName = document.querySelector('#bName');
+        let bVersion = document.querySelector('#bVersion')
+        let bOnLine = document.querySelector('#bOnLine');
+
+        bName.textContent = navigator.appName;
+        bVersion.value = navigator.appVersion;
+        bOnLine.textContent = navigator.onLine;
+    }
+</script>
+</head>
+<body>
+<h3>사용중인 웹 브라우저 정보 보기</h3><button onclick="info()">보기</button>
+<div>
+브라우저 이름:<span id="bName"></span><br>
+브라우저 버전:<input type="text" name="bVersion" id="bVersion"><br>
+브라우저 온라인 여부:<span id="bOnLine"></span><br>
+</div>
+</body>
+</html>

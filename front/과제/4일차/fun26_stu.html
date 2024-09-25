@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+     
+      /*
+                 함수 코드 구현
+      */
+    
+      let info=[]
+
+      let cnt = 1;
+
+      function save(){
+            let username = document.querySelector("#username").value;
+            let age = document.querySelector("#age").value;
+            let address = document.querySelector("#address").value;
+
+            let people ={
+                  one : `${cnt}번째 고객`,
+                  two: `이름:${username}`,
+                  three: `나이:${age}`,
+                  four: `주소:${address}`
+            }
+            cnt +=1;
+            info[info.length] = people;
+            console.log(info)
+      }
+
+      function print(){
+            let result = document.querySelector("#result");
+            
+            console.log(info[0].one)
+            for(let i =0; i < info.length; i++){
+                  result.innerHTML +=`${info[i].one}<br>${info[i].two}<br>${info[i].three}<br>${info[i].four}<br>`
+            }
+      }
+
+</script>
+</head>
+<body>
+<h3>JSON 객체</h3>
+이름<input type="text" name="username" id="username"><br>
+나이<input type="text" name="age" id="age"><br>
+주소<input type="text" name="address" id="address"><br>
+<button onclick="save()">저장</button><br>
+<button onclick="print()">출력</button><br>
+<div id="result">
+</div>
+</body>
+</html>
