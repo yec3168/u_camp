@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https:/www.daum.net">Daum</a>
+
+    <script>
+        // style 지정.
+        let element = document.querySelector('a');
+        element.style.color = 'red';
+        element.style.textDecoration = 'none';
+
+        //add
+        element.setAttribute("style", "text-shadow : 10px 5px 1px")
+        
+        //modify
+        element.setAttribute("href", "https://www.naver.com")
+    
+        // get
+        let getHref = element.getAttribute('href');
+        console.log(getHref);
+
+        //remove
+        element.removeAttribute('href')
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validationCheck(){
+            let inputs = document.querySelectorAll('input[type]');
+            let onSubmit = true;
+            for (let index in inputs){
+                if(inputs[index].value ===''){
+                    alert("값을 입력해주세요.")
+                    inputs[index].focus();
+                    onSubmit = false;
+                    break;
+                }
+            }
+            return onSubmit;
+        }
+    </script>
+</head>
+<body>
+    <form action="/main" method="get" onsubmit="return validationCheck()">
+        id : <input type="text"> <br>
+        pwd : <input type="password"><br>
+
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

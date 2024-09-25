@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color : red;
+        }
+
+        .color{
+            color : burlywood
+        }
+
+        .fontstyle {
+            font-style: italic;
+        }
+    </style>
+
+    <script>
+        function changeColor(){
+            let h = document.querySelector('h1');
+           // h.setAttribute("style", "color:green; background-color:blue");
+            
+            h.setAttribute('class', 'color')
+        }
+
+        function changeText(){
+            let div = document.querySelector('div');
+            div.innerHTML += "추가된 내용<span style= 'color: orange'> 데이터 </span> <br>>"
+        }
+    </script>
+</head>
+<body>
+    <h1>h1 테스트</h1>
+    <button type="button" onclick="changeColor()">체인지</button>
+    <button type="button" onclick="changeText()">내용변경</button>
+
+    <div></div>
+</body>
+</html>

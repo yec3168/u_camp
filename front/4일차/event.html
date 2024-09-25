@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function textField(event){
+            
+            alert(event.value)
+        }
+
+        function focusHandler(){
+            alert('커서가 input 태그에 있습니다.');
+        }
+        function overhandler(event){
+            console.log(event.x + " " + event.y);
+            
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+            onclick()이 리스너
+            값(함수)가 핸들러
+    -->
+    <input type="text" onclick="textField()"  onmouseover="textField(this)">
+
+    <div style="width: 300px; height: 300px; border: 1px solid black; " onmousemove
+    ="overhandler(event)"></div>
+</body>
+</html>

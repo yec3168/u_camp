@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function checkedTest(){
+            //radio
+            let radios = document.querySelectorAll('input[type=radio]')
+            console.log(radios)
+            for(let index in radios){
+                console.log(radios[index].checked);
+            }
+
+
+            //checkbox
+            let checkboxs = document.querySelectorAll('input[type=checkbox]')
+            console.log(checkboxs)
+            for(let index in checkboxs){
+                console.log(checkboxs[index].checked);
+            }
+
+
+            // select
+            let select = document.querySelector('select');
+            console.log(select)
+            console.log(select.options.length)
+            for(let index in select.options){
+                console.log(select.options[index].selected + " " +select.options[index].value)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="one" value="first"> first
+    <input type="radio" name="one" value="second"> second
+    <hr>
+    <input type="checkbox" name="sports" value="baseBall"> baseBall
+    <input type="checkbox" name="sprots" value="soccer"> soccer
+    <hr>
+    <select name="animal">
+        <option value="cat">고양이</option>
+        <option value="dog">강아지</option>
+    </select> <br><br><br>
+    <button onclick="checkedTest()">확인</button>
+
+
+    
+</body>
+</html>

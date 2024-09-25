@@ -1,0 +1,94 @@
+<script>
+    
+    /*
+            location
+        - 브라우저를 이동하는 속성. 
+        
+            1. href : 값
+            - 사이트를 이동.
+            2. reload 
+            - 새로고침
+    */
+    function move(){
+        location.href = 'https://www.daum.net'
+    }
+    function refresh(){
+        location.reload();
+    }
+
+    /*
+            history
+        - 뒤로가기, 앞으로가기
+            
+            1. back()
+            - 뒤로가기
+            2. forward()
+            - 앞으로가기
+            3. go(파라미터)
+            - 파라미터 만큼 이동
+            - 음수는 이전 페이지, 양수는 다음 페이지
+            4. length
+            - history 갯수
+    */  
+    function goBack(){
+        history.back();
+    }
+
+    function goFoward(){
+        history.forward();
+    }
+    
+    function goStep(step){
+        history.go(step);
+    }
+
+    /*
+            navigator
+        - 정보를 확인
+        
+            1.online
+            - 온라인상태(인터넷이 연결되었는지)인지
+            - true, false
+            2. platform
+            - 시스템 종류
+            3. language
+            - 언어
+            4. appName, appVersion
+            - 브라우저 이름
+            - 버전
+            5. product
+            - 브라우저 엔진
+            6. userAgent
+            - 브라우저와 운영체제의 종합 정보
+    */
+
+    function onCheckOnline(){
+        console.log(navigator.onLine);
+    }
+    function onCheckPlatform(){
+        console.log(navigator.platform);
+    }
+    function onCheckLanguage(){
+        console.log(navigator.language);
+    }
+    function onCheckAppName(){
+        console.log(navigator.appName);
+    }
+    function onCheckProduct(){
+        console.log(navigator.product);
+    }
+    function onCheckUserAgent(){
+        console.log(navigator.userAgent);
+    }
+
+
+    /*
+            Screen
+        - 화면에 대한 정보
+
+            1.width
+            2.heigth
+    */
+    console.log(screen.width)
+    console.log(screen.height)
+</script>

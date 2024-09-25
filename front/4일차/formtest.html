@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function formHandler(){
+            //let form = document.querySelector("form");
+            let form = document.myForm; 
+            console.log(form)
+
+            console.log(form.id.value)
+            console.log(form.pwd.value)
+            console.log(form.name.value)
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        id : <input type="text" name="id"> <br>
+        pwd : <input type="password" name="pwd"> <br>
+        name : <input type="text" name="name"><br>
+    </form>
+
+    <button onclick="formHandler()">버튼</button>
+</body>
+
+
+</html>

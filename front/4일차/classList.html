@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .red-color{
+            color : red;
+        }
+
+        .font-20{
+            font-size: 20px;
+        }
+
+        .background-green{
+            background-color: green;
+        }
+        .font-weight-700{
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <p>text</p>
+
+    <p id="tg">Toggle test</p>
+    
+    <script>
+        let ele = document.querySelector('p');
+
+        /*
+                classList    
+            - 클래스는 중복된 값 x
+            - 이미 존재하는 클래스는 add가 무시됨.
+            - 덮어쓰는 것이 아닌 스택 처럼 추가하는 것.ㄴ
+        */
+
+        //추가
+        ele.classList.add('red-color')
+        ele.classList.add('font-20')
+
+        ele.classList.add('background-green', 'font-weight-700')
+    
+        
+
+        //제거
+        ele.classList.remove('background-green')
+        
+
+
+        //토글
+        let tg = document.querySelector('#tg')
+        
+        setInterval( () => {
+            tg.classList.toggle("red-color");
+        }, 500)
+    </script>
+</body>
+</html>

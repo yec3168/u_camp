@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            height: 2000px;
+            width: 3000px;
+        }
+        button:nth-of-type(2){
+            position: fixed;
+            left: 100px;
+        }
+        
+        button:nth-of-type(3){
+            position: fixed;
+            left: 200px;
+        }
+        
+        button:nth-of-type(4){
+            position: fixed;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">제출</button>
+
+    <button onclick="stop()">멈춤</button>
+
+    <button onclick="sto()">scrollTo</button>
+    <button onclick="sby()">scrollby</button>
+</body>
+<script>
+
+
+    function printInfo(){
+        console.log("content가 표시되는 크기")
+        // content의 넓이니 창이 줄어들거나 하면 같이 줄어듬
+        console.log("창 너비 : " + window.innerWidth);
+        console.log("창 높이 : " + window.innerHeight);
+
+        
+        console.log("브라우저 너비 : " + window.outerWidth);
+        console.log("브라우저 높이 : " + window.outerHeight);
+
+        console.log("위쪽 간격 : " + window.screenTop );
+        console.log("좌측 간격 : " + window.screenLeft);
+        console.log("스크롤 위치X : " + window.scrollX);
+        console.log("스크롤 위치 Y : " + window.scrollY);
+    }
+    printInfo();
+
+
+
+
+
+
+    /*
+                window function
+            - alert : 경고창
+            - prompt : 입력창
+            - confrim : 확인 창
+            - open : 새 창
+            - close : 창 닫기
+            - setTimeout : 일정 시간 뒤 콜백함수 실행
+            - setInterval : 일정시간 마다 콜백함수 반복 실행
+            - clearInterval, setInterval : 메소드를 반복 실행되는 함수를 중지
+            - scrollTo, scrollby : 스크롤의 위치를 상대위치로 이동.
+    */
+    
+    alert("alert 테스트")
+    prompt("prompt 테스트")
+    confirm("confirm 테스트")
+    //open("https://www.naver.com")
+    
+    setTimeout(()=>{
+        alert("delay")
+    }, 3000)
+    
+    let timer = setInterval(() =>{
+            document.innerHTML += "1500W"
+    }, 1000)
+
+    
+
+    function sto(){
+            window.scrollTo(100, 200)
+    }
+
+    function sby(){
+            window.scrollBy(100, 200)
+    }
+
+    
+    
+
+</script>
+</html>

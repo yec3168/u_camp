@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p data-name="TV" data-price="1000" data-cnt="15" >TV</p>
+    <p data-name="Radio" data-price="500" data-cnt=12"">Radio</p>
+
+
+    <script>
+        let e = document.querySelectorAll("p")
+        console.log(e.length)
+
+        for(let i = 0 ; i < e.length; i++){
+            console.log(e[i])
+            console.log(e[i].getAttribute('data-price'))
+        }
+
+        console.log(e[0].dataset.name, e[0].dataset.price, e[0].dataset.cnt);
+        
+        
+    </script>
+</body>
+</html>
