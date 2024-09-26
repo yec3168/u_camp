@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/5일차/js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+    
+    <h1 class="one">첫번째 글</h1>
+    <p class="one">
+        벌써 목요일 입니다.
+    </p>
+    <h1 class="one two">두번째 글</h1>
+    <p class="two">
+        요즘 날씨가 쌀쌀하죠
+    </p>
+
+    <script>
+        // h1 text : orange
+        // p background : yello
+        // one : marign 10
+        // two : padding 20
+        $(document).ready(function(){
+            $('h1').css('color', 'orange');
+            $('p').css('background-color', 'yellow') 
+
+            $('.one').css('margin', '10px')
+            $('.two').css('padding', '20px')
+            $('.one.two').css('font-weight', '300')
+        });
+    </script>
+</body>
+</html>

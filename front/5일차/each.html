@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/5일차/js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+
+    <p>five</p>
+    <script>
+        $(document).ready(function(){
+            $("p").each(function(idx, item){
+                console.log(item);
+
+                if(idx % 2 == 0){
+                    $(this).css("color", 'red')
+                }
+                else    
+                    $(item).css('color', 'blue')
+            })
+        })
+    </script>
+</body>
+</html>

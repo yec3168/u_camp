@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <button onclick="myHandler()">클릭1</button>
+    <button id="btn2">클릭2</button>
+    <button id="btn3">클릭3</button>
+    <button id="btn4">클릭4</button>
+    <script>
+        let btn = document.querySelector('button'); //클립1
+
+        function myHandler(){
+            alert("이벤트")
+        }
+        btn.addEventListener("click", myHandler); //클릭1 이벤트리스너, 함수호출
+        btn.addEventListener("mouseover", ()=>{     // 클릭1 이벤트리스너 익명함수
+            console.log(scrollX + "  |  " + scrollY)
+        })
+
+
+        //클릭2
+        let btn2 = document.querySelector("#btn2")
+        btn2.addEventListener("mouseover", ()=>{
+            btn2.style.width = "100px"
+            btn2.style.height = "100px"
+        })
+
+
+        //클릭3
+        let btn3 = document.querySelector("#btn3")
+        btn3.onclick = ()=>{
+            alert("onclick 메소드")
+        }
+        
+    </script>
+</body>
+</html>

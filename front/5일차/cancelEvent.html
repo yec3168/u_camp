@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.google.co.kr">구글</a>
+
+    <p onclick="clickHandler(this)">one</p>
+    <span>first</span>
+    <span>second</span>
+    <span>third</span>
+
+    <script>
+
+        function clickHandler(p){
+            console.log(p)
+        }
+
+        
+        let a = document.querySelector("a");
+        a.addEventListener("click", (event)=>{
+            alert("내가만든이벤트")
+            // preventDefault()
+            // - 기존에 적용된 이벤트를 삭제
+            // - href로 링크 타는 것 또한 이벤트임.
+            event.preventDefault();
+            
+        })
+
+
+        // let p = document.querySelector("p")
+        // p.onclick = () => {
+        //     console.log(p.innerHTML);
+        // }
+
+        let spanList = document.querySelectorAll("span");
+        spanList.forEach( (span) => {
+            span.addEventListener('click', (event) => {
+                console.log ( "span " + span.innerHTML)
+            })
+        })
+
+        
+    </script>
+</body>
+
+</html>

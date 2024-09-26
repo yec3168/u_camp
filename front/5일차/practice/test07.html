@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/5일차/js/jquery-2.2.4.min.js"></script>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일자</th>
+            <th>조회수</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>첫번째</td>
+            <td>홍길동</td>
+            <td>2024-09-26</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2번째</td>
+            <td>ㅂ길동</td>
+            <td>2024-09-26</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3번째</td>
+            <td>ㄱ길동</td>
+            <td>2024-09-26</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4번째</td>
+            <td>ㅁ길동</td>
+            <td>2024-09-26</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5번째</td>
+            <td>ㄴ길동</td>
+            <td>2024-09-26</td>
+            <td>5</td>
+        </tr>
+ 
+    </table>
+
+    <script>
+        $('tr:odd').css('background-color', 'lightblue');
+        $('tr:even').css('color', 'blue');
+        $('tr:first').css('font-size', '20px')
+        $('tr:last').css('text-shadow', '5px 5px 2px black')
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/5일차/js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    
+    id : <input type="text" id="myId" readonly> <button id='dupCheck'>중복확인</button><br>
+    pw : <input type="password" id="password1" on> <br>
+    chk_pw : <input type="passowrd" id="password2"disabled><br>
+    dept: <select name="dep">
+                <option>정치</option>
+                <option>경제</option>
+                <option>사회</option>
+                <option>문화</option>
+            </select><br>
+    <input type="submit" value="Login">
+
+
+    <script>
+        $(document).ready(function(){
+            // $("input[type=submit]").click(function(){
+            //     alert("클릭")
+            // })
+            $('#dupCheck').on('click', function(){
+                window.open("test06.html",'새창','width=300px, height=300px')
+            })
+            $("input[type=submit]").on('click', function(){
+                let pwd1 = $('#password1').val();
+                let pwd2 = $('#password2').val();
+                let id = $('#myId').val();
+                let dept = $('select[name=dep]').val();
+                console.log(dept)
+                if(pwd1 === pwd2){
+                    alert("회원가입 성공")
+                }
+                else{
+                    $('#password1').val("");
+                    $('#password2').val("");
+                }
+            })
+
+
+            $("#password1").on('keyup', function(){
+                let data = $(this).val();
+                
+                console.log(data.length)
+                if( data.length >0){
+                    $('#password2').prop('disabled', false)
+                }
+                else
+                $('#password2').prop('disabled', true)
+            })  
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front//5일차/js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <h1>Jquery를 사용하여 셀렉터 테스트</h1>
+    <input type="text" value="하나둘셋넷" id="text">
+    
+    
+    <script>
+    $(document).ready(function(){
+        $('h1').css('color', 'red');
+
+        // id로 가져오기
+        console.log($('#text').val());
+    });
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="/front/5일차/js/jquery-2.2.4.min.js"></script>
+
+    </head>
+    <body>
+        <input type="text">
+        <button>확인</button>
+
+        <script>
+            $(document).ready(function(){
+                $("button").on("click", function(){
+                    let idVal = $("input[type=text]").val();
+                    
+                    // 부모의 문서를 찾음
+                    opener.document.querySelector('#myId').value = idVal;
+                    close();
+                })
+            })
+        </script>
+    </body>
+</html>

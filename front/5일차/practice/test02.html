@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+
+    <script>
+        let input = document.querySelector('#text');
+
+        input.addEventListener("keydown", (event)=>{
+            console.log(event.key + " | " + event.keyCode)
+            console.log(event.ctrlKey)
+            console.log(event.shiftKey)
+            console.log(event.enterKey)
+        })
+    </script>
+</body>
+</html>
