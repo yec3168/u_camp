@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function info(img){
+        let file_name = img.src.substr(-5);
+        //console.log(file_name)
+
+        let result =document.querySelector('#result');
+        result.innerHTML = `<h1>${file_name}</h1>`;
+
+    }
+
+</script>
+</head>
+<body>
+이미지 이름 알아보기<br>
+<img src="a.jpg" width="100" height="100" onmouseover="info(this)">
+<img src="b.jpg" width="100" height="100" onmouseover="info(this)">
+<img src="c.jpg" width="100" height="100" onmouseover="info(this)"><br>
+파일명:<span id="result"></span>
+</body>
+</html>

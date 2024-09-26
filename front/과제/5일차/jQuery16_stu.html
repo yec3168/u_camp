@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		 //구현
+		let ok = false;
+		$('input[type=submit]').on('click', function(e){
+		
+			if( $('#userid').val() == ''){
+				e.preventDefault();
+				$('#idSpan').text('아이디값을 입력하시오.')
+			}
+			else if( $('#userid').val().length >= 4 && $('#userid').val().length <= 10){
+				ok =true;
+				e.preventDefault();
+				$('#idSpan').text('')
+				
+			}
+			else{
+				e.preventDefault();
+				$('#idSpan').text('아이디값은 4~10자입니다.')
+			}
+
+
+			if($('#passwd').val() == ''){
+				e.preventDefault();
+				$('#pwSpan').text('비밀번호값을 입력하시오.')
+			}
+			else{
+				if(ok)
+					window.open('success.html', '_self')
+				else
+					e.preventDefault();
+			}
+		})
+	});
+</script>
+</head>
+<body>
+<form action="success.html">
+ 아이디<input type="text" name="userid" id="userid">
+ <span id="idSpan"></span><br>
+ 비밀번호<input type="text" name="passwd" id="passwd">
+ <span id="pwSpan"></span><br>
+  <input type="submit" value="로그인" >
+ </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function allCheck(all){
+        //console.log(all.checked)
+        let checkbox = document.querySelectorAll("input[type=checkbox].lang");
+
+        //console.log(checkbox)
+        if(all.checked){
+            for(let i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = true;
+            }
+        }
+        else{
+            for(let i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = false;
+            }
+        }
+    }
+
+</script>
+</head>
+<body>
+전체선택
+<input type="checkbox" name="all" onclick="allCheck(this)"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

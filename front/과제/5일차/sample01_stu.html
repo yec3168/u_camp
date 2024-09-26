@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   /*
+       구현
+   */
+   
+    function up(){
+        let text = document.querySelector('#quantity');
+        let temp = Number(text.value) + 1;
+        
+        text.value = temp;
+    }
+
+    function down(){
+        let text = document.querySelector('#quantity');
+        if(text.value == 1)
+            return;
+        let temp = Number(text.value) - 1;
+        text.value = temp;
+    }
+
+</script>
+</head>
+<body>
+갯수<input type="text" name="quantity"  id="quantity" value="1">
+<button id="up" onclick="up()">+</button><button id="down" onclick="down()">-</button>
+</body>
+</html>
