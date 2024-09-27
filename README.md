@@ -229,3 +229,43 @@
  - 객체, 배열
 
 <hr>
+
+
+### 09월 25일
+- window function
+- location function
+- navigator function
+- history function
+- screen function
+- radio. checkbox, select (checked, selected)
+- createElement, appendchild, firstElementChild, lastElementchild
+- setAttribute
+- classList
+- event
+    - click
+    - mouseover
+    - mousemove
+       ..etc
+
+
+<hr>
+
+### 09월 26일
+- addEventListener
+- h1.onclick = () =>{}
+- event
+    - keyup
+    - keydown
+    - keypress
+- e.preventDefault
+- Jquery
+    - ready() : window.onload || <body onload="">
+    - $(셀렉터).css
+    - $(셀렉터).on('click', function(){})
+    - $(셀렉터).click(function(){})
+    - $(셀렉터).prop()  == document.querySelector(셀렉터).setAttribute
+    - $(셀렉터).val() = document.querySelector(셀렉터).value
+    - $(셀렉터).text() = document.querySelector(셀렉터).textContent
+    - $(셀렉터).each(function(){})
+ 
+  <hr>
