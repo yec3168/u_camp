@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .one-0 {
+            color: red;
+            background-color: yellow;
+        }
+
+        .one-1 {
+            color: blue;
+            background-color: gray;
+        }
+
+    </style>
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+    <script>
+        
+        /*
+                    addclass
+                - 클래스를 추가하는 것.
+                - function를 써서 추가도 가능하나, 단순히 문자열만 입력해서도 가능.
+                
+        */
+        $(document).ready(function(){
+            //$("h1").addClass("one");
+            $("h1").addClass(function(index){
+                return "one-" + (index%2);
+            });
+
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>데이터...</h1>
+    <h1>Data</h1>
+    <h1>데이터</h1>
+    <h1>Data</h1>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            /*
+                        filter
+                - function에서 return에 조건을 걸어서 filter를 걺
+                - css 혹은 prop 등 다양한 속성을 부여 가능.
+                - filter 마지막에 '.end()'를 부이면 문서 객체 선택을 한 단계 뒤로 돌린다.
+
+                    1. end()
+                        - filter를 적용시키기 바로 전 상태로 돌아감.
+                    2. eq()
+                        - 특정위치에 존재하는 문서 객체를 선택.
+                    3. first()
+                        - 첫 번째 위치하는 문서 객체 생성.
+                    4. last()
+                
+            */
+            $('h3').filter(function(idx){
+                return idx % 3 == 0;
+            }).css("background-color", 'red')
+
+
+            // 첫 번째 필터를 적용한 결과에 odd가 적용됨. 
+            $('div').css('color', 'blue').filter(':even').css('background-color', 'yellow')
+                                        .filter(':odd').css('background-color', 'green')
+
+            // 중복 작성해야지 적용.
+            $('div').css('color', 'blue').filter(':even').css('font-size', '20px')
+            $('div').css('color', 'blue').filter(':odd').css('font-size', '40px')
+
+            // 1. end(): filter나 css 등 여러 속성을 적용하기 전 상태로 돌아감.
+            $('div').css('color', 'blue').filter(':even').css('background-color', 'purple').end()
+                                        .filter(':odd').css('background-color', 'black')
+
+            
+
+
+            // 2. eq(index) : div 리스트의 인덱스의 값이 같은 태그를 선택.
+            $("div").eq(3).css('background-color', 'white')
+            $("div").eq(-2).css('background-color', 'white')
+            
+            //3. first
+            $("div").first().css('background-color', 'red')
+
+            //4. last
+            $("div").last().css('background-color', 'lightblue')
+        })
+    </script>
+</head>
+<body>
+    <h3>one</h3>
+    <h3>two</h3>
+    <h3>three</h3>
+    <h3>four</h3>
+    <h3>five</h3>
+    <h3>six</h3>
+    <h3>seven</h3>
+
+    <hr>
+    
+    <div>100</div>
+    <div>200</div>
+    <div>300</div>
+    <div>400</div>
+    <div>500</div>
+    <div>600</div>
+    <div>700</div>
+    <div>800</div>
+    
+</body>
+</html>

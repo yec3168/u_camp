@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+
+        /*
+                attr
+            - 속성을 조회, 추가, 수정 하는 것.
+                
+                조회
+            1. attr('href')
+
+                수정
+            2. attr('href', 'www.naver.com')
+
+                추가
+            3. attr('style', 'font-size: 30px')
+
+
+                attr({
+                    href : www.naver.com,
+                    class : link,
+                    style : "text-decoration:none"
+                })
+
+            
+                제거
+            4. removeAttr("style")
+            - key값을 넣어주면 됨.
+            
+        */
+        $(document).ready(function(){
+            console.log($('a'))
+            $('a').attr("href", "https://www.google.com")
+            console.log($('a').attr('href'));
+
+            $('a').attr('style', 'text-decoration:none')
+            $('a').attr('class', 'link');
+
+
+            $('a').attr({
+                href: 'https://www.github.com',
+                class: 'link',
+                style: 'font-size:50px; text-decoration:none',
+                id : function(index){
+                    return index+1;
+                }
+            })
+
+            $('a').removeAttr('class');
+        })
+    </script>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.daum.net">다음</a>
+</body>
+</html>

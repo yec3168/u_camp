@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        let imgList = ['/front/과제/5일차/a.jpg', '/front/과제/5일차/b.jpg', '/front/과제/5일차/c.jpg']
+        $(document).ready(function(){
+            
+            setInterval(function(){
+                $('img').first().appendTo("body");
+            }, 1000)
+        })
+    </script>
+</head>
+<body>
+    <img src="/front/과제/5일차/a.jpg" width="100"> 
+    <img src="/front/과제/5일차/b.jpg" width="100">
+    <img src="/front/과제/5일차/c.jpg" width="100">
+</body>
+</html>

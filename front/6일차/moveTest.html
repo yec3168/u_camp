@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            color:red;
+        }
+        .two{
+            color:blue;
+        }
+        .three{
+            background-color: green;
+        }
+        .four{
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            //append를 사용하면 기존에 있는게 이동되는 현상이 발생.
+            
+            //$('div').first().appendTo($('div').last())
+            //$('div').first().appendTo($('body'))
+
+
+            // copy
+            // clone을 사용하면 기존에 있던게 복사가 된 상태로 남아 있음.
+            let clone = $('div').first().clone();
+            $('div').last().append(clone)
+        })
+    </script>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div>
+    <div class="four">four</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#one').html("<h1>rrrrrrrrrrrr</h1>")
+            
+            $('#two').text("<h1>rrrrrrrrrrrr</h1>")
+
+            // html내부에서 제거.
+            $('div').remove();
+
+            // 문자열 내부를 비움
+            // 내부 텍스트만 지우는 것.
+            // 자식 클래스도 지움.
+            $('span').empty();
+
+
+
+            /*
+                    appendTo(테그)
+                - 태그에 이어 붙임.
+            */
+           $('<h1></h1>').html('appendTo로 추가한 데이터').appendTo('span')
+           $('<p>p태그 appendTo</p>').appendTo('body')
+           $('body').append('<p>일반 appen</p>')
+        })
+    </script>
+</head>
+<body>
+    <p id="one"></p>
+    <p id="two"></p>
+
+    <div>asdasd</div>
+    <span>문자열 : <h1>asd</h1></span>
+</body>
+</html>

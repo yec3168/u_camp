@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // $('h1', this)를 하면 조건에 맞는 여러 h1중 해당 div 안에 h1이 출력.
+            $('div').on('click', function(){
+                console.log($('h1', this))
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1>one</h1>
+        <p>first</p>
+    </div> 
+    <div>
+        <h1>two</h1>
+        <p>second</p>
+    </div> 
+</body>
+</html>

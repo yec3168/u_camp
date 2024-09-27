@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        /*
+                    add
+                - 문서 객체를 추가적으로 선택.
+                - new element ( x )
+                    ex) div와 p를 한 번에 선택하고 싶을 때.
+                        $('div').add('p')
+                - 대신 add 뒤에 filter, css 등 속성을 적용시 add 전, 후 태그 둘 다 적용.
+
+
+                
+                    is
+                - 문서 객체가 특징이 있는지 확인 하는 것.
+
+        
+        */
+        $(document).ready(function(){
+            $('div').css('font-size', '20px').add("p").css('background-color', 'lightgreen');
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            /*
+                        XML
+                    - parseXMl 사용해서 xml로 작성된 것을 xml로 바꿔줌.
+            */
+            let doc = "<list>";
+                    doc += "<data>";
+                        doc += "<price>1000</price>";
+                        doc += "<name>asd</name>"
+                    doc += "</data>";
+
+                    doc += "<data>";
+                        doc += "<price>2000</price>";
+                        doc += "<name>qwe</name>"
+                    doc += "</data>";
+
+                    doc += "<data>";
+                        doc += "<price>3000</price>";
+                        doc += "<name>123</name>"
+                    doc += "</data>";
+        
+                doc += "</list>"
+
+
+            
+            let xmlDom = $.parseXML(doc);
+            let resultList = '';
+            $(xmlDom).find('data').each(function(idx, item){
+                let name = $(item).find('name').text();
+                let price = $(item).find('price').text();
+
+                let result = "<tr>"
+                        result += `<td>${name}</td>`
+                        result += `<td>${price}</td>`
+                    result += "</tr>" 
+
+                resultList += result;
+            })
+
+            // innerHTML = html
+            $('table').html(resultList)
+        })
+
+    </script>
+</head>
+<body>
+    add 연습
+    <div>100</div>
+    <p>asd</p>
+    
+
+    <hr>
+
+    <table border="1">
+
+    </table>
+</body>
+</html>

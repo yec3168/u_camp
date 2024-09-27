@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/front/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        const list = [
+            {'name' : 'one', 'addr' : 'seoul'},
+            {'name' : 'two', 'addr' : 'daejeon'},
+            {'name' : 'three', 'addr' : 'incheon'}
+        ]
+
+        $(document).ready(function(){
+            $("div").append(function(index){
+                let item_1 = `<h1>${list[index].name}</h1>`
+                let item_2 = `<h1>${list[index].addr}</h1>`
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>
