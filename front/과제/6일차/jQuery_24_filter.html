@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var sum = 0;
+            $("#sum").on("click",function(){
+                sum=0;
+                $("ul>li").filter(function(idx){
+                        console.log(idx + " 들어옴");
+                        return idx % 2 != 0;
+                    }).each(function(){
+                        sum += Number($(this).html());
+                    });
+                    console.log(sum);
+                    $("#result").html(sum);
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>5</li>
+        <li style="color: red; font-size: 30px;">15</li>
+        <li >25</li>
+        <li style="color: red; font-size: 30px;">35</li>
+        <li>45</li>
+        <li style="color: red; font-size: 30px;">55</li>
+        <li>65</li>
+    </ul>
+    <button id="sum">li태그의 총합계</button><br>
+    합계:<span id="result"></span>
+</body>
+
+</html>
