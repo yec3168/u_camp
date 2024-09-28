@@ -22,13 +22,13 @@
             success: function(data, status, xhr){
               console.log(data.boxOfficeResult.dailyBoxOfficeList[0])
               
-              let list = data.boxOfficeResult.dailyBoxOfficeList;
+              let list = data.boxOfficeResult.dailyBoxOfficeList;             
               let print =`<tr>
                             <th>순위</th>
                             <th>제목</th>
                             <th>개봉일</th>
                             <th>상영횟수</th>
-                          </tr>`;
+                          </tr>`;                          
               for(let i = 0; i < list.length; i++){
                   print += `<tr>`
                     print += `<td>${list[i].rnum}</td>`
