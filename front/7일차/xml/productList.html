@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').on('click', function(){
+                $.ajax({
+                    url: 'data.xml',
+                    dataType : 'xml',
+                    success: function(data){
+                        let productList = $(data).find("product")
+
+                        $.each(productList, function(index, item){
+                            let tr = "<tr>"
+                                tr += `<td> ${$(item).find('num').text()} </td>`
+                                tr += `<td> ${$(item).find('name').text()} </td>`
+                                tr += `<td> ${$(item).find('company').text()} </td>`
+                                tr += `<td> ${$(item).find('price').text()} </td>`
+                                tr += `</tr>`
+
+                                let oldDate = $('table').html();
+
+                                $('table').html(oldDate + tr);
+                        })
+                    }
+            
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <button>데이터불러오기</button>
+    </div>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>제조사</th>
+            <th>가격</th>
+        </tr>
+    </table>
+</body>
+</html>

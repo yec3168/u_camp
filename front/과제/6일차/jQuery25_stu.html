@@ -21,6 +21,8 @@
             dataType: 'json',
             success: function(data, status, xhr){
               console.log(data.boxOfficeResult.dailyBoxOfficeList[0])
+              console.log(status)
+              console.log(xhr)
               
               let list = data.boxOfficeResult.dailyBoxOfficeList;             
               let print =`<tr>

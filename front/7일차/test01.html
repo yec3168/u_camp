@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'ajax.html',
+                data:{
+                    id:'aaaa',
+                    pwd:'bbbb'
+                },
+                success: function(data, status, xhr){
+                    console.log(data)
+                    $('body').html(data);
+                },
+                error: function(data, status, xhr){
+                    console.log(result)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>

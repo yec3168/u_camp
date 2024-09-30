@@ -1,0 +1,26 @@
+<productList>
+    <product>
+        <num>1</num>
+        <name>asd</name>
+        <company>LG</company>
+        <price>2000</price>
+    </product>
+    <product>
+        <num>2</num>
+        <name>qwe</name>
+        <company>LG</company>
+        <price>3000</price>
+    </product>
+    <product>
+        <num>3</num>
+        <name>123asf</name>
+        <company>LG</company>
+        <price>4000</price>
+    </product>
+    <product>
+        <num>4</num>
+        <name>dagaegwg</name>
+        <company>LG</company>
+        <price>5000</price>
+    </product>
+</productList>
