@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript"> 
+            $(document).ready(function(){
+                let datas;
+                $.ajax({
+                    url: 'orderList.json',
+                    method:'get',
+                    dataType: 'json',
+                    success:function(data, status, xhr){
+                        datas = data;
+                        for(let i =0; i < data.length; i++){
+                            let table = $('#one').html();
+                            let row = `<tr>`;
+                                row += `<td>${data[i].orderNum}</td>`;
+                                row += `<td><a href='#'>${data[i].memName}</a></td>`;
+                        
+                            let quantity = 0;
+                            let price = 0;
+                            console.log(data[i].orderItems)
+                            for(let j =0; j< data[i].orderItems.length;j++){
+                                    quantity += Number(data[i].orderItems[j].quantity);
+                                    price += Number(data[i].orderItems[j].itemPrice * data[i].orderItems[j].quantity);
+                            }
+
+                            console.log(quantity + " " + price)
+                        
+                                row += `<td>${data[i].orderDt}</td>`;
+                                row += `<td>${quantity}</td>`;
+                                row += `<td>${price}</td>`;
+                            row += `</tr>`;
+
+                            $('#one').html(table+row)
+                        }
+                    }
+                })
+                $('button').on('click', function(){
+                    let input =  Number($('input').val());
+                    let orderList = datas[input-1].orderItems;
+                    $('#two').attr('style', 'display:block;')
+                    let tr = $('#two').html()
+                    console.log(tr)
+
+                    for(let i=0; i < orderList.length; i++){
+                        let table = $('#two').html();
+                            let row = `<tr>`;
+                                row += `<td>${input}</td>`;
+                                row += `<td>${orderList[i].itemNum}</td>`;
+                                row += `<td>${orderList[i].itemName}</td>`;
+                                row += `<td>${orderList[i].itemPrice}</td>`;
+                                row += `<td>${orderList[i].quantity}</td>`;
+                                row += `</tr>`;
+
+                                $('#two').html(table+row)
+                        }
+                    
+                 }) // button
+            }); // document.ready
+
+         
+            
+        </script>
+
+    </head>
+    <body>
+        <h3>상품 주문 목록</h3>
+        <hr/>
+        <p>
+            검색 : <input type="text" /><button>검색</button>
+        </p>
+        <table border="1" id="one">
+            <tr>
+                <th>Order Num</th>
+                <th>Member Name</th>
+                <th>Order date</th>
+                <th>Product Count</th>
+                <th>Total Price</th>
+            </tr>          
+        </table>    
+        <hr/>
+        <div>
+            <table border="1" style="display:none" id="two">
+                <tr>
+                    <th>Order Num</th>
+                    <th>item Num</th>
+                    <th>item Name</th>
+                    <th>price</th>
+                    <th>order qty</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
