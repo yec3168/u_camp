@@ -4,8 +4,11 @@
         <script
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript"> 
+         let datas;
+         let twoTable;
             $(document).ready(function(){
-                let datas;
+                // let datas;
+                // let twoTable;
                 $.ajax({
                     url: 'orderList.json',
                     method:'get',
@@ -16,7 +19,7 @@
                             let table = $('#one').html();
                             let row = `<tr>`;
                                 row += `<td>${data[i].orderNum}</td>`;
-                                row += `<td><a href='#'>${data[i].memName}</a></td>`;
+                                row += `<td><a href='#' onclick="clickData(${data[i].orderNum}, ${data[i]-1})">${data[i].memName}</a></td>`;
                         
                             let quantity = 0;
                             let price = 0;
@@ -26,7 +29,7 @@
                                     price += Number(data[i].orderItems[j].itemPrice * data[i].orderItems[j].quantity);
                             }
 
-                            console.log(quantity + " " + price)
+                            //console.log(quantity + " " + price)
                         
                                 row += `<td>${data[i].orderDt}</td>`;
                                 row += `<td>${quantity}</td>`;
@@ -34,6 +37,7 @@
                             row += `</tr>`;
 
                             $('#one').html(table+row)
+                            twoTable = $('#two').html();
                         }
                     }
                 })
@@ -41,12 +45,12 @@
                     let input =  Number($('input').val());
                     let orderList = datas[input-1].orderItems;
                     $('#two').attr('style', 'display:block;')
-                    let tr = $('#two').html()
-                    console.log(tr)
 
+                    let tr = twoTable;
+                    //console.log(tr)
+                    let row ="";
                     for(let i=0; i < orderList.length; i++){
-                        let table = $('#two').html();
-                            let row = `<tr>`;
+                            row += `<tr>`;
                                 row += `<td>${input}</td>`;
                                 row += `<td>${orderList[i].itemNum}</td>`;
                                 row += `<td>${orderList[i].itemName}</td>`;
@@ -54,13 +58,33 @@
                                 row += `<td>${orderList[i].quantity}</td>`;
                                 row += `</tr>`;
 
-                                $('#two').html(table+row)
+                                
                         }
+                        $('#two').html(tr+row)
                     
                  }) // button
+
             }); // document.ready
 
-         
+            function clickData(num){
+                    let orderList = datas[num-1].orderItems;
+                    //console.log(orderList)
+                    $('#two').attr('style', 'display:block;')
+                    let tr = twoTable;
+                    //console.log(tr)
+
+                    let row ="";
+                    for(let i=0; i < orderList.length; i++){
+                            row += `<tr>`;
+                                row += `<td>${datas[num-1].orderNum}</td>`;
+                                row += `<td>${orderList[i].itemNum}</td>`;
+                                row += `<td>${orderList[i].itemName}</td>`;
+                                row += `<td>${orderList[i].itemPrice}</td>`;
+                                row += `<td>${orderList[i].quantity}</td>`;
+                            row += `</tr>`;   
+                        }
+                        $('#two').html(tr+row)
+                }
             
         </script>
 
