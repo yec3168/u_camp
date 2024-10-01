@@ -26,7 +26,6 @@
                         }
 
                         // 초기화.
-                        countperPage = page;
                         total_data = data;
                         max_count = data.length;
                         table = $('table').html(); // 임시 저장
@@ -51,7 +50,7 @@
                 console.log(total_data)
                 let start = (pageNum - 1) * 5;
                 let end = (pageNum )* 5
-                
+                let diff = end - max_count;
                 
                 if(end >= max_count){
                     end = max_count;
@@ -62,14 +61,27 @@
                 let row ="";
                 for(let i = start; i < end; i++){
                         
-                         row += `<tr>`;
-                            row += `<td>${total_data[i].num}</td>`;
-                            row += `<td><a href='#'>${total_data[i].title}</a></td>`;
-                            row += `<td>${total_data[i].createDt}</td>`;
-                            row += `<td>${total_data[i].hit}</td>`;
-                            row += `</tr>`;
-                            $('table').html(t+row);
+                        row += `<tr>`;
+                        row += `<td>${total_data[i].num}</td>`;
+                        row += `<td><a href='#'>${total_data[i].title}</a></td>`;
+                        row += `<td>${total_data[i].createDt}</td>`;
+                        row += `<td>${total_data[i].hit}</td>`;
+                        row += `</tr>`;
+                        $('table').html(t+row);
                     }
+                // 만약 총 개수가 5의 배수가 아닌 경우 ( 12, 18 ...)
+                // 나머지의 차이를 undefined로 채워놓음. ( 3개, 2개) 
+                t = $('table').html();
+                row ="";
+                for(let i = 0; i < diff; i++){
+                    row += `<tr>`;
+                        row += `<td>undefined</td>`;
+                        row += `<td>undefined</td>`;
+                        row += `<td>undefined</td>`;
+                        row += `<td>undefined</td>`;
+                        row += `</tr>`;
+                        $('table').html(t+row);
+                }
             }
 
         </script>
