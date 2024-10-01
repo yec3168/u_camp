@@ -16,8 +16,11 @@
       //구현
       $('#req').on('click', function(){
         let input = $('#targetDt').val();
+        if(input == ''){
+          input = '20110101'
+        }
           $.ajax({
-            url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=20120101',
+            url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt='+input,
             method: 'get',
             dataType: 'json',
             success: function(data, status, xhr){
