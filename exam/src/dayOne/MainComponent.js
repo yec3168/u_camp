@@ -17,8 +17,8 @@ const MainComponent = () =>{
                     </th>
                 </tr>
             </table>
-            <a href="addMember">회원가입</a>
-            <a href="classType">클래스타입</a>
+            <a href="addMember">회원가입 </a>
+            <a href="classType"> 클래스타입</a>
         </>
     );
 }

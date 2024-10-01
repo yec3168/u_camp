@@ -6,6 +6,10 @@ import LoginComponent from './dayOne/LoginComponent'
 import ClsComponent from './dayOne/ClsComponent'
 import DivComponent from './dayOne/DivComponent'
 import DataTest from './dayOne/DataComponent';
+import CmpComponent from './dayOne/CmpComponent';
+import MapTest from './dayOne/MapTest'
+import MyEventComponent from './dayOne/MyEventComponent'
+import StateTest from './dayOne/Statetest';
 
 const App = () => {
   
@@ -18,6 +22,10 @@ const App = () => {
                 <Route path="classType" element={<ClsComponent />}></Route>
                 <Route path="divComponent" element={<DivComponent />}></Route>
                 <Route path="dataTest" element={<DataTest />}></Route>
+                <Route path="cmpComponent" element={<CmpComponent />}></Route>
+                <Route path="mapTest" element={<MapTest />}></Route>
+                <Route path="myEventComponent" element={<MyEventComponent />}></Route>
+                <Route path="stateTest" element={<StateTest />}></Route>
             </Routes>
         </BrowserRouter>
     </>
