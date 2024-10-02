@@ -112,6 +112,7 @@ const MissionFour = () => {
         }    
     ];
     const [newBoard, setBoardList] = useState(boardList);
+
 	const list = () => {
         return (
             newBoard.map((data) =>{
@@ -119,7 +120,7 @@ const MissionFour = () => {
                     <tr>
                         <td>{data.num}</td>
                         <td>{data.title}</td>
-                        <td>{data.createDt}</td>
+                        <td>{data.createDt}</td>    
                         <td>{data.hit}</td>
                     </tr>
                 )
@@ -128,15 +129,24 @@ const MissionFour = () => {
 	};
 
     const findBoard = (e) =>{
+        console.log(e.target.value)
         let word = e.target.value;
         
         let findList =[];
         
-        for(let i = 0 ; i< boardList.length; i++){
-            if((boardList[i].title).includes(word)){
-                findList.push(boardList[i]);
-            }
-        }
+        // 반복문
+        // for(let i = 0 ; i< boardList.length; i++){
+        //     if((boardList[i].title).includes(word)){
+        //         findList.push(boardList[i]);
+        //     }
+        // }
+
+
+        // map을 사용.
+        boardList.map((board) => {
+            if(board.title.includes(word))
+                findList.push(board);
+        })
 
         setBoardList(findList);
 
