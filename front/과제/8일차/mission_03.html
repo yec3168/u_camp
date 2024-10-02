@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 회원 정보를 저장할 데이터.
+        let dataList = [];
+
+        const addData = () =>{
+            // 1. input에 입력한 데이터를 가져온다.
+            let id = document.querySelector('#id').value; //사원ID값
+            let pw = document.querySelector('#pw').value; // pw값
+            let name = document.querySelector('#name').value; //name값
+            let email = document.querySelector('#email').value; // email값
+            // 현재 날짜를 구해주는 Date 객체
+            let today = new Date()
+            let createDt = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+
+
+
+            //2. 가져온 데이터를 객체 형태로 저장한다.
+            let data ={
+                "id" : id,
+                "pw" : pw,
+                "name" : name,
+                "email" : email,
+                "createDt": createDt
+            };
+
+            // 3. 데이터를 배열에 저장한다.
+            // * 이때 배열을 지역변수로 선언하면 addData에서만 사용이 가능하기 때문에 배열은 전역변수로 선언한다.
+            dataList.push(data);
+            //console.log(dataList)
+
+
+            //4. 화면에 출력하기 위해 함수 호출( 따로 분리해서 작성 )
+            printTable();
+        }
+
+
+        const removeData = () =>{
+            // 1. 사원 id의 데이터를 가져옴
+            let id = document.querySelector('#id').value;
+
+            // 2. 임시 저장할 배열 생성.
+            let newArray = [];
+
+            // 3. dataList의 값들을 하나 씩 확인해서 id와 일치하면 continue
+            //                                           일치하지 않으면  newArray에 data를 push
+            for(let i = 0; i <dataList.length; i++){
+                if(dataList[i].id === id){
+                    continue;
+                }
+                else{
+                    newArray.push(dataList[i])
+                }
+            }
+
+            // 4. dataList의 값을 newArray로 바꿔 준다.
+            dataList = newArray;
+
+            
+            // 5. 테이블 출력.
+            printTable();
+        }
+
+
+
+        //전체조회
+        const printTable = () =>{
+            // 1. #memberList를 querySelector로 가져옴
+            let memberList = document.querySelector("#memberList");
+
+
+            // 2. 테이블을 출력.
+            let row =`
+                    <tr>
+                        <th>사원ID</th>
+                        <th>비번</th>
+                        <th>이름</th>
+                        <th>이메일</th>
+                        <th>생성일</th>
+                    </tr>
+            `;
+            
+            for(let i = 0; i < dataList.length; i++){
+                row += `<tr>`;
+                    row += `<th>${dataList[i].id}</th>`;
+                    row += `<th>${dataList[i].pw}</th>`;
+                    row += `<th>${dataList[i].name}</th>`;
+                    row += `<th>${dataList[i].email}</th>`;
+                    row += `<th>${dataList[i].createDt}</th>`;
+                row += `</tr>`;
+            }
+
+            memberList.innerHTML =  row;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>사용자 관리</h1>
+
+    <button id="all">전체조회</button>
+    <input type="text" id="search">
+    <button id="searchBtn">ID검색</button>
+
+
+    <table border="1" id="memberList">
+        <tr>
+            <th>사원ID</th>
+            <th>비번</th>
+            <th>이름</th>
+            <th>이메일</th>
+            <th>생성일</th>
+        </tr>
+    </table>
+    
+
+    <hr>
+
+    <table border="1" id="formTable">
+        <tr>
+            <td>사원</td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td>비번</td>
+            <td><input type="password" id="pw"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+    </table>
+
+    <button type="button" id="add" onclick="addData()">추가</button>
+    <button type="button" id="remove" onclick="removeData()">삭제</button>
+    <button type="button" id="update">수정</button>
+</body>
+</html>

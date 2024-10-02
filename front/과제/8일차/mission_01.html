@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>사용자 관리</h1>
+
+    <button id="all">전체조회</button>
+    <input type="text" id="search">
+    <button id="searchBtn">ID검색</button>
+
+
+    <table border="1" id="memberList">
+        <thead>
+            <tr>
+                <th>사원ID</th>
+                <th>비번</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>생성일</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+
+    <hr>
+
+    <table border="1" id="formTable">
+        <tr>
+            <td>사원</td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td>비번</td>
+            <td><input type="password" id="pw"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+    </table>
+
+    <button type="button" id="add">추가</button>
+    <button type="button" id="remove">삭제</button>
+    <button type="button" id="update">수정</button>
+</body>
+</html>
