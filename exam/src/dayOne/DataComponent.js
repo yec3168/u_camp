@@ -32,10 +32,6 @@ const DataComponent = () =>{
                 list += `<td>${location}</td>`;
             list += "</tr>";
         }
-
-        data.map((item, index) => {
-            console.log(item)
-        })
         
         return (
             list   

@@ -10,12 +10,20 @@ import CmpComponent from './dayOne/CmpComponent';
 import MapTest from './dayOne/MapTest'
 import MyEventComponent from './dayOne/MyEventComponent'
 import StateTest from './dayOne/Statetest';
+import LifeCycleTest from './dayTwo/LifeCycleTest';
+import UseStateTest from './dayTwo/UseStateTest';
+import EffectTest from './dayTwo/EffectTest';
+import AjaxTest from './dayTwo/AjaxTest';
+import MemberInsetComponent from './dayTwo/MemberInsertComponent';
+import MemberListComponent from './dayTwo/MemberListComponent';
+import MemberDetailComponent from './dayTwo/MemberDetailComponent';
 
 const App = () => {
   
   return (
     <>
       <BrowserRouter>
+            {/* 1일차 */}
             <Routes>
                 <Route path="/" element={<MainComponent />}></Route>
                 <Route path="addMember" element={<LoginComponent name="testName" />}></Route>
@@ -26,6 +34,18 @@ const App = () => {
                 <Route path="mapTest" element={<MapTest />}></Route>
                 <Route path="myEventComponent" element={<MyEventComponent />}></Route>
                 <Route path="stateTest" element={<StateTest />}></Route>
+            </Routes>
+            
+            {/* 2일차 */}
+            <Routes>
+                <Route path='lifeCycleTest' element={<LifeCycleTest />}></Route>
+                <Route path='useStateTest' element={<UseStateTest />}></Route>
+                <Route path='effectTest' element={<EffectTest />}></Route>
+                <Route path='ajaxTest' element={<AjaxTest />}></Route>
+                <Route path='memberInsertComponent' element={<MemberInsetComponent />}></Route>
+                <Route path='memberListComponent' element={<MemberListComponent />}></Route>
+                {/* :id 같이 선언시 유동적으로 바뀜 */}
+                <Route path='memberDetailComponent/:id' element={<MemberDetailComponent />}></Route>
             </Routes>
         </BrowserRouter>
     </>
