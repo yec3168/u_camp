@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   /*
+      배열값을 오름 차순 정렬 
+   */
+   var arr = [ 11, 2, 33, 54, 5];
+   const asc = (numbers) =>{
+     for(let i =0; i < numbers.length; i++){
+      for(let j= i+1; j< numbers.length; j++){
+         if(numbers[i] > numbers[j]){
+            let temp = numbers[j];
+            numbers[j] = numbers[i];
+            numbers[i] = temp;
+         }
+      }
+     }
+     return numbers;
+   } 
+
+
+   const asc2 = (numbers) =>{
+      return numbers.sort( (a, b) => a-b)
+   } 
+
+
+   var m = asc(arr);
+   console.log("오름차순 정렬:", m );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

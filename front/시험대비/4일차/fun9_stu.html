@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   /*
+       대문자, 소문자, 거꾸로 된 데이터를
+       한번에 반환
+   */  
+    const xyz = (s) =>{
+        let result = "";
+        result += s.toUpperCase() +" ";
+        result += s.toLowerCase() +" ";
+        result += s.split('').reverse().join("") +" ";
+        
+        return result;
+    }
+   var data = xyz('AbCDeF');
+   console.log("데이터", data );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

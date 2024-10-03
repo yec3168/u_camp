@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   /*
+      성별 반환
+   */
+   const xyz = (str) => {
+      let num = Number(str.substr(7, 1))
+      if( num % 2!= 0)
+         return '남'
+      else
+         return '여'
+   }
+   var gender = xyz('811025-1234567');
+   console.log("성별", gender );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

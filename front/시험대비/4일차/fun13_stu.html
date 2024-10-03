@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   /*
+       배열중에서 최대값 구하기
+   */
+
+   var arr = [ 11, 2, 33, 54, 5];
+   const max = (numbers) =>{
+      let max = numbers[0];
+      for(let i = 1 ; i < numbers.length; i++){
+         max = (max < numbers[i])? numbers[i]:max;
+      }
+      return max;
+   } 
+   var m = max(arr);
+   console.log("최대값:", m );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
