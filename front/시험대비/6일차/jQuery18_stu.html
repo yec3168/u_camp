@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	let childWin2;
+	function checkId(){
+		childWin2 = window.open('childWin2.html','새창','width=300px, height=300px;')
+	}
+    
+</script>
+</head>
+<body>
+ 아이디<input type="text" name="userid" id="userid">
+ <button onclick="checkId()">아이디중복</button>
+
+</body>
+</html>

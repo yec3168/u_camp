@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+	function confirm(){
+		let userid = document.querySelector("#userid").value;
+		opener.document.querySelector('#userid').value = userid;
+		close();
+	}
+</script>
+</head>
+<body>
+ 아이디:<input type="text" name="userid" id="userid">
+ <button id="a" onclick="confirm()">아이디 사용 가능</button>
+</body>
+</html>

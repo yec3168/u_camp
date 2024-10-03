@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	let childWin;
+	function openWindow(){
+		childWin = window.open('childWin.html','새창', 'width=300px, height=300px;');
+	}
+
+	function closeWindow(){
+		childWin.closse();
+	}
+
+	function curClose(){
+		close();
+	}
+</script>
+</head>
+<body>
+ <button id="one" onclick="openWindow()">새창 열기</button>
+ <button id="two" onclick="closeWindow()">새창 닫기</button>
+ <button id="three" onclick="curClose()">현재창(부모장) 닫기</button>
+</body>
+</html>
