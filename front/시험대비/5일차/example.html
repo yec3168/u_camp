@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+        // function chk(){
+        //     let chkAll = document.querySelector("#all");
+        //     let chkbox = document.querySelectorAll(".lang");
+        //     console.log(chkbox);
+        //     chkbox.forEach(function(box) {
+        //         console.log(box);
+        //     box.checked = chkAll.checked;
+        //     });
+        // }
+
+        window.onload = function(){
+            let chkAll = document.querySelector("#all");
+            let chkbox = document.querySelectorAll(".lang");
+            
+            chkAll.addEventListener("click",()=>{
+                for(let i=0;i<chkbox.length;i++){
+                    chkbox[i].checked = chkAll.checked;
+                }
+            });
+
+            chkbox[0].addEventListener("click",()=>{
+                if( !chkbox[0].checked ){
+                    chkAll.checked = false;
+                }
+                else{
+                    let cnt = 0;
+                    for(let i = 0; i < chkbox.length; i++){
+                        if( chkbox[i].checked){
+                            cnt += 1;
+                        }
+                    }
+                    
+                    if( cnt ==3){
+                        chkAll.checked = true;
+                    }
+                }
+            });
+
+            chkbox[1].addEventListener("click",()=>{
+                if( !chkbox[1].checked ){
+                    chkAll.checked = false;
+                }
+                else{
+                    let cnt = 0;
+                    for(let i = 0; i < chkbox.length; i++){
+                        if( chkbox[i].checked){
+                            cnt += 1;
+                        }
+                    }
+                    
+                    if( cnt ==3){
+                        chkAll.checked = true;
+                    }
+                }
+            });
+
+            chkbox[2].addEventListener("click",()=>{
+                if( !chkbox[2].checked ){
+                    chkAll.checked = false;
+                }
+                else{
+                    let cnt = 0;
+                    for(let i = 0; i < chkbox.length; i++){
+                        if( chkbox[i].checked){
+                            cnt += 1;
+                        }
+                    }
+                    
+                    if( cnt ==3){
+                        chkAll.checked = true;
+                    }
+                }
+            });
+            
+        }
+
+</script>
+</head>
+<body>
+    전체선택
+    <input id="all" type="checkbox" name="all"><br>
+    <!--<input id="all" type="checkbox" name="all" onclick="chk()"><br>-->
+    <input type="checkbox" name="java" class="lang">java<br>
+    <input type="checkbox" name="sql" class="lang">sql<br>
+    <input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

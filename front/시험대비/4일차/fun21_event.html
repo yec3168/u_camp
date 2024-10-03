@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      /*
+         함수 구현
+       
+      */
+
+      window.onload = () =>{
+        
+        let create = document.querySelector("#create");
+        let remove = document.querySelector("#remove");
+        let add = document.querySelector("#add");
+        let print = document.querySelector("#print");
+
+        let arr;
+
+        create.addEventListener('click', function(){
+            arr =[];
+            let result =document.querySelector('#result');
+            result.innerHTML = '';
+        })
+        remove.addEventListener('click', function(){
+            arr =[];
+            let result =document.querySelector('#result');
+            result.innerHTML = '';
+        })
+        add.addEventListener('click', function(){
+            let v1 =document.querySelector('#v1');
+            arr.push(v1.value)
+        })
+        print.addEventListener('click', function(){
+                let result =document.querySelector('#result');
+
+                let str = ''
+                for(let i = 0; i < arr.length; i++){
+                    str += `${arr[i]} <br>`
+                }
+
+                result.innerHTML = str;
+        })
+      }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+<button id="create">배열생성</button>
+<button id="remove">배열삭제</button><br>
+값:<input type="text" name="v1" id="v1" >
+<button id="add">배열에 값 저장</button><br>
+<button id="print">배열에 값 출력</button><br>
+<div id="result"></div>
+</body>
+</html>

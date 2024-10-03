@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      //입력된 정보를 배열에 등록
+      //목록에 출력
+
+      let dataList = [];
+      function info() {
+        let id = document.querySelector("#id");
+        let pw = document.querySelector("#pw");
+        let name = document.querySelector("#name");
+        let email = document.querySelector("#email");
+        let today = new Date();
+        let creatDt = `${today.getFullYear()} - ${
+          today.getMonth() + 1
+        } -${today.getDate()}`;
+        let btn = document.querySelector("#add");
+
+       btn.addEventListener("click", function () {
+          //가져온 데이터를 객체 형태로 저장
+          let data = {
+            id: id.value,
+            pw: pw.value,
+            name: name.value,
+            email: email.value,
+            creatDt: creatDt,
+          };
+          //데이터를 배열에 저장
+          //이때 배열을 지역변수로 선언하면 btn에서만 사용이 가능하기 때문에 배열은 지역변수로 선언
+
+          dataList.push(data);
+        });
+        all.addEventListener("click", function () {});
+      }
+    </script>
+  </head>
+  <body onload="info()">
+    <h1>사용자 관리</h1>
+    <button id="all">전체 조회</button>
+    <input type="text" id="search" />
+    <button id="idSearch">ID검색</button><br />
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>사원 ID</th>
+          <th>비번</th>
+          <th>이름</th>
+          <th>이메일</th>
+          <th>생성일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 데이터 행이 추가될 부분 -->
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table border="1">
+      <tbody>
+        <tr>
+          <th>사원 ID</th>
+          <td><input type="text" id="id" /></td>
+        </tr>
+        <tr>
+          <th>비번</th>
+          <td><input type="password" id="pw" /></td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td><input type="email" id="email" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="add">추가</button>
+    <button id="remove">삭제</button>
+    <button id="edit">수정</button>
+  </body>
+</html>

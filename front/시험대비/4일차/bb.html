@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = () => {
+            let btn = document.querySelector("#add");
+
+            let id;
+            let pwd;
+            let name;
+            let email;
+            let createDt;
+            let arr = [];
+
+            // 추가
+            btn.addEventListener("click", function() {
+                id = document.querySelector("#id").value;
+                pwd = document.querySelector("#pwd").value;
+                name = document.querySelector("#name").value;
+                email = document.querySelector("#email").value;
+                let date = new Date();
+                let year = date.getFullYear();
+                let month = ("0" + (date.getMonth() + 1)).slice(-2);
+                let day = ("0" + (date.getDay()-1)).slice(-2);
+                createDt = `${year} - ${month} - ${day}`;
+
+                let data = {
+                    "id" : id,
+                    "pwd" : pwd,
+                    "name" : name,
+                    "email" : email,
+                    "createDt" : createDt
+                };
+
+                arr.push(data);
+                // console.log(arr);
+
+                let tbody = document.querySelector("#tbody01");
+
+                let msg = "";
+                for(let i = 0; i < arr.length; i++) {
+
+                    msg += "<tr>";
+                    msg += "<td>" + `${arr[i].id}` + "</td>"
+                    msg += "<td>" + `${arr[i].pwd}` + "</td>"
+                    msg += "<td>" + `${arr[i].name}` + "</td>"
+                    msg += "<td>" + `${arr[i].email}` + "</td>"
+                    msg += "<td>" + `${arr[i].createDt}` + "</td>"
+                    msg += "</tr>"
+
+                    tbody.innerHTML = msg;
+
+                    document.querySelector("#id").value = "";
+                    document.querySelector("#pwd").value = "";
+                    document.querySelector("#name").value = "";
+                    document.querySelector("#email").value = "";
+                }
+            });
+
+            // 삭제
+            let remove = document.querySelector("#remove");
+            
+            remove.addEventListener("click", function() {
+                id = document.querySelector("#id").value;
+                // --------------------
+
+                let removeArr = [];
+
+                for(let i = 0; i < arr.length; i++) {
+                    if(arr[i].id === id) {
+                        continue; 
+                    } else {
+                        removeArr.push(arr[i]);
+                    }
+
+                }
+
+                arr = removeArr
+
+                let tbody = document.querySelector("#tbody01");
+                let msg = "";
+                for(let i = 0; i < arr.length; i++) {
+
+                    msg += "<tr>";
+                    msg += "<td>" + `${arr[i].id}` + "</td>";
+                    msg += "<td>" + `${arr[i].pwd}` + "</td>";
+                    msg += "<td>" + `${arr[i].name}` + "</td>";
+                    msg += "<td>" + `${arr[i].email}` + "</td>";
+                    msg += "<td>" + `${arr[i].createDt}` + "</td>";
+                    msg += "</tr>"
+
+                }
+                tbody.innerHTML = msg; // 삭제할 때는 반복문 밖에...ㅜ
+                console.log(arr);
+            });
+
+            // 전체조회
+            let totSearch = document.querySelector("#totSearch");
+
+            totSearch.addEventListener("click", function() {
+                let tbody = document.querySelector("#tbody01");
+
+                document.querySelector("#tbody01").value = "";
+                let msg = "";
+                for(let i = 0; i < arr.length; i++) {
+
+                    msg += "<tr>";
+                    msg += "<td>" + `${arr[i].id}` + "</td>"
+                    msg += "<td>" + `${arr[i].pwd}` + "</td>"
+                    msg += "<td>" + `${arr[i].name}` + "</td>"
+                    msg += "<td>" + `${arr[i].email}` + "</td>"
+                    msg += "<td>" + `${arr[i].createDt}` + "</td>"
+                    msg += "</tr>"
+
+                    tbody.innerHTML = msg;
+                    }
+                
+            });
+
+            // ID 검색
+            let idSearch = document.querySelector("#idSearch");
+
+            idSearch.addEventListener("click", function() {
+                let search = document.querySelector("#search").value;
+                let tbody = document.querySelector("#tbody01");
+
+                let msg = "";
+                for(let i = 0; i < arr.length; i++) {
+                    if(arr[i].id === search) {
+
+                    msg += "<tr>";
+                        msg += "<td>" + `${arr[i].id}` + "</td>";
+                        msg += "<td>" + `${arr[i].pwd}` + "</td>";
+                        msg += "<td>" + `${arr[i].name}` + "</td>";
+                        msg += "<td>" + `${arr[i].email}` + "</td>";
+                        msg += "<td>" + `${arr[i].createDt}` + "</td>";
+                    msg += "</tr>";
+
+                    tbody.innerHTML = msg;
+                        
+                    }
+                }
+                // arr = searchArr;
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>사용자 관리</h1>
+    <p></p>
+
+    <button id="totSearch">전체검색</button>
+    <input id="search" type="text">
+    <button id="idSearch">ID 검색</button>
+
+    <table id="table01" border="1">
+        <tr>
+            <th>사원 ID</th>
+            <th>비번</th>
+            <th>이름</th>
+            <th>이메일</th>
+            <th>생성일</th>
+        </tr>
+        <tbody id="tbody01">
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <tr>
+            <td>사원ID</td>
+            <td><input id="id" type="text"></td>
+        </tr>
+        <tr>
+            <td>비번</td>
+            <td><input id="pwd" type="password"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input id="name" type="text"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input id="email" type="email"></td>
+        </tr>
+    </table>
+    <button id="add">추가</button>
+    <button id="remove">삭제</button>
+    <button>수정</button>
+    
+</body>
+</html>

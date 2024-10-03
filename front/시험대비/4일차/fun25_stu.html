@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  
+      /*
+                  함수 구현
+      */
+      let cnt = 0; // 클릭한 횟수
+      let sum = 0; //합계
+      let str =''; //출력 할 문자열
+     function print(){
+            cnt += 1;
+
+            if(cnt == 1){
+                  str += (3 * cnt);
+            }
+            else{
+                  str += ',' + (3 * cnt);
+            }
+            sum += (3 * cnt);
+
+            let result = document.querySelector('#result');
+            result.innerHTML = `${str}<br>클릭한 수:${cnt}<br>합계${sum}`;
+     }
+
+</script>
+</head>
+<body>
+<h3>배수 출력</h3>
+<button onclick="print()">3의 배수</button>
+<div id="result">
+</div>
+</body>
+</html>
