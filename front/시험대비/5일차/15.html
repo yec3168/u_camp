@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    /*
+        1. `input[type=submit]`인 태그를 가져온다.
+
+        2. 버튼이 클릭되면 발생되는 addEventListener를 적용한다.
+
+        3. userid, passwd의 value를 가져온다.
+
+        4. userid의 value 또는 passwd의 value가 ''와 같다면 alert 출력.
+            아니라면, window.open으로 success.html을 연다.
+        
+    */
+    function ready(){
+        // 1. `input[type=submit]`인 태그를 가져온다.
+        let submit = document.querySelector('input[type=submit]');
+
+        // 2. 버튼이 클릭되면 발생되는 addEventListener를 적용한다.
+        submit.addEventListener('click', function(e){
+
+            //3. userid, passwd의 value를 가져온다.
+            let userid = document.querySelector('#userid').value;
+            let passwd = document.querySelector('#passwd').value;
+
+            // 4. userid의 value 또는 passwd의 value가 ''와 같다면 alert 출력.
+            // 아니라면, window.open으로 success.html을 연다.
+            if(userid == '' || passwd == ''){
+                // preventDefault를 붙이지 않으면 `submit`이벤트가 실행돼서  alert 출력후 화면이 바뀜
+                // 한 번 지우고 실행해보는 것도 추천해요
+                e.preventDefault(); 
+                alert('아이디 혹은 비밀번호 값을 입력하시오.');
+            }
+            else{
+                alert("로그인 성공");
+                window.open('success.html', '_self');
+            }
+
+        })
+    }
+
+
+
+
+
+    //jQuery
+/*    
+    $(document).ready(function() {
+		 //구현
+		$('input[type=submit]').on('click', function(e){
+			if( $('#userid').val() == '' || $('#passwd').val() == ''){
+				e.preventDefault();
+				alert("아이디 혹은 비밀번호를 입력하세요.")
+			}
+			else{
+				window.open('success.html', '_self')
+			}
+		})
+
+		
+	});
+*/
+</script>
+</head>
+<body onload="ready()">
+    <form action="success.html">
+        아이디<input type="text" name="userid" id="userid"><br>
+        비밀번호<input type="text" name="passwd" id="passwd"><br>
+        <input type="submit" value="로그인" >
+    </form>
+</body>
+</html>

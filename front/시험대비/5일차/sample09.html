@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function chk(n){
+		let inputs = document.querySelectorAll('input[class=lang]')
+
+		if(n.checked){
+			for(let i =0; i <inputs.length ;i++){
+				inputs[i].checked = true;
+			}
+		}
+		else{
+			for(let i =0; i <inputs.length ;i++){
+				inputs[i].checked = false;
+			}
+		}
+   }
+
+</script>
+</head>
+<body>
+전체선택
+<input type="checkbox" name="all" onclick="chk(this)"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

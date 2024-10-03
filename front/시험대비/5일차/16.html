@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+ /*
+        1. `input[type=submit]`인 태그를 가져온다.
+
+        2. 버튼이 클릭되면 발생되는 addEventListener를 적용한다.
+
+        3. userid, passwd의 value를 가져온다.
+
+        4. userid의 valuer가 ''와 같다면 `#idSpan`에 innerHTML을 붙임
+                                아니면 `#idSpan`값을  ''값으로 초기화
+        5. passwd의 valuer가 ''와 같다면 `#pwSpan`에 innerHTML을 붙임
+                                아니면 `#pwSpan`값을  ''값으로 초기화
+    */
+    function ready(){
+        // 1. `input[type=submit]`인 태그를 가져온다.
+        let submit = document.querySelector('input[type=submit]');
+
+        // 2. 버튼이 클릭되면 발생되는 addEventListener를 적용한다.
+        submit.addEventListener('click', function(e){
+            //3. userid, passwd의 value를 가져온다.
+            let userid = document.querySelector('#userid').value;
+            let passwd = document.querySelector('#passwd').value;
+
+            let idSpan = document.querySelector("#idSpan");
+            let pwSpan = document.querySelector("#pwSpan");
+
+
+            // 4. userid의 valuer가 ''와 같다면 `#idSpan`에 innerHTML을 붙임
+                                // 아니면 `#idSpan`값을  ''값으로 초기화
+            if(userid == ''){
+                e.preventDefault();
+                idSpan.innerHTML = '아이디값을 입력하시오.'
+            }
+            else{
+                idSpan.innerHTML = '';
+            }
+
+
+            // 5. passwd의 valuer가 ''와 같다면 `#pwSpan`에 innerHTML을 붙임
+                                // 아니면 `#pwSpan`값을  ''값으로 초기화
+            if(passwd == ''){
+                e.preventDefault();
+                pwSpan.innerHTML = '비밀번호값을 입력하시오.'
+            }
+            else{
+                pwSpan.innerHTML = '';
+            }
+        })
+
+    }
+
+
+
+
+
+
+
+
+
+    //jQuery
+/*
+	$(document).ready(function() {
+		 //구현
+		$('input[type=submit]').on('click', function(e){
+			if( $('#userid').val() == ''){
+				e.preventDefault();
+				$('#idSpan').text('아이디값을 입력하시오.')
+			}
+			else{
+				e.preventDefault();
+				$('#idSpan').text('')
+			}
+
+			if($('#passwd').val() == ''){
+				e.preventDefault();
+				$('#pwSpan').text('비밀번호값을 입력하시오.')
+			}
+			else{
+				window.open('success.html', '_self')
+			}
+		})
+	});
+*/
+</script>
+</head>
+<body onload="ready()">
+<form action="success.html">
+ 아이디<input type="text" name="userid" id="userid">
+ <span id="idSpan"></span><br>
+ 비밀번호<input type="text" name="passwd" id="passwd">
+ <span id="pwSpan"></span><br>
+  <input type="submit" value="로그인" >
+ </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    /*
+        1. `#all`인 태그를 가져와서 변수 `all`에 저장한다.
+
+        2. all의 addEvnetLister을 적용한다.
+
+        3. `input[class=lang]`인 태그들을 가져와서 `inputs`에 저장한다.
+
+        4. 만약, all이 checked 되어있다면 inputs의 태그들을 모두 checked로 바꿈
+                        checked 되어있지 `않다면` checked 제거.
+    
+    */
+    function ready(){
+        // 1. `#all`인 태그를 가져온다.
+        let all = document.querySelector('#all');
+
+        // 2. all의 addEventLister을 적용한다.
+        all.addEventListener('click', function(){
+            //3. `input[class=lang]`인 태그들을 가져와서 `inputs`에 저장한다.
+            let inputs = document.querySelectorAll('input[class=lang]');
+
+            // 4. 만약, all이 checked 되어있다면 inputs의 태그들을 모두 checked로 바꿈
+            //                  checked 되어있지 `않다면` checked 제거.
+            if(all.checked){
+                for(let i = 0; i < inputs.length; i++){
+                    inputs[i].checked =true;
+                }
+            }
+            else{
+                for(let i = 0; i < inputs.length; i++){
+                    inputs[i].checked = false;
+                }
+            }
+        })
+
+        
+    }
+
+
+
+
+
+
+    
+    // jQuery
+/*
+   $(document).ready(function() {
+       
+   	  //구현
+		$('#all').on('click', function(){
+			let all = this;
+			let inputs = $('input[class=lang]')
+			
+			if(all.checked){
+				$('input[class=lang]').each(function(idx, item){
+					$(this).prop('checked', true);
+				})
+			}
+			else{
+				$('input[class=lang]').each(function(idx, item){
+					$(this).prop('checked', false);
+				})
+			}
+		})
+   	   
+   	});
+*/
+</script>
+</head>
+<body onload="ready()">
+전체선택
+<input type="checkbox" name="all" id="all"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

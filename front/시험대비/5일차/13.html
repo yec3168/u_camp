@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+/*
+                JS
+        -   body 태그에 `onload` 이벤트를 붙이면 
+            $(document).ready(function() {}와 같이 작동한다.
+
+
+            
+        0. 버튼이 클릭될 때  ready()함수에 정의된 `addEventLister`가 실행된다.
+
+        1. input[type= checkbox]인 태그들을(querySelectorAll) 가져와서 변수(inputs)에 저장한다.
+
+        2. 결과값을 저장 할 변수 (str)를 선언한다.
+            * 이때 저장할 때 `빈 문자열` 형태로 저장한다.
+                reason) 결과가 `야구 게임` 식으로 이어 붙여서 나오기 때문.
+        
+        3. input태그가 저장된 `inputs`변수의 length만큼 반복문을 돌린다.
+            reason) 각각의 input들이 checked 됐는지 확인해야 하기 때문.
+        
+        4. 조건문으로 input이 `checked` 되어있다면 `value`값을 str에 이어 붙인다.
+
+        5. 결과값을 출력할 `#result`를 가져와서 innerHTML를 사용하여 str을 넣는다.
+        
+     */
+
+     
+     function ready(){
+        let button = document.querySelector('button');
+        
+        //0. 버튼이 클릭될 때  ready()함수에 정의된 `addEventLister`가 실행된다.
+        button.addEventListener('click', function(){
+            //1. input[type= checkbox]인 태그들(querySelectorAll)을 가져와서 변수(inputs)에 저장한다.
+            let inputs = document.querySelectorAll('input[type=checkbox]')
+            
+
+            // 2. 결과값을 저장 할 변수 (str)를 선언한다.
+            let str ="";
+
+            
+            // 3. input태그가 저장된 `inputs`변수의 length만큼 반복문을 돌린다.
+            for(let i =0; i < inputs.length; i++){
+                // 4. 조건문으로 input이 `checked` 되어있다면 `value`값을 str에 이어 붙인다.
+                if(inputs[i].checked){
+                    console.log(inputs[i].value);
+                    str += inputs[i].value + " ";
+                }
+            }
+
+            // 5. 결과값을 출력할 `#result`를 가져와서 innerHTML를 사용하여 str을 넣는다.
+            document.querySelector('#result').innerHTML = str;
+
+        })
+
+    }
+
+
+
+
+
+    // jQuery
+    /*
+	$(document).ready(function() {
+		
+	   	//구현
+		$('button').on('click', function(){
+			let input = $("input[type=checkbox]")
+			let str = "";
+			//console.log(input)
+			for(let i = 0; i < input.length; i++){
+				if(input[i].checked)
+					str+= input[i].value+" "
+			}
+			//console.log(str)
+			$('#result').text(str)
+		})
+		
+	});
+    */
+
+    
+
+
+</script>
+</head>
+<body onload="ready()">
+    취미<br>
+    <ul>
+        <li>야구<input type="checkbox" name="hobby" value="야구"></li>
+        <li>농구<input type="checkbox" name="hobby" value="농구"></li>
+        <li>게임<input type="checkbox" name="hobby" value="게임"></li>
+    </ul>
+    <button>결과보기</button><br>
+
+    결과값:<div id="result"></div>
+</body>
+</html>

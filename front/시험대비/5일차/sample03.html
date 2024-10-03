@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function count(n){
+    	let result = document.querySelector('#result');
+        result.innerHTML = n.length;
+    }
+
+
+</script>
+</head>
+<body>
+글자수 세기<br>
+<textarea rows="10" cols="10" onkeyup="count(this.value)"></textarea><br>
+입력문자수:<span id="result"></span>
+</body>
+</html>
