@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+	    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            let totalData;
+            $(document).ready(function(){
+                $.ajax({
+                    url : 'orderList.json',
+                    dataType : 'json',
+                    success:function(data, status){
+                        let table01 = document.querySelector('#table01');
+                        totalData = data;
+                        let row = `<tr>
+                                        <th>Order Num</th>
+                                        <th>Member Name</th>
+                                        <th>Order date</th>
+                                        <th>Product Count</th>
+                                        <th>Total Price</th>
+                                    </tr>   `
+
+                        for(let i = 0; i < data.length; i++){
+                            row += `<tr>`;
+                            row += `<td>${data[i].orderNum}</td>`;
+                            row += `<td><a href='#' onclick='info(${data[i].orderNum}-1)'>${data[i].memName}</a></td>`;
+                            row += `<td>${data[i].orderDt}</td>`;
+                            let quantity = 0;
+                            let price = 0;
+                            for(let j = 0; j < data[i].orderItems.length; j++){
+                                quantity += data[i].orderItems[j].quantity;
+                                price += (data[i].orderItems[j].quantity * data[i].orderItems[j].itemPrice)
+                            }
+                            row += `<td>${quantity}</td>`;
+                            row += `<td>${price}</td>`;
+                            row += `</tr>`;
+                        }
+                        table01.innerHTML = row;
+                    }
+                })
+            })
+
+            const info = (num) =>{
+                let table02 = document.querySelector('#table02');
+                table02.setAttribute('style', 'display:block');
+                let row = `<tr>
+                                <th>Order Num</th>
+                                <th>item Num</th>
+                                <th>item Name</th>
+                                <th>price</th>
+                                <th>order qty</th>
+                            </tr>   `
+                row += `<tr>`;
+                for(let j = 0; j < totalData[num].orderItems.length; j++){
+                    row += `<td>${totalData[num].orderNum}</td>`;
+                    row += `<td>${totalData[num].orderItems[j].itemNum}</td>`;
+                    row += `<td>${totalData[num].orderItems[j].itemName}</td>`;
+                    row += `<td>${totalData[num].orderItems[j].quantity}</td>`;
+                    row += `<td>${totalData[num].orderItems[j].itemPrice}</td>`;
+                    row += `</tr>`;
+                }
+
+                table02.innerHTML = row;
+            }
+
+            function searchInfo(){
+                let text = document.querySelector('input[type=text]');
+                
+                info(Number(text.value )-1)
+            }
+            
+            
+    
+        </script>
+    </head>
+    <body>
+        <h3>상품 주문 목록</h3>
+        <hr/>
+        <p>
+            검색 : <input type="text" /><button onclick="searchInfo()">검색</button>
+        </p>
+        <table border="1" id="table01">
+            <tr>
+                <th>Order Num</th>
+                <th>Member Name</th>
+                <th>Order date</th>
+                <th>Product Count</th>
+                <th>Total Price</th>
+            </tr>          
+        </table>    
+        <hr/>
+        <div>
+            <table border="1" style="display:none" id="table02">
+                <tr>
+                    <th>Order Num</th>
+                    <th>item Num</th>
+                    <th>item Name</th>
+                    <th>price</th>
+                    <th>order qty</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
