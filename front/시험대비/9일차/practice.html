@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let dataList=[];
+
+        function add(){
+            let id = document.querySelector('#id').value;
+            let pw = document.querySelector('#pw').value;
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let today =new Date();
+            let createDt = `${today.getFullYear()}-${today.getMonth()}-${today.getDay()}`;
+            
+            let data ={
+                'id' :id,
+                'pw': pw,
+                'name': name,
+                'email': email,
+                'createDt': createDt
+            };
+
+            dataList.push(data);
+
+            printTable(dataList);
+        }
+
+        function remove(){
+            let id = document.querySelector('#id').value;
+
+            let dataRemoveList = [];
+
+            for(let i = 0; i < dataList.length; i++){
+                if( dataList[i].id !== id){
+                    dataRemoveList.push(dataList[i]);
+                }
+            }
+            dataList = dataRemoveList;
+
+            printTable(dataList)
+        }
+
+        function searchInfo(){
+            let search = document.querySelector('#search').value;
+
+            let searchList = [];
+
+            for(let i = 0; i < dataList.length; i++){
+                if( dataList[i].id === search){
+                    searchList.push(dataList[i]);
+                }
+            }
+
+            printTable(searchList)
+        }
+
+        function printTable(arr){
+            let result = document.querySelector('#result');
+
+            let row ="";
+            for(let i =0; i < arr.length; i++){
+                row += `<tr>`;
+                    row += `<td>${arr[i].id}</td>`;
+                    row += `<td>${arr[i].pw}</td>`;
+                    row += `<td>${arr[i].name}</td>`;
+                    row += `<td>${arr[i].email}</td>`;
+                    row += `<td>${arr[i].createDt}</td>`;
+                row +=`</tr>`;
+            }
+
+            result.innerHTML = row;
+        }
+    </script>
+</head>
+<body>
+    
+    <h1>사용자 관리</h1>
+    <button onclick="Javascript:printTable(dataList)">전체조회</button>
+    <input type="text" id="search">
+    <button id="searchBtn" onclick="searchInfo()">ID검색</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>사원ID</th>
+                <th>비번</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>생성일</th>
+            </tr>
+        </thead>
+        <tbody id='result'></tbody>
+    </table>
+    <hr>
+    <table border="1">
+            <tr >
+                <th>사원ID</th>
+                <td><input type="text" id="id"></td>
+            </tr>
+            <tr>
+                <th>비번</th>
+                <td><input type="password" id="pw"></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td><input type="text" id="email"></td>
+            </tr>
+    </table>
+    <button onclick="add()">추가</button>
+    <button onclick="remove()">삭제</button>
+    <button>수정</button>
+</body>
+</html>
