@@ -14,13 +14,13 @@ import Member from './Member';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Provider store={ myStore }>
+    <Provider store={ myStore }>
       <App /> 
-    </Provider> */}
-
-    <Provider store={storage}>
-      <Member />
     </Provider>
+
+    {/* <Provider store={storage}>
+      <Member />
+    </Provider> */}
   </React.StrictMode>
 );
 

@@ -1,0 +1,16 @@
+thead tr:first-child{
+    background-color: rgb(100, 100, 100);
+    color : white;
+}
+
+tr:nth-child(even){
+    background-color: rgb(200, 200, 200);
+}
+
+a{
+    text-decoration: none;
+}
+
+tbody tr:hover{
+    background-color: yellow;
+}
