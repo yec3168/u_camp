@@ -17,6 +17,10 @@ import AjaxTest from './dayTwo/AjaxTest';
 import MemberInsetComponent from './dayTwo/MemberInsertComponent';
 import MemberListComponent from './dayTwo/MemberListComponent';
 import MemberDetailComponent from './dayTwo/MemberDetailComponent';
+import MissionOne from './exam/MissionOne_stu'
+import MissionTwo from './exam/MissionTwo_stu'
+import MissionThree from './exam/MissionThree_stu'
+import MissionFour from './exam/MissionFour_stu'
 
 const App = () => {
   
@@ -46,6 +50,13 @@ const App = () => {
                 <Route path='memberListComponent' element={<MemberListComponent />}></Route>
                 {/* :id 같이 선언시 유동적으로 바뀜 */}
                 <Route path='memberDetailComponent/:id' element={<MemberDetailComponent />}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='missionOne' element={<MissionOne />}></Route>
+                <Route path='missionTwo' element={<MissionTwo />}></Route>
+                <Route path='missionThree' element={<MissionThree />}></Route>
+                <Route path='missionFour' element={<MissionFour />}></Route>
             </Routes>
         </BrowserRouter>
     </>
