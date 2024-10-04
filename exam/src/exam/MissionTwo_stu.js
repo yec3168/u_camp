@@ -7,7 +7,7 @@ const MissionTwo = () => {
 		let id = document.querySelector('#id').value;
 		let pw = document.querySelector('#pw').value;
 		console.log(id.length + " | " + pw.length)
-		if(id == '' || pw == ''){
+		if(id === '' || pw === ''){
 			printAlert();
 		}
 		else if ( (id.length >= 3 && id.length <=15) && (pw.length >=3 && pw.length <=15) ){

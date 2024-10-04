@@ -43,11 +43,11 @@
 
         const removeData = () =>{
             // 1. 사원 id의 데이터를 가져옴
-            let id = document.querySelector('#id').value;
+            let id = document.querySelector('#id').value; //111
 
             // 2. 임시 저장할 배열 생성.
-            let newArray = [];
-
+            let newArray = [];      
+                // 11 11 11 111 111
             // 3. dataList의 값들을 하나 씩 확인해서 id와 일치하면 continue
             //                                           일치하지 않으면  newArray에 data를 push
             for(let i = 0; i <dataList.length; i++){
@@ -61,7 +61,7 @@
 
             // 4. dataList의 값을 newArray로 바꿔 준다.
             dataList = newArray;
-
+            
             
             // 5. 테이블 출력.
             printTable();
