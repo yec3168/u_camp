@@ -6,12 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import myStore from './dayThree/config/myStore';
 import {Provider} from 'react-redux'
 
+// dayThree Review
+import storage from './dayThree/review/storage';
+import Member from './Member';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={ myStore }>
+    {/* <Provider store={ myStore }>
       <App /> 
+    </Provider> */}
+
+    <Provider store={storage}>
+      <Member />
     </Provider>
   </React.StrictMode>
 );
