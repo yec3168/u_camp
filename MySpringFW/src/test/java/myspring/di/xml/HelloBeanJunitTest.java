@@ -55,9 +55,5 @@ public class HelloBeanJunitTest {
 		StringPrinter stringPrinter = container.getBean("stringPrinter", StringPrinter.class);
 		assertEquals("Hello 스프링", printer1.toString());
 		
-		
-		
-		
-	
 	}
 }

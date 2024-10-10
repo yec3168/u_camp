@@ -26,6 +26,17 @@
 		<property name="printer" ref="stringPrinter"/>
 	</bean>
 	
+	<!-- Hello 클래스를 Bean으로 설정 constructor injection -->
+	<!-- 
+				constructor-arg
+			1. index로 지정 
+			2. name으로 지정.
+			3. 둘 다 섞어서 가능.
+	 -->
+	<bean id='hello2' class="myspring.di.xml.Hello">
+		<constructor-arg index='0' value="생성자"/>
+		<constructor-arg name='printer' ref="consolePrinter" />
+	</bean>
 	
 	
 </beans>
