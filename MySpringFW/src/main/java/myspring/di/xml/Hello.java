@@ -30,7 +30,7 @@ public class Hello {
 		System.out.println("setName 메소드 실행  ::" + name);
 	}
 
-	public void setPrinter(Printer printer) {
+	public void setPrinter(Printer printer) { // StringPrinter
 		this.printer = printer;
 		System.out.println("setPrinter 메소드 실행 ::" + printer.getClass().getName());
 	}

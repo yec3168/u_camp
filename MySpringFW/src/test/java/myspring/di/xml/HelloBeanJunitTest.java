@@ -52,7 +52,9 @@ public class HelloBeanJunitTest {
 		
 		//3. bean교체로 인한 SpringPrinter getBean으로 호출.
 		Printer printer1 =container.getBean("stringPrinter", Printer.class); // StringPrinter가 상속받는 부모클래스인 Printer로도 가능.
-		StringPrinter stringPrinter = container.getBean("stringPrinter", StringPrinter.class);
+		
+		
+//		StringPrinter stringPrinter = container.getBean("stringPrinter", StringPrinter.class);
 		assertEquals("Hello 스프링", printer1.toString());
 		
 	}

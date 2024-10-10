@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean id='myBasicDataSource' class="myspring.di.annot.config.MyBasicDataSource"/>
+	
+	<bean id='myHikariDataSource' class="myspring.di.annot.config.MyHikariDataSource" />
+	
+	<!-- 1번. -->
+	<bean id='myDAO1' class="myspring.di.annot.config.MyDAO">
+		<property name="type" value='basic'/>
+		<property name="dataSource" ref="myBasicDataSource" />
+	</bean>
+	
+	
+	<!-- 2번 -->
+	<bean id='myDAO2' class="myspring.di.annot.config.MyDAO">
+		<constructor-arg index="0" value='hikari'/>
+		<constructor-arg index="1" ref="myHikariDataSource"/>
+	</bean>
+</beans>
