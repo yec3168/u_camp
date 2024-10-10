@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- StringPrinter 클래스를 Bean으로 설정. -->
+	<bean id='stringPrinter' class="myspring.di.xml.StringPrinter" />
+
+	<!-- ConsolePrinter 클래스를 Bean으로 설정. -->
+	<bean id='consolePrinter' class="myspring.di.xml.ConsolePrinter" />
+	
+	<!-- Hello 클래스를 Bean으로 설정. -->
+	<!-- 
+			scope
+		- singleton : default
+		- prototype : 계속해서 생성.
+		- section : 브라우저를 open 후 close까지
+		- request : request 요청 후 화면 이동시 까지.
+	 -->
+	<bean id='hello' class="myspring.di.xml.Hello" scope="singleton">
+		<!-- property는 set에 의미로  만약, 클래스안에 set메소드가 존재하지 않으면 Property태그가 작동하지 않음. -->
+		<property name="name" value='스프링'/>
+		<!-- ref의 값은 bean으로 정의된 id 값 -->
+		<property name="printer" ref="stringPrinter"/>
+	</bean>
+	
+	
+	
+</beans>
