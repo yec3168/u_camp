@@ -5,11 +5,19 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<!-- Component Atuo Scanning 설정 -->
+	<context:component-scan base-package="myspring.di.annot" />
+	
 	<!-- StringPrinter 클래스를 Bean으로 설정. -->
 	<bean id='stringPrinter' class="myspring.di.xml.StringPrinter" />
 
 	<!-- ConsolePrinter 클래스를 Bean으로 설정. -->
 	<bean id='consolePrinter' class="myspring.di.xml.ConsolePrinter" />
+	
+	
+	<!-- values.properties 파일의 위치를 설정. -->
+	<context:property-placeholder location="classpath:values.properties"/>
+	
 	
 	<!-- Hello 클래스를 Bean으로 설정. -->
 	<!-- 
@@ -21,7 +29,7 @@
 	 -->
 	<bean id='hello' class="myspring.di.xml.Hello" scope="singleton">
 		<!-- property는 set에 의미로  만약, 클래스안에 set메소드가 존재하지 않으면 Property태그가 작동하지 않음. -->
-		<property name="name" value='스프링'/>
+		<property name="name" value='${myname1}'/>
 		<!-- ref의 값은 bean으로 정의된 id 값 -->
 		<property name="printer" ref="stringPrinter"/>
 	</bean>
@@ -34,7 +42,7 @@
 			3. 둘 다 섞어서 가능.
 	 -->
 	<bean id='hello2' class="myspring.di.xml.Hello">
-		<constructor-arg index='0' value="생성자"/>
+		<constructor-arg index='0' value="${myname2}"/>
 		<constructor-arg name='printer' ref="consolePrinter" />
 	</bean>
 	

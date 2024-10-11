@@ -6,19 +6,19 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	
-	<bean id='myBasicDataSource' class="myspring.di.annot.config.MyBasicDataSource"/>
+	<bean id='myBasicDataSource' class="myspring.di.xml.MyBasicDataSource"/>
 	
-	<bean id='myHikariDataSource' class="myspring.di.annot.config.MyHikariDataSource" />
+	<bean id='myHikariDataSource' class="myspring.di.xml.MyHikariDataSource" />
 	
 	<!-- 1번. -->
-	<bean id='myDAO1' class="myspring.di.annot.config.MyDAO">
+	<bean id='myDAO1' class="myspring.di.xml.MyDAO">
 		<property name="type" value='basic'/>
 		<property name="dataSource" ref="myBasicDataSource" />
 	</bean>
 	
 	
 	<!-- 2번 -->
-	<bean id='myDAO2' class="myspring.di.annot.config.MyDAO">
+	<bean id='myDAO2' class="myspring.di.xml.MyDAO">
 		<constructor-arg index="0" value='hikari'/>
 		<constructor-arg index="1" ref="myHikariDataSource"/>
 	</bean>

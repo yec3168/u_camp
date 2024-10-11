@@ -1,4 +1,4 @@
-package myspring.di.annot.config;
+package myspring.di.xml;
 
 public class MyDAO {
 	String type;

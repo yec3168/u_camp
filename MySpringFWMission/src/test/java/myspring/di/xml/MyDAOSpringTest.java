@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import myspring.di.annot.config.MyDAO;
+import myspring.di.xml.MyDAO;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = "classpath:myspring.di.xml")

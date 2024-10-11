@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import myspring.di.annot.config.MyBasicDataSource;
-import myspring.di.annot.config.MyDAO;
-import myspring.di.annot.config.MyDataSource;
+import myspring.di.xml.MyBasicDataSource;
+import myspring.di.xml.MyDAO;
+import myspring.di.xml.MyDataSource;
 
 public class MyDAOJunitTest {
 	ApplicationContext container;
