@@ -8,5 +8,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"myspring.di.annot"})
 public class MyDAOBeanConfig {
 	
-	
 }

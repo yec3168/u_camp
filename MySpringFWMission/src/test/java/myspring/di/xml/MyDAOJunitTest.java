@@ -17,7 +17,7 @@ public class MyDAOJunitTest {
 	
 	@BeforeEach
 	public void init() {
-		container = new GenericXmlApplicationContext("classpath:myspring.di.xml");
+		container = new GenericXmlApplicationContext("classpath:myspring_di.xml");
 	}
 	
 	@Test

@@ -1,23 +1,22 @@
-package myspring.di.xml.annot;
+package myspring.di.annot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("myDAOBean")
-public class MyDAOBean {
-	@Value("basic")
+@Component("myDAOBeanCons")
+public class MyDAOBeanCons {
 	String type;
 	
-	@Autowired
-	@Qualifier("myBasicDataSourceBean")
 	MyDataSourceBean dataSource;
 	
-	public MyDAOBean() {
+	public MyDAOBeanCons() {
 		//System.out.println("기본생성자 호출.");
 	}
-	public MyDAOBean(String type, MyDataSourceBean dataSource) {
+	
+	@Autowired
+	public MyDAOBeanCons(@Value("hikari") String type, @Qualifier("myHikariDataSourceBean")MyDataSourceBean dataSource) {
 		//System.out.println("오버로딩 생성자 호출.");
 		this.type = type;
 		this.dataSource = dataSource;

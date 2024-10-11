@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import myspring.di.xml.MyDAO;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = "classpath:myspring.di.xml")
+@ContextConfiguration(locations = "classpath:myspring_di.xml")
 public class MyDAOSpringTest {
 
 	@Autowired
