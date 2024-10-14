@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Component Scanning -->
+	<context:component-scan base-package="myspring.**.dao, myspring.**.service"></context:component-scan>
+
+
+	<!--  values.properties File information setting -->
+	<context:property-placeholder location="classpath:values.properties"/>
+	
+	<!-- hikaridataSource 클래스를 spring beans으로 설정. -->
+	<bean id='dataSource' class="com.zaxxer.hikari.HikariDataSource" 
+		p:driverClassName="${db.driverClass}"
+		p:jdbcUrl="${db.url}"
+		p:username="${db.username}"
+		p:password="${db.password}"
+	/>
+
+
+
+	<!-- sqlSessionFacotry Bean 클래스를 Spring Bean으로 설정하기. -->
+	<bean id='sqlSessionFactory' class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- setDataSource(DataSource dataSource) -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- setConfigLocation -->
+		<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
+		<!-- setMapperLocation 가져오기  -->
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:mybatis/*Mapper.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 
+			sqlSession 클래스를 Spring Bean으로 설정하기.
+		- Contstruct( 기본생성자 )를 생성해줘야 오류가 발생하지 않음.
+	 -->
+	<bean id='sqlSession' class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
+	
+	 <!-- Mapper 인터페이스 스캐닝을 위한 설정. -->
+   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+       <property name="basePackage" value="myspring.**.dao.mapper" />
+       <!-- optional unless there are multiple session factories defined -->
+       <property name="sqlSessionTemplateBeanName" value="sqlSession" />
+   </bean>
+   
+	
+</beans>
