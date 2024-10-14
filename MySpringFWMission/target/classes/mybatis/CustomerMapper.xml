@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myspring.customer.dao.mapper.CustomerMapper">
+<!-- <mapper namespace="customerNS"> -->
+	<!-- selectOne -->
+	<select id="selectCustomerByEmail" parameterType="String"
+		resultType="Customer">
+		select * from customer where email=#{value}
+	</select>
+	
+	<!-- selectList -->
+	<select id="selectCustomerList" resultType="Customer">
+		select * from customer order by id
+	</select>
+
+	<!-- insert Users table -->
+	<insert id="insertCustomer" parameterType="Customer">
+		insert into customer (id, email,
+		name, age)
+		values(#{id},#{email},#{name},#{age} )
+	</insert>
+
+	<update id="updateCustomer" parameterType="Customer">
+		update customer set
+		email =
+		#{email},
+		name = #{name},
+		age = #{age}
+		where id = #{id}
+	</update>
+
+	<delete id="deleteCustomer" parameterType="Long">
+		delete from customer where
+		id = #{value}
+	</delete>
+
+</mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

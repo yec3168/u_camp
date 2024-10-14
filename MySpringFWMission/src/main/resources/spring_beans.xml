@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:component-scan base-package="myspring.**.dao, myspring.**.service"></context:component-scan>
+	
+	<!--  values.properties File information setting -->
+	<context:property-placeholder location="classpath:values.properties"/>
+	
+	<!-- 1. DB setting ( dataSource setting ) -->
+	<bean id='dataSource' class="com.zaxxer.hikari.HikariDataSource"
+		p:driverClassName="${db.driverClass}"
+		p:jdbcUrl="${db.url}"
+		p:username="${db.username}"
+		p:password="${db.password}"
+	/>
+	
+	<!--  2. sqlSessionFactory Setting-->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 2-1. dataSource 참조 ( hikari dataSource ) -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 
+				2-2. setConfigLocation setting 
+			- log4j2 설정 및 Alias 별칭 setting
+		-->
+		<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+		<!-- setMapperLocations setting ( customerMapper.xml)-->
+		<property name="mapperLocations" >
+			<list>
+				<value>classpath:mybatis/*Mapper.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- 3. sqlSession Setting -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+	
+	
+	<!-- Mapper Setting -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="myspring.**.dao.mapper" />
+		<property name="sqlSessionTemplateBeanName" value="sqlSession"></property>
+	</bean>
+</beans>
