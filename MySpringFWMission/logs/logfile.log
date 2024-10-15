@@ -224,3 +224,55 @@
 2024-10-14 18:56:31 603 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - ==> Parameters: 
 2024-10-14 18:56:31 604 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - <==      Total: 1
 2024-10-14 18:56:31 605 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6326d182]
+2024-10-15 14:10:30 562 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\Users\Kcat\git\u_camp\MySpringFWMission\target\classes\myspring\customer\dao\mapper\CustomerMapper.class]
+2024-10-15 14:10:30 566 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\Users\Kcat\git\u_camp\MySpringFWMission\target\classes\myspring\customer\dao\mapper\MyMapper.class]
+2024-10-15 14:10:30 566 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'customerMapper' and 'myspring.customer.dao.mapper.CustomerMapper' mapperInterface
+2024-10-15 14:10:30 566 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'myMapper' and 'myspring.customer.dao.mapper.MyMapper' mapperInterface
+2024-10-15 14:10:30 798 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2024-10-15 14:10:30 921 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:30 926 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a335fa8] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:31 042 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@673672784 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:31 047 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - ==>  Preparing: insert into customer (email, name, age) values(?,?,? ) 
+2024-10-15 14:10:31 067 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - ==> Parameters: second@email.com(String), 홍길동2(String), 22(Integer)
+2024-10-15 14:10:31 088 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - <==    Updates: 1
+2024-10-15 14:10:31 091 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a335fa8]
+2024-10-15 14:10:31 093 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:31 093 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6256ac4f] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:31 095 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1007660652 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:31 095 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - ==>  Preparing: select * from customer where email=? 
+2024-10-15 14:10:31 095 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - ==> Parameters: first@email.com(String)
+2024-10-15 14:10:31 111 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - <==      Total: 1
+2024-10-15 14:10:31 117 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6256ac4f]
+2024-10-15 14:10:31 122 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:31 122 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64337702] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:31 122 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@754527431 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:31 122 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - ==>  Preparing: select * from customer order by id 
+2024-10-15 14:10:31 122 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - ==> Parameters: 
+2024-10-15 14:10:31 123 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - <==      Total: 2
+2024-10-15 14:10:31 123 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64337702]
+2024-10-15 14:10:49 087 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\Users\Kcat\git\u_camp\MySpringFWMission\target\classes\myspring\customer\dao\mapper\CustomerMapper.class]
+2024-10-15 14:10:49 090 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\Users\Kcat\git\u_camp\MySpringFWMission\target\classes\myspring\customer\dao\mapper\MyMapper.class]
+2024-10-15 14:10:49 091 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'customerMapper' and 'myspring.customer.dao.mapper.CustomerMapper' mapperInterface
+2024-10-15 14:10:49 091 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'myMapper' and 'myspring.customer.dao.mapper.MyMapper' mapperInterface
+2024-10-15 14:10:49 329 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2024-10-15 14:10:49 463 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:49 470 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a335fa8] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:49 573 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@673672784 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:49 579 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - ==>  Preparing: insert into customer (email, name, age) values(?,?,? ) 
+2024-10-15 14:10:49 605 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - ==> Parameters: third@email.com(String), 홍길동3(String), 33(Integer)
+2024-10-15 14:10:49 612 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.insertCustomer - <==    Updates: 1
+2024-10-15 14:10:49 612 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a335fa8]
+2024-10-15 14:10:49 614 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:49 614 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6256ac4f] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:49 616 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1007660652 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:49 616 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - ==>  Preparing: select * from customer where email=? 
+2024-10-15 14:10:49 617 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - ==> Parameters: first@email.com(String)
+2024-10-15 14:10:49 636 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerByEmail - <==      Total: 1
+2024-10-15 14:10:49 643 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6256ac4f]
+2024-10-15 14:10:49 646 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-10-15 14:10:49 647 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64337702] was not registered for synchronization because synchronization is not active
+2024-10-15 14:10:49 647 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@754527431 wrapping org.mariadb.jdbc.MariaDbConnection@62e70ea3] will not be managed by Spring
+2024-10-15 14:10:49 647 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - ==>  Preparing: select * from customer order by id 
+2024-10-15 14:10:49 647 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - ==> Parameters: 
+2024-10-15 14:10:49 649 [main] DEBUG myspring.customer.dao.mapper.CustomerMapper.selectCustomerList - <==      Total: 3
+2024-10-15 14:10:49 650 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64337702]

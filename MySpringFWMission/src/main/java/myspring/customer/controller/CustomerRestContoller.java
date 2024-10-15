@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,15 +23,19 @@ public class CustomerRestContoller {
 	
 	
 	@GetMapping("/{email}/")
-	public String getCustomer(@PathVariable("email")String email, Model model) {
+	public CustomerVO getCustomer(@PathVariable("email")String email, Model model) {
 		CustomerVO customer = customerService.getCustomer(email);
-		model.addAttribute("customer", customer);
-		return "customerDetail";
+		return customer;
 	}
-	@GetMapping("/")
-	public String getCustomer( Model model) {
+	@GetMapping("")
+	public List<CustomerVO> getCustomer() {
 		List<CustomerVO> customerList = customerService.getCustomerList();
-		model.addAttribute("customerList", customerList);
-		return "customerList";
+		return customerList;
+	}
+	
+	@PostMapping("")
+	public List<CustomerVO> insertCustomer(@RequestBody CustomerVO customerVo){
+		customerService.insertCustomer(customerVo);
+		return customerService.getCustomerList();
 	}
 }

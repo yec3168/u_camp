@@ -25,7 +25,7 @@ public class CustomerContoller {
 		return new ModelAndView("customerList", "customerList", customerList);
 	}
 	
-	@RequestMapping("/customers")
+	@RequestMapping("/customerList")
 	public String getCustomers(Model model) {
 		List<CustomerVO> customerList = customerService.getCustomerList();
 		model.addAttribute("customerList", customerList);
