@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+	
+	<!-- user, student 패키지중 뒤에가 Contoller로 끝나는 패키지만 필터를 걸어서 가져옴. -->
+	<context:component-scan base-package="myspring.user,myspring.student">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+
+	<!-- Spring MVC에 필요한 Bean들을 자동으로 등록해주는 태그-->
+	<!-- Jackson을 classpath에 등록하면 Java -> JSON으로 바꿔주는 기능을 제공해준다. -->
+	<mvc:annotation-driven />
+	
+	<!-- DispatcherServlet의  변경된 url-pattern 때문에 필요한 태그 설정 -->	
+	<!-- 
+		tomcat이 기본적으로 부르는 defaultServlet이 기본 경로가 '/'이다.
+		그렇기에 url-pattern을 '*.do'에서 '/'로 수정하게 되면 충돌이 발생하기 때문에,
+		 이를 해결하기위해서 아래 handler를 추가하여 패턴 충돌문제를 해결한다. 
+	 -->
+	<mvc:default-servlet-handler/>
+	
+	<!-- 아래 주석은 Controller에서  포워딩 되는  .jsp 확장자를  생략할 수 있다. -->
+<!-- 	Controller에서 앞에 `/`나 뒤에 확장자가 .jsp인 것들을 지우고 작성 가능. -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<!-- annotation-driven  태그에서 내부적으로 처리해주는 설정 -->
+	<!-- <bean id="jsonHttpMessageConverter"  -->
+	<!--         class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" /> -->
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> -->
+	<!-- 	<property name="messageConverters"> -->
+	<!-- 	  <list> -->
+	<!-- 		<ref bean="jsonHttpMessageConverter"/> -->
+	<!-- 	  </list> -->
+	<!-- 	</property> -->
+	<!-- </bean> -->
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+

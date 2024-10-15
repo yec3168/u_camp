@@ -10,11 +10,17 @@ import myspring.user.dao.UserDao;
 import myspring.user.vo.UserVO;
 
 @Service("userService")
+
 public class UserServiceImpl implements UserService {
 
 	@Autowired
 	UserDao userdao;
 	
+	
+	public UserServiceImpl() {
+		System.out.println(this.getClass().getName() + "  서비스 기본 생성자 호출.");
+	}
+
 	public void setUserdao(UserDao userdao) {
 		this.userdao = userdao;
 	}

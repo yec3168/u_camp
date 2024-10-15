@@ -66,12 +66,12 @@ public class CustomerVO {
 	}
 
 
-	public Date getEntryDate() {
+	public Date getEntry_date() {
 		return entry_date;
 	}
 
 
-	public void setEntryDate(Date entry_date) {
+	public void setEntry_date(Date entry_date) {
 		this.entry_date = entry_date;
 	}
 

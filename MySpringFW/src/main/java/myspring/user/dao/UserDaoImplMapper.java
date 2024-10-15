@@ -15,7 +15,10 @@ public class UserDaoImplMapper implements UserDao {
 	private UserMapper userMapper;	
 	
 	
-	
+	public UserDaoImplMapper() {
+		System.out.println(this.getClass().getName() + " DAO 기본 생성자 호출.");
+	}
+
 	@Override
 	public UserVO read(String id) {
 		UserVO user  = userMapper.selectUserById(id);

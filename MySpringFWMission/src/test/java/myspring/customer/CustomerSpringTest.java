@@ -83,11 +83,11 @@ public class CustomerSpringTest {
 	
 	@Test
 	void customerDaoTest() {
-		CustomerVO addCustomer = new CustomerVO("first@email.com", "홍길동", 20);
+		CustomerVO addCustomer = new CustomerVO("third@email.com", "홍길동3", 33);
 		System.out.println(addCustomer.toString());
 		
 		// 1. Insert test
-		//customerDao.insert(addCustomer);
+		customerDao.insert(addCustomer);
 		
 		// 2. email로 조회.
 		CustomerVO customer = customerDao.read("first@email.com");

@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello 스프링</h1>
+	<h1>CustomerList 목록 출력.</h1>
+	<ul>
+		<li><a href="getCustomerList.do">목록 출력(ModelAndView)</a></li>
+		<li><a href="customers.do">목록 출력(Model)</a></li>
+	</ul>
 </body>
 </html>

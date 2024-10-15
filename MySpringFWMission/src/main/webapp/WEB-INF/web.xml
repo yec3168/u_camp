@@ -12,4 +12,44 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <!-- service, dao 등 파일 위치를 설정. -->
+  	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring_beans.xml</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<!-- FrontContoller 역할을 하는 DispatcherServlet 클래스를 설정. -->
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!--Controller 레이어를 위한 spring Configuration 파일 정보를 설정 -->
+		
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring_beans_web.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern> <!-- user.do ,  customer.do 등 -->
+	</servlet-mapping>
+  
+
 </web-app>
