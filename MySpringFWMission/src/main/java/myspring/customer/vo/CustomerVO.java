@@ -8,20 +8,19 @@ public class CustomerVO {
 	private String email;
 	private String name;
 	private int age;
-	private Date entryDate;
+	private Date entry_date;
 
 	public CustomerVO() {}
 	
 
-	public CustomerVO(String email, String name, int age, Date entryDate) {
+	public CustomerVO(String email, String name, int age) {
 		this.email = email;
 		this.name = name;
 		this.age = age;
-		this.entryDate = entryDate;
 	}
 	
-	public CustomerVO(Long id, String email, String name, int age, Date entryDate) {
-		this(email,name,age,entryDate);
+	public CustomerVO(Long id, String email, String name, int age) {
+		this(email,name,age);
 		this.id = id;
 	}
 
@@ -68,18 +67,18 @@ public class CustomerVO {
 
 
 	public Date getEntryDate() {
-		return entryDate;
+		return entry_date;
 	}
 
 
-	public void setEntryDate(Date entryDate) {
-		this.entryDate = entryDate;
+	public void setEntryDate(Date entry_date) {
+		this.entry_date = entry_date;
 	}
 
 
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", email=" + email + ", name=" + name + ", age=" + age + ", entryDate=" + entryDate
+		return "UserVO [id=" + id + ", email=" + email + ", name=" + name + ", age=" + age + ", entryDate=" + entry_date
 				+ "]";
 	}
 

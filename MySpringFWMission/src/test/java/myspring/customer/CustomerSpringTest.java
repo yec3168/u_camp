@@ -83,7 +83,7 @@ public class CustomerSpringTest {
 	
 	@Test
 	void customerDaoTest() {
-		CustomerVO addCustomer = new CustomerVO(1L, "first@email.com", "홍길동", 20, new Date(0));
+		CustomerVO addCustomer = new CustomerVO("first@email.com", "홍길동", 20);
 		System.out.println(addCustomer.toString());
 		
 		// 1. Insert test

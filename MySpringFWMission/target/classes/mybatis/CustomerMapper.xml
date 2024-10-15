@@ -16,9 +16,9 @@
 
 	<!-- insert Users table -->
 	<insert id="insertCustomer" parameterType="Customer">
-		insert into customer (id, email,
+		insert into customer (email,
 		name, age)
-		values(#{id},#{email},#{name},#{age} )
+		values(#{email},#{name},#{age} )
 	</insert>
 
 	<update id="updateCustomer" parameterType="Customer">
