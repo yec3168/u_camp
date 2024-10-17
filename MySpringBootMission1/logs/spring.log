@@ -1,0 +1,196 @@
+2024-10-16T17:22:23.755+09:00  INFO 13592 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Starting MymissonApplicationTests using Java 17.0.2 with PID 13592 (started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:22:23.772+09:00 DEBUG 13592 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:22:23.774+09:00  INFO 13592 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : The following 1 profile is active: "test"
+2024-10-16T17:22:26.394+09:00  INFO 13592 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:22:26.461+09:00  INFO 13592 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:22:28.235+09:00  INFO 13592 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-10-16T17:22:28.720+09:00  INFO 13592 --- [mymisson] [main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d5457be8-c3d9-4755-a808-21a32630fb5f user=SA
+2024-10-16T17:22:28.724+09:00  INFO 13592 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-10-16T17:22:28.841+09:00  INFO 13592 --- [mymisson] [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:22:29.053+09:00  INFO 13592 --- [mymisson] [main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T17:22:29.152+09:00  INFO 13592 --- [mymisson] [main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:22:30.471+09:00  INFO 13592 --- [mymisson] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:22:32.897+09:00  INFO 13592 --- [mymisson] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:22:32.906+09:00  INFO 13592 --- [mymisson] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:22:33.305+09:00  WARN 13592 --- [mymisson] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:22:34.405+09:00  WARN 13592 --- [mymisson] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:22:35.586+09:00  INFO 13592 --- [mymisson] [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:22:35.751+09:00  INFO 13592 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Started MymissonApplicationTests in 12.798 seconds (process running for 16.242)
+2024-10-16T17:22:35.766+09:00  INFO 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-16T17:22:35.767+09:00  INFO 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:22:35.768+09:00  INFO 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-16T17:22:35.768+09:00  INFO 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.port     :   20
+2024-10-16T17:22:35.769+09:00  INFO 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:22:35.769+09:00 DEBUG 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties username  : springboot
+2024-10-16T17:22:35.770+09:00 DEBUG 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties port  : 96
+2024-10-16T17:22:35.770+09:00 DEBUG 13592 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyEnvironment data      :   MyEnvironment(mode=개발환경)
+2024-10-16T17:22:37.198+09:00  INFO 13592 --- [mymisson] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:22:37.204+09:00  INFO 13592 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-10-16T17:22:37.211+09:00  INFO 13592 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-16T17:28:07.675+09:00  INFO 14440 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Starting MymissonApplicationTests using Java 17.0.2 with PID 14440 (started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:28:07.699+09:00 DEBUG 14440 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:28:07.702+09:00  INFO 14440 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : The following 1 profile is active: "test"
+2024-10-16T17:28:10.866+09:00  INFO 14440 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:28:10.925+09:00  INFO 14440 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:28:13.630+09:00  INFO 14440 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-10-16T17:28:14.430+09:00  INFO 14440 --- [mymisson] [main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5ea37835-d2d6-4964-86ac-1f2f01b12c49 user=SA
+2024-10-16T17:28:14.440+09:00  INFO 14440 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-10-16T17:28:14.673+09:00  INFO 14440 --- [mymisson] [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:28:15.022+09:00  INFO 14440 --- [mymisson] [main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T17:28:15.263+09:00  INFO 14440 --- [mymisson] [main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:28:16.304+09:00  INFO 14440 --- [mymisson] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:28:17.390+09:00  INFO 14440 --- [mymisson] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:28:17.407+09:00  INFO 14440 --- [mymisson] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:28:18.103+09:00  WARN 14440 --- [mymisson] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:28:19.217+09:00  WARN 14440 --- [mymisson] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:28:20.309+09:00  INFO 14440 --- [mymisson] [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:28:20.488+09:00  INFO 14440 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Started MymissonApplicationTests in 13.825 seconds (process running for 18.819)
+2024-10-16T17:28:20.506+09:00  INFO 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-16T17:28:20.507+09:00  INFO 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:28:20.508+09:00  INFO 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-16T17:28:20.508+09:00  INFO 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.port     :   66
+2024-10-16T17:28:20.509+09:00  INFO 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:28:20.510+09:00 DEBUG 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties username  : springboot
+2024-10-16T17:28:20.510+09:00 DEBUG 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties port  : 52
+2024-10-16T17:28:20.511+09:00 DEBUG 14440 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyEnvironment data      :   MyEnvironment(mode=개발환경)
+2024-10-16T17:28:22.024+09:00  INFO 14440 --- [mymisson] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:28:22.033+09:00  INFO 14440 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-10-16T17:28:22.041+09:00  INFO 14440 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-16T17:34:47.927+09:00  INFO 17856 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Starting MymissonApplicationTests using Java 17.0.2 with PID 17856 (started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:34:47.946+09:00 DEBUG 17856 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:34:47.948+09:00  INFO 17856 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : The following 1 profile is active: "test"
+2024-10-16T17:34:49.869+09:00  INFO 17856 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:34:49.922+09:00  INFO 17856 --- [mymisson] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:34:51.654+09:00  INFO 17856 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-10-16T17:34:52.388+09:00  INFO 17856 --- [mymisson] [main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b66abb0d-6dac-4faa-a0db-b8b5e81c0a3a user=SA
+2024-10-16T17:34:52.392+09:00  INFO 17856 --- [mymisson] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-10-16T17:34:52.528+09:00  INFO 17856 --- [mymisson] [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:34:52.698+09:00  INFO 17856 --- [mymisson] [main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T17:34:52.794+09:00  INFO 17856 --- [mymisson] [main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:34:53.484+09:00  INFO 17856 --- [mymisson] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:34:54.447+09:00  INFO 17856 --- [mymisson] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:34:54.461+09:00  INFO 17856 --- [mymisson] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:34:55.219+09:00  WARN 17856 --- [mymisson] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:34:57.152+09:00  WARN 17856 --- [mymisson] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:35:00.743+09:00  INFO 17856 --- [mymisson] [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:35:01.326+09:00  INFO 17856 --- [mymisson] [main] c.u.m.MymissonApplicationTests           : Started MymissonApplicationTests in 14.024 seconds (process running for 15.933)
+2024-10-16T17:35:01.395+09:00  INFO 17856 --- [mymisson] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:35:01.413+09:00  INFO 17856 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-10-16T17:35:01.431+09:00  INFO 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-16T17:35:01.433+09:00  INFO 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:35:01.434+09:00  INFO 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-16T17:35:01.435+09:00  INFO 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : myprop.port     :   69
+2024-10-16T17:35:01.437+09:00  INFO 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:35:01.438+09:00 DEBUG 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties username  : springboot
+2024-10-16T17:35:01.439+09:00 DEBUG 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyPropsProperties port  : 93
+2024-10-16T17:35:01.440+09:00 DEBUG 17856 --- [mymisson] [main] c.u.m.r.MyPropsRunner                    : MyEnvironment data      :   MyEnvironment(mode=개발환경)
+2024-10-16T17:35:01.460+09:00  INFO 17856 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-16T17:36:49.199+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13708 (C:\sts3.9-bundle\springboot\mymisson\mymisson\target\classes started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:36:49.206+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:36:49.207+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "test"
+2024-10-16T17:36:49.265+09:00  INFO 13708 --- [mymisson] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T17:36:49.266+09:00  INFO 13708 --- [mymisson] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T17:36:50.411+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:36:50.435+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:36:51.381+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-16T17:36:51.407+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-16T17:36:51.409+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T17:36:51.497+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-16T17:36:51.498+09:00  INFO 13708 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2231 ms
+2024-10-16T17:36:51.701+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-10-16T17:36:51.983+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:771ec45a-d646-49f9-94d1-19f39194756d user=SA
+2024-10-16T17:36:51.988+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-10-16T17:36:52.003+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:771ec45a-d646-49f9-94d1-19f39194756d'
+2024-10-16T17:36:52.305+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:36:52.406+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T17:36:52.461+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:36:52.897+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:36:53.487+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:36:53.494+09:00  INFO 13708 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:36:53.626+09:00  WARN 13708 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:36:54.162+09:00  WARN 13708 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:36:54.873+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T17:36:54.894+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:36:55.030+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-16T17:36:55.054+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 6.406 seconds (process running for 7.764)
+2024-10-16T17:36:55.068+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-16T17:36:55.068+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:36:55.068+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-16T17:36:55.068+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   34
+2024-10-16T17:36:55.068+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:36:55.069+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyPropsProperties username  : springboot
+2024-10-16T17:36:55.069+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyPropsProperties port  : 58
+2024-10-16T17:36:55.070+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyEnvironment data      :   MyEnvironment(mode=개발환경)
+2024-10-16T17:36:55.704+09:00  INFO 13708 --- [mymisson] [RMI TCP Connection(1)-192.168.100.58] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T17:36:55.705+09:00  INFO 13708 --- [mymisson] [RMI TCP Connection(1)-192.168.100.58] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-10-16T17:36:55.706+09:00  INFO 13708 --- [mymisson] [RMI TCP Connection(1)-192.168.100.58] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2024-10-16T17:37:43.688+09:00  INFO 13708 --- [mymisson] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 11 class path changes (0 additions, 8 deletions, 3 modifications)
+2024-10-16T17:37:43.921+09:00  INFO 13708 --- [mymisson] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:37:43.931+09:00  WARN 13708 --- [mymisson] [Thread-5] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-10-16T17:37:43.932+09:00  INFO 13708 --- [mymisson] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-10-16T17:37:43.936+09:00  INFO 13708 --- [mymisson] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-16T17:37:44.053+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13708 (C:\sts3.9-bundle\springboot\mymisson\mymisson\target\classes started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:37:44.053+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:37:44.053+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "test"
+2024-10-16T17:37:44.557+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:37:44.562+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:37:44.804+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-16T17:37:44.806+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-16T17:37:44.806+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T17:37:44.842+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-16T17:37:44.843+09:00  INFO 13708 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 788 ms
+2024-10-16T17:37:44.933+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2024-10-16T17:37:44.936+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:27069cd7-6381-49cc-8932-e47e0bfffdef user=SA
+2024-10-16T17:37:44.937+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2024-10-16T17:37:44.937+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:27069cd7-6381-49cc-8932-e47e0bfffdef'
+2024-10-16T17:37:45.061+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:37:45.071+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:37:45.091+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:37:45.132+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:37:45.133+09:00  INFO 13708 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:37:45.213+09:00  WARN 13708 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:37:45.498+09:00  WARN 13708 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:37:45.870+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T17:37:45.877+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:37:45.916+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-16T17:37:45.930+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 1.931 seconds (process running for 58.64)
+2024-10-16T17:37:45.933+09:00  INFO 13708 --- [mymisson] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T17:37:47.312+09:00  INFO 13708 --- [mymisson] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 8 class path changes (8 additions, 0 deletions, 0 modifications)
+2024-10-16T17:37:47.545+09:00  INFO 13708 --- [mymisson] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:37:47.546+09:00  WARN 13708 --- [mymisson] [Thread-7] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-10-16T17:37:47.548+09:00  INFO 13708 --- [mymisson] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2024-10-16T17:37:47.550+09:00  INFO 13708 --- [mymisson] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2024-10-16T17:37:47.660+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13708 (C:\sts3.9-bundle\springboot\mymisson\mymisson\target\classes started by Kcat in C:\sts3.9-bundle\springboot\mymisson\mymisson)
+2024-10-16T17:37:47.660+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T17:37:47.660+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "test"
+2024-10-16T17:37:48.027+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T17:37:48.031+09:00  INFO 13708 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-10-16T17:37:48.190+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-16T17:37:48.191+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-16T17:37:48.192+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T17:37:48.220+09:00  INFO 13708 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-16T17:37:48.221+09:00  INFO 13708 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 558 ms
+2024-10-16T17:37:48.310+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Starting...
+2024-10-16T17:37:48.313+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:ccfe273c-f7e8-4b43-99a5-cbfb0cabe36e user=SA
+2024-10-16T17:37:48.313+09:00  INFO 13708 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Start completed.
+2024-10-16T17:37:48.314+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ccfe273c-f7e8-4b43-99a5-cbfb0cabe36e'
+2024-10-16T17:37:48.381+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T17:37:48.386+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-16T17:37:48.396+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T17:37:48.419+09:00  INFO 13708 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T17:37:48.419+09:00  INFO 13708 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T17:37:48.491+09:00  WARN 13708 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T17:37:48.725+09:00  WARN 13708 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-16T17:37:49.001+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T17:37:49.007+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T17:37:49.040+09:00  INFO 13708 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-16T17:37:49.051+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 1.447 seconds (process running for 61.76)
+2024-10-16T17:37:49.053+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-16T17:37:49.054+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:37:49.054+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-16T17:37:49.054+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   14
+2024-10-16T17:37:49.054+09:00  INFO 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-16T17:37:49.054+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyPropsProperties username  : springboot
+2024-10-16T17:37:49.054+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyPropsProperties port  : 65
+2024-10-16T17:37:49.054+09:00 DEBUG 13708 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : MyEnvironment data      :   MyEnvironment(mode=개발환경)
+2024-10-16T17:37:49.056+09:00  INFO 13708 --- [mymisson] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
