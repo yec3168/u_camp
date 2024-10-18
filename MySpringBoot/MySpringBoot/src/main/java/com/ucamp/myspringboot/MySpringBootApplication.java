@@ -1,5 +1,6 @@
 package com.ucamp.myspringboot;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,8 +27,10 @@ public class MySpringBootApplication {
 		springApplication.run(args);
 	}
 
+	// Configuration 클래스로서의 역할을 함.
+	// Object Mapping을 지원하는 ModelMapper를 Spring Beean으로 설정하다.
 	@Bean
-	public String hello(){
-		return "Hello Springboot";
+	public ModelMapper modelMapper(){
+		return new ModelMapper();
 	}
 }

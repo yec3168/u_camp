@@ -30,9 +30,8 @@ public class UserRestController {
 
     @GetMapping({"/{id}"})
     public User getUser(@PathVariable("id") Long id) {
-        Optional<User> user = userRepository.findById(id);
-        return user.orElseThrow(() ->
-                new BusinessException("Data Not Found", HttpStatus.NOT_FOUND));
+        //Optional<User> user = userRepository.findById(id);
+        return getUserFound(id);
     }
 
 
@@ -45,10 +44,25 @@ public class UserRestController {
     @PatchMapping("/{email}/")
     public User updateUser(@PathVariable String email, @RequestBody User userDetail) {
         User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));;
 
         user.setName(userDetail.getName());
         return userRepository.save(user);
 
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable("id")Long id){
+        User user = getUserFound(id);
+
+        userRepository.delete(user);
+
+        return ResponseEntity.ok("ID : " + id + " User가 삭제 되었습니다.");
+    }
+
+    public User getUserFound(Long id) {
+        return userRepository.findById(id).orElseThrow(() ->
+                new BusinessException("User Not Found", HttpStatus.NOT_FOUND)
+        );
     }
 }
