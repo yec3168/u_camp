@@ -17,13 +17,14 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(readOnly = true)
 public class UserService {
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 
 
+    @Transactional
     public UserResDTO addUser(UserReqDTO userReqDTO){
         // UserMapper을 사용해서 UserReqDTO -> User로 만듦.
         User user = modelMapper.map(userReqDTO, User.class);
@@ -62,6 +63,7 @@ public class UserService {
         //        return  userResDTOList;
     }
 
+
     public UserResDTO getUserByEmail(String email){
         return userRepository.findByEmail(email)
                 .map( user -> modelMapper.map(user, UserResDTO.class))
@@ -70,4 +72,27 @@ public class UserService {
                 );
     }
 
+    @Transactional
+    public UserResDTO updateUser(Long id, UserReqDTO userReqDTO){
+        User user = getUserFound(id);
+        user.setName(user.getName().isEmpty() ? user.getName() : userReqDTO.getName());
+        user.setEmail(user.getEmail().isEmpty() ? user.getEmail() : userReqDTO.getEmail());
+
+        return modelMapper.map(user, UserResDTO.class);
+    }
+
+
+
+    @Transactional
+    public void deleteUser(Long id){
+        User user = getUserFound(id);
+        userRepository.delete(user);
+    }
+
+    private User getUserFound(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(
+                        () -> new BusinessException(("User not Found"), HttpStatus.NOT_FOUND)
+                );
+    }
 }

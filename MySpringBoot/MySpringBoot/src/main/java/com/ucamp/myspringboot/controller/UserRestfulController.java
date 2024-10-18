@@ -57,4 +57,18 @@ public class UserRestfulController {
 //        List<UserResDTO> userResDTOList= userService.getUserList();
 //        return null;
 //    }
+
+    @PutMapping("/{id}")
+    public UserResDTO updateUser(@PathVariable("id") Long id, @RequestBody UserReqDTO userReqDTO){
+        return  userService.updateUser(id, userReqDTO);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable("id") Long id){
+        userService.deleteUser(id);
+
+        return ResponseEntity.ok("Id : " +id  + " User을 삭제되었습니다.");
+    }
+
+
 }
