@@ -819,3 +819,270 @@ java.lang.NullPointerException: Cannot invoke "com.ucamp.mymisson.repository.Cus
 2024-10-17T17:54:49.238+09:00  INFO 17512 --- [mymisson] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-17T17:54:49.244+09:00  INFO 17512 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 2024-10-17T17:54:49.253+09:00  INFO 17512 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-18T16:51:49.113+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13908 (C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1\target\classes started by Kcat in C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1)
+2024-10-18T16:51:49.135+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "prod"
+2024-10-18T16:51:49.265+09:00  INFO 13908 --- [mymisson] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18T16:51:49.266+09:00  INFO 13908 --- [mymisson] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18T16:51:54.174+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T16:51:54.615+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 403 ms. Found 1 JPA repository interface.
+2024-10-18T16:51:59.478+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-18T16:51:59.543+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-18T16:51:59.554+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T16:51:59.826+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-18T16:51:59.831+09:00  INFO 13908 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10560 ms
+2024-10-18T16:52:00.537+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-10-18T16:52:01.023+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@663b465e
+2024-10-18T16:52:01.029+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-10-18T16:52:01.069+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/ucamp_db?user=ucamp&password=***'
+2024-10-18T16:52:01.784+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T16:52:02.037+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-18T16:52:02.177+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-18T16:52:03.534+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T16:52:03.736+09:00  WARN 13908 --- [mymisson] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18T16:52:06.703+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T16:52:06.964+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:52:08.264+09:00  WARN 13908 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18T16:52:09.048+09:00  WARN 13908 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-18T16:52:09.818+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-18T16:52:09.834+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-18T16:52:09.972+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-18T16:52:09.995+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 22.943 seconds (process running for 26.823)
+2024-10-18T16:52:10.006+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-18T16:52:10.007+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:52:10.007+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-18T16:52:10.007+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   66
+2024-10-18T16:52:10.007+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:55:00.450+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18T16:55:00.450+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-10-18T16:55:00.452+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2024-10-18T16:56:38.565+09:00  INFO 13908 --- [mymisson] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-18T16:56:38.793+09:00  INFO 13908 --- [mymisson] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:56:38.798+09:00  INFO 13908 --- [mymisson] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-10-18T16:56:38.805+09:00  INFO 13908 --- [mymisson] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-10-18T16:56:38.955+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13908 (C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1\target\classes started by Kcat in C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1)
+2024-10-18T16:56:38.956+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "prod"
+2024-10-18T16:56:39.588+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T16:56:39.606+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-10-18T16:56:39.900+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-18T16:56:39.902+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-18T16:56:39.902+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T16:56:39.940+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-18T16:56:39.940+09:00  INFO 13908 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 982 ms
+2024-10-18T16:56:40.027+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2024-10-18T16:56:40.032+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@ab83641
+2024-10-18T16:56:40.033+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2024-10-18T16:56:40.033+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/ucamp_db?user=ucamp&password=***'
+2024-10-18T16:56:40.161+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T16:56:40.169+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-18T16:56:40.193+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T16:56:40.198+09:00  WARN 13908 --- [mymisson] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18T16:56:40.242+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T16:56:40.264+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:56:40.488+09:00  WARN 13908 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18T16:56:40.767+09:00  WARN 13908 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-18T16:56:41.196+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-18T16:56:41.206+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-18T16:56:41.250+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-18T16:56:41.260+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 2.376 seconds (process running for 298.089)
+2024-10-18T16:56:41.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-18T16:56:41.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:56:41.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-18T16:56:41.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   7
+2024-10-18T16:56:41.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:56:41.266+09:00  INFO 13908 --- [mymisson] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-18T16:56:42.678+09:00  INFO 13908 --- [mymisson] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-10-18T16:56:42.875+09:00  INFO 13908 --- [mymisson] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:56:42.876+09:00  INFO 13908 --- [mymisson] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2024-10-18T16:56:42.881+09:00  INFO 13908 --- [mymisson] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2024-10-18T16:56:43.000+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13908 (C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1\target\classes started by Kcat in C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1)
+2024-10-18T16:56:43.000+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "prod"
+2024-10-18T16:56:43.395+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T16:56:43.408+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2024-10-18T16:56:43.567+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-18T16:56:43.568+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-18T16:56:43.568+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T16:56:43.596+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-18T16:56:43.596+09:00  INFO 13908 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 593 ms
+2024-10-18T16:56:43.679+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Starting...
+2024-10-18T16:56:43.683+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@1bf24039
+2024-10-18T16:56:43.683+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Start completed.
+2024-10-18T16:56:43.683+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/ucamp_db?user=ucamp&password=***'
+2024-10-18T16:56:43.753+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T16:56:43.757+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-18T16:56:43.766+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T16:56:43.768+09:00  WARN 13908 --- [mymisson] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18T16:56:43.809+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T16:56:43.825+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:56:44.006+09:00  WARN 13908 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18T16:56:44.230+09:00  WARN 13908 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-18T16:56:44.548+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-18T16:56:44.555+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-18T16:56:44.588+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-18T16:56:44.600+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 1.65 seconds (process running for 301.429)
+2024-10-18T16:56:44.603+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-18T16:56:44.603+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:56:44.603+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-18T16:56:44.603+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   58
+2024-10-18T16:56:44.603+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:56:44.605+09:00  INFO 13908 --- [mymisson] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-18T16:56:46.952+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18T16:56:46.952+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-10-18T16:56:46.953+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2024-10-18T16:56:56.144+09:00 ERROR 13908 --- [mymisson] [http-nio-8080-exec-4] c.u.m.e.a.DefaultExceptionAdvice         : Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "post1@post.com"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "post1@post.com"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:302) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:137) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) [spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) [spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) [spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113) [spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1589) [?:?]
+Caused by: java.lang.NumberFormatException: For input string: "post1@post.com"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Long.parseLong(Long.java:708) ~[?:?]
+	at java.base/java.lang.Long.valueOf(Long.java:1156) ~[?:?]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:206) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:860) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:294) ~[spring-web-6.1.13.jar:6.1.13]
+	... 52 more
+
+2024-10-18T16:56:56.165+09:00  WARN 13908 --- [mymisson] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "post1@post.com"]
+2024-10-18T16:58:23.201+09:00  INFO 13908 --- [mymisson] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-18T16:58:23.868+09:00  INFO 13908 --- [mymisson] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:58:23.870+09:00  INFO 13908 --- [mymisson] [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown initiated...
+2024-10-18T16:58:23.876+09:00  INFO 13908 --- [mymisson] [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown completed.
+2024-10-18T16:58:24.128+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13908 (C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1\target\classes started by Kcat in C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1)
+2024-10-18T16:58:24.129+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "prod"
+2024-10-18T16:58:24.911+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T16:58:24.934+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+2024-10-18T16:58:25.214+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-18T16:58:25.216+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-18T16:58:25.216+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T16:58:25.263+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-18T16:58:25.263+09:00  INFO 13908 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+2024-10-18T16:58:25.386+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Starting...
+2024-10-18T16:58:25.391+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-4 - Added connection org.mariadb.jdbc.Connection@39fbb0df
+2024-10-18T16:58:25.392+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Start completed.
+2024-10-18T16:58:25.392+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/ucamp_db?user=ucamp&password=***'
+2024-10-18T16:58:25.570+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T16:58:25.579+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-18T16:58:25.602+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T16:58:25.605+09:00  WARN 13908 --- [mymisson] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18T16:58:25.688+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T16:58:25.720+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:58:25.960+09:00  WARN 13908 --- [mymisson] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService': No qualifying bean of type 'com.ucamp.mymisson.service.CustomerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-18T16:58:25.960+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:58:25.961+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Shutdown initiated...
+2024-10-18T16:58:25.965+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Shutdown completed.
+2024-10-18T16:58:25.966+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2024-10-18T16:58:25.990+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-18T16:58:26.055+09:00 ERROR 13908 --- [mymisson] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.ucamp.mymisson.controller.CustomerController required a bean of type 'com.ucamp.mymisson.service.CustomerService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.ucamp.mymisson.service.CustomerService' in your configuration.
+
+2024-10-18T16:58:27.786+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Starting MymissonApplication using Java 19.0.1 with PID 13908 (C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1\target\classes started by Kcat in C:\sts3.9-bundle\springboot\u_camp\MySpringBootMission1)
+2024-10-18T16:58:27.787+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : The following 1 profile is active: "prod"
+2024-10-18T16:58:28.743+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T16:58:28.771+09:00  INFO 13908 --- [mymisson] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2024-10-18T16:58:29.056+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-10-18T16:58:29.060+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-10-18T16:58:29.061+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T16:58:29.126+09:00  INFO 13908 --- [mymisson] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-10-18T16:58:29.127+09:00  INFO 13908 --- [mymisson] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1336 ms
+2024-10-18T16:58:29.258+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-5 - Starting...
+2024-10-18T16:58:29.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-5 - Added connection org.mariadb.jdbc.Connection@429f0243
+2024-10-18T16:58:29.263+09:00  INFO 13908 --- [mymisson] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-5 - Start completed.
+2024-10-18T16:58:29.263+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/ucamp_db?user=ucamp&password=***'
+2024-10-18T16:58:29.377+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T16:58:29.383+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-10-18T16:58:29.398+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T16:58:29.401+09:00  WARN 13908 --- [mymisson] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18T16:58:29.458+09:00  INFO 13908 --- [mymisson] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T16:58:29.481+09:00  INFO 13908 --- [mymisson] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:58:29.733+09:00  WARN 13908 --- [mymisson] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18T16:58:30.008+09:00  WARN 13908 --- [mymisson] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-10-18T16:58:30.377+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-18T16:58:30.384+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-18T16:58:30.429+09:00  INFO 13908 --- [mymisson] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2024-10-18T16:58:30.443+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.MymissonApplication                : Started MymissonApplication in 2.892 seconds (process running for 407.271)
+2024-10-18T16:58:30.445+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : logger test 시작 
+2024-10-18T16:58:30.446+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:58:30.446+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.username     :   springboot
+2024-10-18T16:58:30.446+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : myprop.port     :   53
+2024-10-18T16:58:30.446+09:00  INFO 13908 --- [mymisson] [restartedMain] c.u.m.r.MyPropsRunner                    : =============================================
+2024-10-18T16:58:30.448+09:00  INFO 13908 --- [mymisson] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-18T16:58:34.073+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18T16:58:34.073+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-10-18T16:58:34.079+09:00  INFO 13908 --- [mymisson] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 5 ms
+2024-10-18T16:59:11.693+09:00  INFO 13908 --- [mymisson] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T16:59:11.695+09:00  INFO 13908 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-5 - Shutdown initiated...
+2024-10-18T16:59:11.700+09:00  INFO 13908 --- [mymisson] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-5 - Shutdown completed.
