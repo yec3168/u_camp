@@ -9,12 +9,16 @@
         <th>Name</th>
         <th>Email</th>
         <th>CreateAt</th>
+        <th>수정</th>
+        <th>삭제</th>
     </tr>
     <tr th:each="user : ${users}">
         <td th:text="${user.id}"></td>
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
         <td th:text="${#temporals.format(user.createAt,'yyyy-MM-dd hh:mm E a')}"></td>
+        <td><a th:href="@{/edit/{id}(id=${user.id})}">수정</a></td>
+        <td><a th:href="@{/delete/{id}(id=${user.id})}">삭제</a></td>
     </tr>
     </table>
 

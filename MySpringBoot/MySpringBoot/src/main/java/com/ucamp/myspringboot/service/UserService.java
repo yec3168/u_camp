@@ -2,6 +2,7 @@ package com.ucamp.myspringboot.service;
 
 import com.ucamp.myspringboot.dto.UserReqDTO;
 import com.ucamp.myspringboot.dto.UserResDTO;
+import com.ucamp.myspringboot.dto.form.UserReqUpdateForm;
 import com.ucamp.myspringboot.entity.User;
 import com.ucamp.myspringboot.exception.BusinessException;
 import com.ucamp.myspringboot.repository.UserRepository;
@@ -25,7 +26,7 @@ public class UserService {
 
 
     @Transactional
-    public UserResDTO addUser(UserReqDTO userReqDTO){
+    public UserResDTO addUser(UserReqDTO userReqDTO) {
         // UserMapper을 사용해서 UserReqDTO -> User로 만듦.
         User user = modelMapper.map(userReqDTO, User.class);
 
@@ -37,21 +38,21 @@ public class UserService {
     }
 
 
-    public UserResDTO getUser(Long id){
-         return  userRepository.findById(id)
-                 // optional map
-                        .map( user -> modelMapper.map(user, UserResDTO.class))
-                        .orElseThrow(
-                            () -> new BusinessException("User not Found", HttpStatus.NOT_FOUND)
-                         );
+    public UserResDTO getUser(Long id) {
+        return userRepository.findById(id)
+                // optional map
+                .map(user -> modelMapper.map(user, UserResDTO.class))
+                .orElseThrow(
+                        () -> new BusinessException("User not Found", HttpStatus.NOT_FOUND)
+                );
 
 
     }
 
-    public List<UserResDTO> getUserList(){
+    public List<UserResDTO> getUserList() {
         List<User> userList = userRepository.findAll();
         return userList.stream() // Stream<User>로 바뀜.
-                .map( user -> modelMapper.map(user, UserResDTO.class)) // Stream<UserResDTO>
+                .map(user -> modelMapper.map(user, UserResDTO.class)) // Stream<UserResDTO>
                 .toList(); // List<UserResDTO>
 
         //        List<UserResDTO> userResDTOList = new ArrayList<>();
@@ -64,16 +65,16 @@ public class UserService {
     }
 
 
-    public UserResDTO getUserByEmail(String email){
+    public UserResDTO getUserByEmail(String email) {
         return userRepository.findByEmail(email)
-                .map( user -> modelMapper.map(user, UserResDTO.class))
+                .map(user -> modelMapper.map(user, UserResDTO.class))
                 .orElseThrow(
                         () -> new BusinessException("User not Found", HttpStatus.NOT_FOUND)
                 );
     }
 
     @Transactional
-    public UserResDTO updateUser(Long id, UserReqDTO userReqDTO){
+    public UserResDTO updateUser(Long id, UserReqDTO userReqDTO) {
         User user = getUserFound(id);
         user.setName(user.getName().isEmpty() ? user.getName() : userReqDTO.getName());
         user.setEmail(user.getEmail().isEmpty() ? user.getEmail() : userReqDTO.getEmail());
@@ -82,9 +83,15 @@ public class UserService {
     }
 
 
+    @Transactional
+    public UserResDTO updateUserForm(UserReqUpdateForm userReqUpdateForm) {
+        User exist = getUserFound(userReqUpdateForm.getId());
+        exist.setName(userReqUpdateForm.getName().isEmpty() ? exist.getName() : userReqUpdateForm.getName());
+        return modelMapper.map(exist, UserResDTO.class);
+    }
 
     @Transactional
-    public void deleteUser(Long id){
+    public void deleteUser(Long id) {
         User user = getUserFound(id);
         userRepository.delete(user);
     }

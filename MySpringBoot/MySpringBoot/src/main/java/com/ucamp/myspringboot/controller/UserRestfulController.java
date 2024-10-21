@@ -18,6 +18,7 @@ public class UserRestfulController {
 
 
     @PostMapping("/")  // ResponseEntity 예시
+                                    // @RequestBody는 클라이언트에서 post요청을 보낼 때 데이터가 json형태일 때 사용한다.
     public ResponseEntity<?> addUser2(@RequestBody UserReqDTO userReqDTO){
         UserResDTO user = userService.addUser(userReqDTO);
 
