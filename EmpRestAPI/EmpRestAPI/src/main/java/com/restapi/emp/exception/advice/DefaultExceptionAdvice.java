@@ -1,6 +1,5 @@
 package com.restapi.emp.exception.advice;
 
-import com.restapi.emp.exception.ErrorObject;
 import com.restapi.emp.exception.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

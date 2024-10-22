@@ -23,16 +23,16 @@ public class EmpDepInsertRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Department department1 = new Department();
+        Department department1 = new Department(); //1
         department1.setDepartmentName("HR");
         department1.setDepartmentDescription("performs human resource management functions");
 
         Department department2 = new Department();
-        department2.setDepartmentName("Marketing");
+        department2.setDepartmentName("Marketing"); //2
         department2.setDepartmentDescription("creates strategies for selling its company's products");
 
         Department department3 = new Department();
-        department3.setDepartmentName("Sales");
+        department3.setDepartmentName("Sales"); //3
         department3.setDepartmentDescription("identifies sales goals and objectives and prepares a sales plan");
 
         departmentRepository.saveAll(List.of(department1, department2, department3));
@@ -41,25 +41,26 @@ public class EmpDepInsertRunner implements ApplicationRunner {
         employee1.setFirstName("John");
         employee1.setLastName("Smith");
         employee1.setEmail("John@company.com");
-        employee1.setDepartment(department1);
+        employee1.setDepartment(department1); //1.HR
 
         Employee employee2 = new Employee();
         employee2.setFirstName("Sarah");
         employee2.setLastName("Johnson");
         employee2.setEmail("Sarah@company.com");
-        employee2.setDepartment(department2);
+        employee2.setDepartment(department2); //2.Marketing
 
         Employee employee3 = new Employee();
         employee3.setFirstName("Emily");
         employee3.setLastName("Brown");
         employee3.setEmail("Emilyh@company.com");
-        employee3.setDepartment(department3);
+        employee3.setDepartment(department3); //Sales
 
         Employee employee4 = new Employee();
-        employee4.setFirstName("dooly");
-        employee4.setLastName("go");
-        employee4.setEmail("dooly@company.com");
-        employee4.setDepartment(department1);
+        employee4.setFirstName("Dooly");
+        employee4.setLastName("Go");
+        employee4.setEmail("doolyh@company.com");
+        employee4.setDepartment(department1); //HR
+
 
         employeeRepository.saveAll(List.of(employee1,employee2,employee3,employee4));
     }
