@@ -60,7 +60,19 @@ public class CustomerService {
                 .orElseThrow(
                         () -> new BusinessException("Customer not Found", HttpStatus.NOT_FOUND)
                 );
-        customer.setAge(customerRequest.getAge());
+        customer.setAge(Integer.parseInt(customerRequest.getAge()));
+        customer.setEmail(customerRequest.getEmail());
+
+        return modelMapper.map(customer, CustomerResponse.class);
+    }
+
+    @Transactional
+    public CustomerResponse updateCustomer(Long id, CustomerRequest customerRequest){
+        CustomerEntity customer = customerRepository.findById(id)
+                .orElseThrow(
+                        () -> new BusinessException("Customer not Found", HttpStatus.NOT_FOUND)
+                );
+        customer.setAge(Integer.parseInt(customerRequest.getAge()));
         customer.setEmail(customerRequest.getEmail());
 
         return modelMapper.map(customer, CustomerResponse.class);

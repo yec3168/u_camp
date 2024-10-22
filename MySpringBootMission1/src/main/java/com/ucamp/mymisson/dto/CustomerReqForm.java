@@ -7,7 +7,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class CustomerRequest {
+public class CustomerReqForm {
+    private Long id;
+
     @NotBlank(message = "나이는 필수입력값입니다.")
     @Min(message = "나이는 10세이상이어야합니다.", value = 10)
     private String age;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<body>
+<form action="#" th:action="@{/addCustomer}" th:object="${customerRequest}" method="post">
+    <!--
+        th:field : id + name + value 3가지 속성을 생성해주는 타임리프 태그
+        id 속성은 label과 연결을 하기 위한 속성  == input의 id와 label의 for와 연결.
+        name속성은 UserReqDTO객체와 여결을 위한 속성.
+     -->
+    <label for="age">Age</label>
+    <input type="text" th:field="*{age}" id="age">
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+    <br/>
+    <label for="email">Email</label>
+    <input type="text" th:field="*{email}" id="email">
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+    <br/>
+    <input type="submit" value="Add Customer">
+</form>
+</body>
+</html>

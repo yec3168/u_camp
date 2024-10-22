@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Customer 수정</h2>
+<form action="#" th:action="@{/updateCusotmer/{id}(id=${customer.id})}" th:object="${customer}" method="post">
+    <label for="age">Age</label>
+    <input type="text" th:field="*{age}" id="age">
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span> <br/>
+
+    <label for="email">Email</label>
+    <input type="text" th:field="*{email}" id="email" readonly>
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span> <br/>
+    <input type="submit" value="Update User">
+</form>
+</body>
+</html>

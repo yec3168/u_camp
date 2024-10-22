@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<body>
+<table border="1">
+    <h2>Customer 목록 출력.</h2>
+    <tr>
+        <th>Id</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>EntryDate</th>
+        <th>수정</th>
+        <th>삭제</th>
+    </tr>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.age}"></td>
+        <td th:text="${customer.email}"></td>
+        <td th:text="${#temporals.format(customer.entryDate,'yyyy-MM-dd hh:mm E a')}"></td>
+        <td><a th:href="@{/edit/{id}(id=${customer.id})}">수정</a></td>
+        <td><a th:href="@{/deleteCustomer/{id}(id=${customer.id})}">삭제</a></td>
+    </tr>
+</table>
+
+<p>
+    <a href="/signup">Insert</a>
+</p>
+
+</body>
+</html>
